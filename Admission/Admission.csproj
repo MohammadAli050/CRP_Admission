@@ -1,0 +1,2886 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Admission</RootNamespace>
+    <AssemblyName>Admission</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <ApplicationInsightsResourceId>/subscriptions/017a732d-260c-4ba8-913a-df0a8530b2e7/resourcegroups/Default-ApplicationInsights-EastUS/providers/microsoft.insights/components/Admission</ApplicationInsightsResourceId>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=16.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.16.1.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AjaxControlToolkit.HtmlEditor.Sanitizer, Version=16.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.HtmlEditor.Sanitizer.16.1.1.0\lib\net40\AjaxControlToolkit.HtmlEditor.Sanitizer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap, Version=3.3.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.3.7\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery, Version=3.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.1.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ClosedXML">
+      <HintPath>..\packages\ClosedXML.0.85.0\lib\net40\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotNetZip, Version=1.10.1.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.10.1\lib\net20\DotNetZip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.EntityDataSource, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.EntityDataSource.6.0.0\lib\net40\Microsoft.AspNet.EntityDataSource.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\User\Downloads\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 14.0\ReportViewer\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Admission\Admin\AdminHome.aspx" />
+    <Content Include="Admission\Admin\BackupDb.aspx" />
+    <Content Include="Admission\Admin\CandidateFormSl.aspx" />
+    <Content Include="Admission\Admin\Country.aspx" />
+    <Content Include="Admission\Admin\District.aspx" />
+    <Content Include="Admission\Admin\Division.aspx" />
+    <Content Include="Admission\Admin\DocumentType.aspx" />
+    <Content Include="Admission\Admin\EducationBoard.aspx" />
+    <Content Include="Admission\Admin\EducationCategory.aspx" />
+    <Content Include="Admission\Admin\EncDec.aspx" />
+    <Content Include="Admission\Admin\ExamType.aspx" />
+    <Content Include="Admission\Admin\FosterStoreSetup.aspx" />
+    <Content Include="Admission\Admin\Institute.aspx" />
+    <Content Include="Admission\Admin\InstituteImageUpload.aspx" />
+    <Content Include="Admission\Admin\Key.aspx" />
+    <Content Include="Admission\Admin\KeyValue.aspx" />
+    <Content Include="Admission\Admin\MaintenanceSetup.aspx" />
+    <Content Include="Admission\Admin\Menu.aspx" />
+    <Content Include="Admission\Admin\Quota.aspx" />
+    <Content Include="Admission\Admin\StoreSetup.aspx" />
+    <Content Include="Admission\Admin\UndergradGradProgram.aspx" />
+    <Content Include="Admission\cancelurl.aspx" />
+    <Content Include="Admission\cancelurlfpg.aspx" />
+    <Content Include="Admission\Candidate\academicInfoAppForm.aspx" />
+    <Content Include="Admission\Candidate\ApplicationAdditional.aspx" />
+    <Content Include="Admission\Candidate\ApplicationAddress.aspx" />
+    <Content Include="Admission\Candidate\ApplicationAttachment.aspx" />
+    <Content Include="Admission\Candidate\ApplicationBasic.aspx" />
+    <Content Include="Admission\Candidate\FinalsubmitView.aspx" />
+    <Content Include="Admission\Candidate\foreignStudentApplicationDeclaration.aspx" />
+    <Content Include="Admission\Candidate\ApplicationDeclaration.aspx" />
+    <Content Include="Admission\Candidate\ApplicationEducation.aspx" />
+    <Content Include="Admission\Candidate\ApplicationPriority.aspx" />
+    <Content Include="Admission\Candidate\ApplicationPriorityS.aspx" />
+    <Content Include="Admission\Candidate\ApplicationRelation.aspx" />
+    <Content Include="Admission\Candidate\Declarationform.aspx" />
+    <Content Include="Admission\Candidate\editPreview.aspx" />
+    <Content Include="Admission\Candidate\finalsubmitPage.aspx" />
+    <Content Include="Admission\Candidate\ForeignCandidateHome.aspx" />
+    <Content Include="Admission\Candidate\foreignStudentInputInfo.aspx" />
+    <Content Include="Admission\Candidate\foreignStudentProgramSelection.aspx" />
+    <Content Include="Admission\Candidate\Listofdocument.aspx" />
+    <Content Include="Admission\Candidate\MassageAfterAdmissionClosed.aspx" />
+    <Content Include="Admission\Candidate\MultipleApplication.aspx" />
+    <Content Include="Admission\Candidate\PaymentInformation.aspx" />
+    <Content Include="Admission\Candidate\PersonalInfoAppForm.aspx" />
+    <Content Include="Admission\Candidate\previewForm.aspx" />
+    <Content Include="Admission\Candidate\Prints\AdmitCard.aspx" />
+    <Content Include="Admission\Candidate\Prints\AdmitCardV2.aspx" />
+    <Content Include="Admission\Candidate\PurchaseByBkash.aspx" />
+    <Content Include="Admission\Candidate\PurchaseForm.aspx" />
+    <Content Include="Admission\Candidate\PurchaseFormBachelor.aspx" />
+    <Content Include="Admission\Candidate\PurchaseFormV2.aspx" />
+    <Content Include="Admission\Candidate\PurchaseFormV3.aspx" />
+    <Content Include="Admission\Candidate\PurchaseNotification.aspx" />
+    <Content Include="Admission\Candidate\ReviewApplication.aspx" />
+    <Content Include="Admission\Candidate\Scripts\AdditionalInfoValidation.js" />
+    <Content Include="Admission\Candidate\Scripts\AddressValidation.js" />
+    <Content Include="Admission\Candidate\Scripts\BasicInfoValidation.js" />
+    <Content Include="Admission\Candidate\Scripts\EducationValidation.js" />
+    <Content Include="Admission\Candidate\Scripts\RelationInfoValidation.js" />
+    <Content Include="Admission\Candidate\Scripts\UploadImages.js" />
+    <Content Include="Admission\Candidate\SelectProgram.aspx" />
+    <Content Include="Admission\Candidate\SelectProgramDiploma.aspx" />
+    <Content Include="Admission\Candidate\SelectProgramPhd.aspx" />
+    <Content Include="Admission\Candidate\SelectProgramV2.aspx" />
+    <Content Include="Admission\Candidate\SelectProgramV3.aspx" />
+    <Content Include="Admission\Candidate\SelectProgramV4.aspx" />
+    <Content Include="Admission\Candidate\UnitInformation.aspx" />
+    <Content Include="Admission\Candidate\upDocumentv2.aspx" />
+    <Content Include="Admission\Candidate\UploadDocumentsv1.aspx" />
+    <Content Include="Admission\CertificateCandidate\CertificateApplicationAdditional.aspx" />
+    <Content Include="Admission\CertificateCandidate\CertificateApplicationAddress.aspx" />
+    <Content Include="Admission\CertificateCandidate\CertificateApplicationAttachment.aspx" />
+    <Content Include="Admission\CertificateCandidate\CertificateApplicationBasic.aspx" />
+    <Content Include="Admission\CertificateCandidate\CertificateApplicationEducation.aspx" />
+    <Content Include="Admission\CertificateCandidate\CertificateApplicationRelation.aspx" />
+    <Content Include="Admission\CertificateCandidate\CertificatePurchaseForm.aspx" />
+    <Content Include="Admission\CertificateCandidate\CertificatePurchaseNotification.aspx" />
+    <Content Include="Admission\CertificateCandidate\SelectCertificateProgram.aspx" />
+    <Content Include="Admission\EkPayCanceled.aspx" />
+    <Content Include="Admission\EkPayFailed.aspx" />
+    <Content Include="Admission\EkPayIPNListener.aspx" />
+    <Content Include="Admission\EkPaySuccess.aspx" />
+    <Content Include="Admission\failurl.aspx" />
+    <Content Include="Admission\failurlfpg.aspx" />
+    <Content Include="Admission\AdmssionCircular.aspx" />
+    <Content Include="Admission\FAQ.aspx" />
+    <Content Include="Admission\ForgotPassword.aspx" />
+    <Content Include="Admission\GeneralInstructions.aspx" />
+    <Content Include="Admission\HelpDesk\CheckPaymentFromGatewayHelpDesk.aspx" />
+    <Content Include="Admission\HelpDesk\DistrictSeatLimitSetup.aspx" />
+    <Content Include="Admission\HelpDesk\FormRequestHelpDesk.aspx" />
+    <Content Include="Admission\HelpDesk\HD_ApplicationAdditional.aspx" />
+    <Content Include="Admission\HelpDesk\HD_ApplicationAddress.aspx" />
+    <Content Include="Admission\HelpDesk\HD_ApplicationAttachment.aspx" />
+    <Content Include="Admission\HelpDesk\HD_ApplicationBasic.aspx" />
+    <Content Include="Admission\HelpDesk\HD_ApplicationEducation.aspx" />
+    <Content Include="Admission\HelpDesk\HD_ApplicationPriority.aspx" />
+    <Content Include="Admission\HelpDesk\HD_ApplicationRelation.aspx" />
+    <Content Include="Admission\HelpDesk\HD_PrintCandidateAdmitCard.aspx" />
+    <Content Include="Admission\HelpDesk\HD_UpdateBasicInfo.aspx" />
+    <Content Include="Admission\HelpDesk\ReceiveFormHelpDesk.aspx" />
+    <Content Include="Admission\HelpDesk\ResendSmsHelpDesk.aspx" />
+    <Content Include="Admission\HomeOld.aspx" />
+    <Content Include="Admission\HowToApply.aspx" />
+    <Content Include="Admission\IPNListener.aspx" />
+    <Content Include="Admission\ipnsuccessurl.aspx" />
+    <Content Include="Admission\Login.aspx" />
+    <Content Include="Admission\Message.aspx" />
+    <Content Include="Admission\NoticeAll.aspx" />
+    <Content Include="Admission\NoticeView.aspx" />
+    <Content Include="Admission\Office\AdmissionHSCSSCPercentageSetup.aspx" />
+    <Content Include="Admission\Office\AdmissionHSCSSCTotalMarkSetup.aspx" />
+    <Content Include="Admission\Office\AdmissionMeritListGeneration.aspx" />
+    <Content Include="Admission\Office\AdmissionPropertySetup.aspx" />
+    <Content Include="Admission\Office\AdmissionSetupOfDiplomaPrograms.aspx" />
+    <Content Include="Admission\Office\AdmissionSetupOfMPhilAndPhdPrograms.aspx" />
+    <Content Include="Admission\Office\AdmissionSetupOfOtherMSCPrograms.aspx" />
+    <Content Include="Admission\Office\AdmissionSscHscGpa.aspx" />
+    <Content Include="Admission\Office\AdmissionSSCHSCPassingYearSetup.aspx" />
+    <Content Include="Admission\Office\AdmissionStudentPriorityExcelUpload.aspx" />
+    <Content Include="Admission\Office\AdmissionTestMarkExcelUpload.aspx" />
+    <Content Include="Admission\Office\AdmissionUnitPrograms.aspx" />
+    <Content Include="Admission\Candidate\CandidateHome.aspx" />
+    <Content Include="Admission\Candidate\ProgramInformation.aspx" />
+    <Content Include="Admission\Home.aspx" />
+    <Content Include="Admission\Office\AdmissionSetup.aspx" />
+    <Content Include="Admission\Office\AdmissionUnit.aspx" />
+    <Content Include="Admission\Admin\BackupCandidateDocuments.aspx" />
+    <Content Include="Admission\Office\AdmitCardBulkDownload.aspx" />
+    <Content Include="Admission\Office\AdmitCardBulkGenerate.aspx" />
+    <Content Include="Admission\Office\ApproveCandidate.aspx" />
+    <Content Include="Admission\Office\ApproveCandidateGrad.aspx" />
+    <Content Include="Admission\Office\ApproveCandidateV2.aspx" />
+    <Content Include="Admission\Office\ApproveCandidateV3.aspx" />
+    <Content Include="Admission\Office\ApproveCandidateV4.aspx" />
+    <Content Include="Admission\Office\BuildingSetup.aspx" />
+    <Content Include="Admission\Office\BulkAdmitCardFileManager.aspx" />
+    <Content Include="Admission\Office\CampusSetup.aspx" />
+    <Content Include="Admission\Office\CandidateByPass\CandidateByPassPurchaseForm.aspx" />
+    <Content Include="Admission\Office\CandidateByPass\CandidateByPassPurchaseNotification.aspx" />
+    <Content Include="Admission\Office\CandidateByPass\CandidateByPassSelectProgram.aspx" />
+    <Content Include="Admission\Office\CandidateInformation.aspx" />
+    <Content Include="Admission\Office\CandidateInfo\CandApplicationAdditional.aspx" />
+    <Content Include="Admission\Office\CandidateInfo\CandApplicationAddress.aspx" />
+    <Content Include="Admission\Office\CandidateInfo\CandApplicationAttachment.aspx" />
+    <Content Include="Admission\Office\CandidateInfo\CandApplicationBasic.aspx" />
+    <Content Include="Admission\Office\CandidateInfo\CandApplicationDeclaration.aspx" />
+    <Content Include="Admission\Office\CandidateInfo\CandApplicationEducation.aspx" />
+    <Content Include="Admission\Office\CandidateInfo\CandApplicationPriority.aspx" />
+    <Content Include="Admission\Office\CandidateInfo\CandApplicationRelation.aspx" />
+    <Content Include="Admission\Office\CandidateLoginCredentials.aspx" />
+    <Content Include="Admission\Office\CandidateRoomChange.aspx" />
+    <Content Include="Admission\Office\CandidateTransaction.aspx" />
+    <Content Include="Admission\Office\DistrictForSeatPlanSetup.aspx" />
+    <Content Include="Admission\Office\DistrictSeatLimitSetup.aspx" />
+    <Content Include="Admission\Office\DistrictSeatLimitView.aspx" />
+    <Content Include="Admission\Office\EnrollCandidateV2.aspx" />
+    <Content Include="Admission\Office\FacultyWiseQuota.aspx" />
+    <Content Include="Admission\Office\FormRequestForeign.aspx" />
+    <Content Include="Admission\Office\FormRequest.aspx" />
+    <Content Include="Admission\Office\GeneralDataLog.aspx" />
+    <Content Include="Admission\Office\GeneralInstructionSetup.aspx" />
+    <Content Include="Admission\Office\GlobalAdmissionAppSetup.aspx" />
+    <Content Include="Admission\Office\HowToApplySetup.aspx" />
+    <Content Include="Admission\Office\ImageTransferFromAdmissionToUCAM.aspx" />
+    <Content Include="Admission\Office\ImageTransferManualAdmissionToFolder.aspx" />
+    <Content Include="Admission\Office\ImportantNotice.aspx" />
+    <Content Include="Admission\Office\MenuInRole.aspx" />
+    <Content Include="Admission\Office\Notice.aspx" />
+    <Content Include="Admission\Office\AdmitCardInstructionSetup.aspx" />
+    <Content Include="Admission\Office\NoticeForHomeImportant.aspx" />
+    <Content Include="Admission\Office\OfficeHome.aspx" />
+    <Content Include="Admission\Office\PostgraduateDiplomaFormRequest.aspx" />
+    <Content Include="Admission\Office\Prints\PrintMoneyReceipt.aspx" />
+    <Content Include="Admission\Office\Prints\PrintPurchaseReceipt.aspx" />
+    <Content Include="Admission\Office\ProgramandQoutaWiseSetup.aspx" />
+    <Content Include="Admission\Office\ProgramDetails.aspx" />
+    <Content Include="Admission\Office\ProgramWiseTotalSeatSetup.aspx" />
+    <Content Include="Admission\Office\ReceiveFormForeign.aspx" />
+    <Content Include="Admission\Office\ReceiveForm.aspx" />
+    <Content Include="Admission\Office\ReceiveFormCertificate.aspx" />
+    <Content Include="Admission\Office\Reports\BulkAdmitCardGenerate.aspx" />
+    <Content Include="Admission\Office\Reports\FacultyWiseQuotaCount.aspx" />
+    <Content Include="Admission\Office\Reports\PaymentCheckInterface.aspx" />
+    <Content Include="Admission\Office\Reports\RptAdmissionMeritList.aspx" />
+    <Content Include="Admission\Office\Reports\RPTAdmissionSeatToken.aspx" />
+    <Content Include="Admission\Office\Reports\RPTApprovedCandidatesWithTestRoll.aspx" />
+    <Content Include="Admission\Office\Reports\RPTAttendanceReport.aspx" />
+    <Content Include="Admission\Office\Reports\RPTAttendanceRoomWise.aspx" />
+    <Content Include="Admission\Office\Reports\RPTAttendanceRoomWiseV2.aspx" />
+    <Content Include="Admission\Office\Reports\RPTCampusWiseSeatPlan.aspx" />
+    <Content Include="Admission\Office\Reports\RPTCampusWiseSeatPlanAllCampus.aspx" />
+    <Content Include="Admission\Office\Reports\RptCandidateInfoSelParam.aspx" />
+    <Content Include="Admission\Office\Reports\RPTDetailsForVivaGraduate.aspx" />
+    <Content Include="Admission\Office\Reports\RPTDetailsForVivaUndergraduate.aspx" />
+    <Content Include="Admission\Office\Reports\RPTEligibilityList.aspx" />
+    <Content Include="Admission\Office\Reports\RPTEligibleRollNumber.aspx" />
+    <Content Include="Admission\Office\Reports\RPTPaidandFinalSumbitReport.aspx" />
+    <Content Include="Admission\Office\Reports\RPTPrintCandidateAdmitCard.aspx" />
+    <Content Include="Admission\Office\Reports\RPTQuotaReport.aspx" />
+    <Content Include="Admission\Office\Reports\RPTQuotaReportDetails.aspx" />
+    <Content Include="Admission\Office\Reports\RPTRoomWiseTestRollSheet.aspx" />
+    <Content Include="Admission\Office\Reports\RPTRoomWiseTestRollSheet.rdlc" />
+    <Content Include="Admission\Office\Reports\RPTRoomWiseTestRollSheet_HtmlReport.aspx" />
+    <Content Include="Admission\Office\Reports\RPTStatusReport.aspx" />
+    <Content Include="Admission\Office\Reports\RPTStatusReportFinalSubmit.aspx" />
+    <Content Include="Admission\Office\Reports\RPTTeleTalkBoardResult.aspx" />
+    <Content Include="Admission\Office\Reports\PaymentUpdateV2.aspx" />
+    <Content Include="Admission\Office\ResendSms.aspx" />
+    <Content Include="Admission\Office\Role.aspx" />
+    <Content Include="Admission\Office\RoomSetup.aspx" />
+    <Content Include="Admission\Office\SeatPlanDelete.aspx" />
+    <Content Include="Admission\Office\SeatPlanGeneration.aspx" />
+    <Content Include="Admission\Office\SSCHSCBasicInfoDataUpdate.aspx" />
+    <Content Include="Admission\Office\SSCHSCVarification.aspx" />
+    <Content Include="Admission\Office\TestRollDelete.aspx" />
+    <Content Include="Admission\Office\TestRollGeneration.aspx" />
+    <Content Include="Admission\Office\TransactionHistoryBkash.aspx" />
+    <Content Include="Admission\Office\TransactionsHistory.aspx" />
+    <Content Include="Admission\Office\UnitProgramSetup.aspx" />
+    <Content Include="Admission\Office\UnitWiseBuildingSetup.aspx" />
+    <Content Include="Admission\Office\UnitWiseCampusSetup.aspx" />
+    <Content Include="Admission\Office\UnitWiseDistrictSetup.aspx" />
+    <Content Include="Admission\Office\UnitWiseRoomSetup.aspx" />
+    <Content Include="Admission\Office\User.aspx" />
+    <Content Include="Admission\Office\UserAccessProgram.aspx" />
+    <Content Include="Admission\Office\UserAccessSchool.aspx" />
+    <Content Include="Admission\Office\UserPasswordChange.aspx" />
+    <Content Include="Admission\Office\VivaInfoForSelectedCandidate.aspx" />
+    <Content Include="Admission\PostgraduateDiploma\PDCandidateInfo\CandApplicationAdditional.aspx" />
+    <Content Include="Admission\PostgraduateDiploma\PDCandidateInfo\CandApplicationAddress.aspx" />
+    <Content Include="Admission\PostgraduateDiploma\PDCandidateInfo\CandApplicationAttachment.aspx" />
+    <Content Include="Admission\PostgraduateDiploma\PDCandidateInfo\CandApplicationBasic.aspx" />
+    <Content Include="Admission\PostgraduateDiploma\PDCandidateInfo\CandApplicationEducation.aspx" />
+    <Content Include="Admission\PostgraduateDiploma\PDCandidateInfo\CandApplicationRelation.aspx" />
+    <Content Include="Admission\PostgraduateDiploma\PostgraduateDiplomaApplicationAdditional.aspx" />
+    <Content Include="Admission\PostgraduateDiploma\PostgraduateDiplomaApplicationAddress.aspx" />
+    <Content Include="Admission\PostgraduateDiploma\PostgraduateDiplomaApplicationAttachment.aspx" />
+    <Content Include="Admission\PostgraduateDiploma\PostgraduateDiplomaApplicationBasic.aspx" />
+    <Content Include="Admission\PostgraduateDiploma\PostgraduateDiplomaApplicationEducation.aspx" />
+    <Content Include="Admission\PostgraduateDiploma\PostgraduateDiplomaApplicationRelation.aspx" />
+    <Content Include="Admission\PostgraduateDiploma\PostgraduateDiplomaPurchaseForm.aspx" />
+    <Content Include="Admission\PostgraduateDiploma\PostgraduateDiplomaPurchaseNotification.aspx" />
+    <Content Include="Admission\PostgraduateDiploma\Report\RPTPostgraduateDiplomaPaidCandidateList.aspx" />
+    <Content Include="Admission\PostgraduateDiploma\SelectPostgraduateDiplomaProgram.aspx" />
+    <Content Include="Admission\SiteUnderMaintenance.aspx" />
+    <Content Include="Admission\SpecialNotice.aspx" />
+    <Content Include="Admission\successurl.aspx" />
+    <Content Include="Admission\successurlfpg.aspx" />
+    <Content Include="Admission\successurlfpgCertificate.aspx" />
+    <Content Include="Admission\successurlRocket.aspx" />
+    <Content Include="Admission\testFpg.aspx" />
+    <Content Include="Admission\TestPage.aspx" />
+    <Content Include="Admission\VerifyPayment.aspx" />
+    <Content Include="ApplicationDocs\AdmitCardImages\AdmitCardBanner-2.jpg" />
+    <Content Include="ApplicationDocs\AdmitCardImages\bupMonoJpg-2Black.jpg" />
+    <Content Include="ApplicationDocs\HowToPayByBkash.PNG" />
+    <Content Include="ApplicationDocs\Institute\BUP_banner.jpg" />
+    <Content Include="ApplicationDocs\Institute\BUP_Logo.png" />
+    <Content Include="ApplicationDocs\TEMP\temp.txt" />
+    <Content Include="Bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Bootstrap\css\bootstrap.css" />
+    <Content Include="Bootstrap\css\bootstrap.min.css" />
+    <Content Include="Bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Bootstrap\js\bootstrap.js" />
+    <Content Include="Bootstrap\js\bootstrap.min.js" />
+    <Content Include="Bootstrap\js\jquery.min.js" />
+    <Content Include="Bootstrap\js\npm.js" />
+    <Content Include="Bootstrap\js\popper.min.js" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\ApplicationForm.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\CKEditor\adapters\jquery.js" />
+    <Content Include="Content\CKEditor\build-config.js" />
+    <Content Include="Content\CKEditor\ckeditor.js" />
+    <Content Include="Content\CKEditor\config.js" />
+    <Content Include="Content\CKEditor\contents.css" />
+    <Content Include="Content\CKEditor\lang\af.js" />
+    <Content Include="Content\CKEditor\lang\ar.js" />
+    <Content Include="Content\CKEditor\lang\az.js" />
+    <Content Include="Content\CKEditor\lang\bg.js" />
+    <Content Include="Content\CKEditor\lang\bn.js" />
+    <Content Include="Content\CKEditor\lang\bs.js" />
+    <Content Include="Content\CKEditor\lang\ca.js" />
+    <Content Include="Content\CKEditor\lang\cs.js" />
+    <Content Include="Content\CKEditor\lang\cy.js" />
+    <Content Include="Content\CKEditor\lang\da.js" />
+    <Content Include="Content\CKEditor\lang\de-ch.js" />
+    <Content Include="Content\CKEditor\lang\de.js" />
+    <Content Include="Content\CKEditor\lang\el.js" />
+    <Content Include="Content\CKEditor\lang\en-au.js" />
+    <Content Include="Content\CKEditor\lang\en-ca.js" />
+    <Content Include="Content\CKEditor\lang\en-gb.js" />
+    <Content Include="Content\CKEditor\lang\en.js" />
+    <Content Include="Content\CKEditor\lang\eo.js" />
+    <Content Include="Content\CKEditor\lang\es-mx.js" />
+    <Content Include="Content\CKEditor\lang\es.js" />
+    <Content Include="Content\CKEditor\lang\et.js" />
+    <Content Include="Content\CKEditor\lang\eu.js" />
+    <Content Include="Content\CKEditor\lang\fa.js" />
+    <Content Include="Content\CKEditor\lang\fi.js" />
+    <Content Include="Content\CKEditor\lang\fo.js" />
+    <Content Include="Content\CKEditor\lang\fr-ca.js" />
+    <Content Include="Content\CKEditor\lang\fr.js" />
+    <Content Include="Content\CKEditor\lang\gl.js" />
+    <Content Include="Content\CKEditor\lang\gu.js" />
+    <Content Include="Content\CKEditor\lang\he.js" />
+    <Content Include="Content\CKEditor\lang\hi.js" />
+    <Content Include="Content\CKEditor\lang\hr.js" />
+    <Content Include="Content\CKEditor\lang\hu.js" />
+    <Content Include="Content\CKEditor\lang\id.js" />
+    <Content Include="Content\CKEditor\lang\is.js" />
+    <Content Include="Content\CKEditor\lang\it.js" />
+    <Content Include="Content\CKEditor\lang\ja.js" />
+    <Content Include="Content\CKEditor\lang\ka.js" />
+    <Content Include="Content\CKEditor\lang\km.js" />
+    <Content Include="Content\CKEditor\lang\ko.js" />
+    <Content Include="Content\CKEditor\lang\ku.js" />
+    <Content Include="Content\CKEditor\lang\lt.js" />
+    <Content Include="Content\CKEditor\lang\lv.js" />
+    <Content Include="Content\CKEditor\lang\mk.js" />
+    <Content Include="Content\CKEditor\lang\mn.js" />
+    <Content Include="Content\CKEditor\lang\ms.js" />
+    <Content Include="Content\CKEditor\lang\nb.js" />
+    <Content Include="Content\CKEditor\lang\nl.js" />
+    <Content Include="Content\CKEditor\lang\no.js" />
+    <Content Include="Content\CKEditor\lang\oc.js" />
+    <Content Include="Content\CKEditor\lang\pl.js" />
+    <Content Include="Content\CKEditor\lang\pt-br.js" />
+    <Content Include="Content\CKEditor\lang\pt.js" />
+    <Content Include="Content\CKEditor\lang\ro.js" />
+    <Content Include="Content\CKEditor\lang\ru.js" />
+    <Content Include="Content\CKEditor\lang\si.js" />
+    <Content Include="Content\CKEditor\lang\sk.js" />
+    <Content Include="Content\CKEditor\lang\sl.js" />
+    <Content Include="Content\CKEditor\lang\sq.js" />
+    <Content Include="Content\CKEditor\lang\sr-latn.js" />
+    <Content Include="Content\CKEditor\lang\sr.js" />
+    <Content Include="Content\CKEditor\lang\sv.js" />
+    <Content Include="Content\CKEditor\lang\th.js" />
+    <Content Include="Content\CKEditor\lang\tr.js" />
+    <Content Include="Content\CKEditor\lang\tt.js" />
+    <Content Include="Content\CKEditor\lang\ug.js" />
+    <Content Include="Content\CKEditor\lang\uk.js" />
+    <Content Include="Content\CKEditor\lang\vi.js" />
+    <Content Include="Content\CKEditor\lang\zh-cn.js" />
+    <Content Include="Content\CKEditor\lang\zh.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\af.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\ar.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\az.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\bg.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\ca.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\cs.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\cy.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\da.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\de-ch.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\de.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\el.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\en-au.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\en-gb.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\en.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\eo.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\es-mx.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\es.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\et.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\eu.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\fa.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\fi.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\fo.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\fr-ca.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\fr.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\gl.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\gu.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\he.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\hi.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\hr.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\hu.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\id.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\it.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\ja.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\km.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\ko.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\ku.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\lt.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\lv.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\mk.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\mn.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\nb.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\nl.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\no.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\oc.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\pl.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\pt-br.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\pt.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\ro.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\ru.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\si.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\sk.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\sl.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\sq.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\sr-latn.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\sr.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\sv.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\th.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\tr.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\tt.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\ug.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\uk.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\vi.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\zh-cn.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\zh.js" />
+    <Content Include="Content\CKEditor\plugins\a11yhelp\dialogs\lang\_translationstatus.txt" />
+    <Content Include="Content\CKEditor\plugins\about\dialogs\about.js" />
+    <Content Include="Content\CKEditor\plugins\about\dialogs\hidpi\logo_ckeditor.png" />
+    <Content Include="Content\CKEditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="Content\CKEditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="Content\CKEditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="Content\CKEditor\plugins\dialog\styles\dialog.css" />
+    <Content Include="Content\CKEditor\plugins\icons.png" />
+    <Content Include="Content\CKEditor\plugins\icons_hidpi.png" />
+    <Content Include="Content\CKEditor\plugins\image\dialogs\image.js" />
+    <Content Include="Content\CKEditor\plugins\image\images\noimage.png" />
+    <Content Include="Content\CKEditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="Content\CKEditor\plugins\link\dialogs\link.js" />
+    <Content Include="Content\CKEditor\plugins\link\images\anchor.png" />
+    <Content Include="Content\CKEditor\plugins\link\images\hidpi\anchor.png" />
+    <Content Include="Content\CKEditor\plugins\magicline\images\hidpi\icon-rtl.png" />
+    <Content Include="Content\CKEditor\plugins\magicline\images\hidpi\icon.png" />
+    <Content Include="Content\CKEditor\plugins\magicline\images\icon-rtl.png" />
+    <Content Include="Content\CKEditor\plugins\magicline\images\icon.png" />
+    <Content Include="Content\CKEditor\plugins\pastefromgdocs\filter\default.js" />
+    <Content Include="Content\CKEditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="Content\CKEditor\plugins\pastetools\filter\common.js" />
+    <Content Include="Content\CKEditor\plugins\pastetools\filter\image.js" />
+    <Content Include="Content\CKEditor\plugins\scayt\dialogs\dialog.css" />
+    <Content Include="Content\CKEditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="Content\CKEditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="Content\CKEditor\plugins\scayt\skins\moono-lisa\scayt.css" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\af.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\ar.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\az.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\bg.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\ca.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\cs.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\cy.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\da.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\de-ch.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\de.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\el.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\en-au.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\en-ca.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\en-gb.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\en.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\eo.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\es-mx.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\es.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\et.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\eu.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\fa.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\fi.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\fr-ca.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\fr.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\gl.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\he.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\hr.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\hu.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\id.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\it.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\ja.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\km.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\ko.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\ku.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\lt.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\lv.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\nb.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\nl.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\no.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\oc.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\pl.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\pt-br.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\pt.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\ro.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\ru.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\si.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\sk.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\sl.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\sq.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\sr-latn.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\sr.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\sv.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\th.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\tr.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\tt.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\ug.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\uk.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\vi.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\zh-cn.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\zh.js" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\lang\_translationstatus.txt" />
+    <Content Include="Content\CKEditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="Content\CKEditor\plugins\tableselection\styles\tableselection.css" />
+    <Content Include="Content\CKEditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="Content\CKEditor\plugins\table\dialogs\table.js" />
+    <Content Include="Content\CKEditor\plugins\widget\images\handle.png" />
+    <Content Include="Content\CKEditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="Content\CKEditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="Content\CKEditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="Content\CKEditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="Content\CKEditor\plugins\wsc\dialogs\wsc_ie.js" />
+    <Content Include="Content\CKEditor\plugins\wsc\skins\moono-lisa\wsc.css" />
+    <Content Include="Content\CKEditor\skins\moono-lisa\dialog.css" />
+    <Content Include="Content\CKEditor\skins\moono-lisa\dialog_ie.css" />
+    <Content Include="Content\CKEditor\skins\moono-lisa\dialog_ie8.css" />
+    <Content Include="Content\CKEditor\skins\moono-lisa\dialog_iequirks.css" />
+    <Content Include="Content\CKEditor\skins\moono-lisa\editor.css" />
+    <Content Include="Content\CKEditor\skins\moono-lisa\editor_gecko.css" />
+    <Content Include="Content\CKEditor\skins\moono-lisa\editor_ie.css" />
+    <Content Include="Content\CKEditor\skins\moono-lisa\editor_ie8.css" />
+    <Content Include="Content\CKEditor\skins\moono-lisa\editor_iequirks.css" />
+    <Content Include="Content\CKEditor\skins\moono-lisa\icons.png" />
+    <Content Include="Content\CKEditor\skins\moono-lisa\icons_hidpi.png" />
+    <Content Include="Content\CKEditor\skins\moono-lisa\images\arrow.png" />
+    <Content Include="Content\CKEditor\skins\moono-lisa\images\close.png" />
+    <Content Include="Content\CKEditor\skins\moono-lisa\images\hidpi\close.png" />
+    <Content Include="Content\CKEditor\skins\moono-lisa\images\hidpi\lock-open.png" />
+    <Content Include="Content\CKEditor\skins\moono-lisa\images\hidpi\lock.png" />
+    <Content Include="Content\CKEditor\skins\moono-lisa\images\hidpi\refresh.png" />
+    <Content Include="Content\CKEditor\skins\moono-lisa\images\lock-open.png" />
+    <Content Include="Content\CKEditor\skins\moono-lisa\images\lock.png" />
+    <Content Include="Content\CKEditor\skins\moono-lisa\images\refresh.png" />
+    <Content Include="Content\CKEditor\skins\moono-lisa\images\spinner.gif" />
+    <Content Include="Content\CKEditor\styles.js" />
+    <Content Include="Content\CKEditor\vendor\promise.js" />
+    <Content Include="Content\formStyle.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\steper.css" />
+    <Content Include="Content\Template\bootstrap-icons\bootstrap-icons.css" />
+    <Content Include="Content\Template\bootstrap-icons\index.html" />
+    <Content Include="Content\Template\css\style.css" />
+    <Content Include="Content\Template\img\hero-bg.jpg" />
+    <Content Include="Docs\AdmissionForm\temp.txt" />
+    <Content Include="Docs\WebAdd\temp.txt" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Images\AdmitCardRegisterSignature\RegisterSign19032023.jpeg" />
+    <Content Include="Images\AdmitCardRegisterSignature\registrarsignature.jpg" />
+    <Content Include="Images\AdmitCardRegisterSignature\Regitrar-Sign-1.jpg" />
+    <Content Include="Images\AppImg\ekpay.png" />
+    <Content Include="Images\AppImg\Instruction.jpg" />
+    <Content Include="Images\AppImg\InstructionF.png" />
+    <Content Include="Images\AppImg\sslcommerz.png" />
+    <Content Include="Images\Favicon\favicon.ico" />
+    <Content Include="Images\Favicon\favicon.png" />
+    <Content Include="package.json" />
+    <Content Include="ApplicationOfflineData\maintainNotice.json" />
+    <Content Include="ApplicationOfflineData\importantNotice.json" />
+    <Content Include="Bootstrap\css\bootstrap.css.map" />
+    <Content Include="Bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Bootstrap\js\bootstrap.js.map" />
+    <Content Include="Bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Content\Template\bootstrap-icons\bootstrap-icons.json" />
+    <Content Include="Content\Template\bootstrap-icons\fonts\bootstrap-icons.woff" />
+    <Content Include="Content\Template\bootstrap-icons\fonts\bootstrap-icons.woff2" />
+    <Content Include="Content\CKEditor\plugins\scayt\CHANGELOG.md" />
+    <Content Include="Content\CKEditor\plugins\scayt\LICENSE.md" />
+    <Content Include="Content\CKEditor\plugins\scayt\README.md" />
+    <Content Include="Content\CKEditor\plugins\wsc\LICENSE.md" />
+    <Content Include="Content\CKEditor\plugins\wsc\README.md" />
+    <Content Include="Content\CKEditor\skins\moono-lisa\readme.md" />
+    <Content Include="ConnectionString.config" />
+    <Content Include="ApplicationDocs\AdmissionTestResultNotice.pdf" />
+    <Content Include="Admission\Office\Reports\RPTQuotaReport.rdlc" />
+    <Content Include="ApplicationDocs\exam_center.pdf" />
+    <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Images\AppImg\img1.png" />
+    <Content Include="Images\AppImg\oscar_data_loop__1_.gif" />
+    <Content Include="Images\AppImg\reload6.png" />
+    <Content Include="Images\AppImg\sign2.png" />
+    <Content Include="Images\AppImg\t1.gif" />
+    <Content Include="Images\AppImg\t2.gif" />
+    <Content Include="Images\AppImg\user7.jpg" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Custom\fadeIn.js" />
+    <Content Include="Scripts\Custom\Key\key_formValidation.js" />
+    <Content Include="Scripts\jquery-3.1.1.js" />
+    <Content Include="Scripts\jquery-3.1.1.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\tinymce\jquery.tinymce.min.js" />
+    <Content Include="Scripts\tinymce\license.txt" />
+    <Content Include="Scripts\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\bbcode\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\codesample\css\prism.css" />
+    <Content Include="Scripts\tinymce\plugins\codesample\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\colorpicker\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\contextmenu\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-cool.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-cry.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-embarassed.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-foot-in-mouth.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-frown.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-innocent.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-kiss.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-laughing.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-money-mouth.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-sealed.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-smile.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-surprised.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-tongue-out.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-undecided.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-wink.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-yell.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\fullpage\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\help\img\logo.png" />
+    <Content Include="Scripts\tinymce\plugins\help\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\hr\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\imagetools\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\importcss\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\legacyoutput\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\noneditable\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\paste\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\print\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\spellchecker\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\tabfocus\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\template\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\textcolor\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\textpattern\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\toc\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="Scripts\tinymce\skins\lightgray\content.inline.min.css" />
+    <Content Include="Scripts\tinymce\skins\lightgray\content.min.css" />
+    <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce-small.svg" />
+    <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce.svg" />
+    <Content Include="Scripts\tinymce\skins\lightgray\img\anchor.gif" />
+    <Content Include="Scripts\tinymce\skins\lightgray\img\loader.gif" />
+    <Content Include="Scripts\tinymce\skins\lightgray\img\object.gif" />
+    <Content Include="Scripts\tinymce\skins\lightgray\img\trans.gif" />
+    <Content Include="Scripts\tinymce\skins\lightgray\skin.min.css" />
+    <Content Include="Scripts\tinymce\themes\inlite\theme.min.js" />
+    <Content Include="Scripts\tinymce\themes\modern\theme.min.js" />
+    <Content Include="Scripts\tinymce\tinymce.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Site.Master" />
+    <Content Include="Temp2.aspx" />
+    <Content Include="TempAdmin.aspx" />
+    <Content Include="Toastr\jquery.min.js" />
+    <Content Include="Toastr\toastr.css" />
+    <Content Include="Upload\Candidate\Others\test.txt" />
+    <Content Include="Upload\Candidate\Photo\C-Ph1-1.jpg" />
+    <Content Include="Upload\Candidate\QuotaDoc\test.txt" />
+    <Content Include="Upload\Candidate\Signature\C-Sn1-1.jpg" />
+    <Content Include="Upload\Candidate\TEMP\Download\C-Sn1-1.jpg" />
+    <Content Include="Upload\Candidate\TEMP\Others\Test.txt" />
+    <Content Include="Upload\Candidate\TEMP\Photo\C-Ph1-1.jpg" />
+    <Content Include="Upload\Candidate\TEMP\Signature\C-Sn1-1.jpg" />
+    <Content Include="Upload\TempAdmitCardDownload\AdminDownload\temp.txt" />
+    <Content Include="Upload\TempAdmitCardDownload\TextFile1.txt" />
+    <Content Include="Upload\TEMP\TextFile1.txt" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Bundle.config" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Service References\Application Insights\ConnectedService.json" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.1.1.min.map" />
+    <Content Include="SiteAdmin.Master" />
+    <Content Include="Scripts\tinymce\langs\readme.md" />
+    <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce-small.eot" />
+    <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce-small.ttf" />
+    <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce-small.woff" />
+    <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce.eot" />
+    <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce.ttf" />
+    <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce.woff" />
+    <Content Include="SiteV2.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admission\Admin\AdminHome.aspx.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Admin\AdminHome.aspx.designer.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Admin\BackupDb.aspx.cs">
+      <DependentUpon>BackupDb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Admin\BackupDb.aspx.designer.cs">
+      <DependentUpon>BackupDb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Admin\CandidateFormSl.aspx.cs">
+      <DependentUpon>CandidateFormSl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Admin\CandidateFormSl.aspx.designer.cs">
+      <DependentUpon>CandidateFormSl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Admin\Country.aspx.cs">
+      <DependentUpon>Country.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Admin\Country.aspx.designer.cs">
+      <DependentUpon>Country.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Admin\District.aspx.cs">
+      <DependentUpon>District.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Admin\District.aspx.designer.cs">
+      <DependentUpon>District.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Admin\Division.aspx.cs">
+      <DependentUpon>Division.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Admin\Division.aspx.designer.cs">
+      <DependentUpon>Division.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Admin\DocumentType.aspx.cs">
+      <DependentUpon>DocumentType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Admin\DocumentType.aspx.designer.cs">
+      <DependentUpon>DocumentType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Admin\EducationBoard.aspx.cs">
+      <DependentUpon>EducationBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Admin\EducationBoard.aspx.designer.cs">
+      <DependentUpon>EducationBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Admin\EducationCategory.aspx.cs">
+      <DependentUpon>EducationCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Admin\EducationCategory.aspx.designer.cs">
+      <DependentUpon>EducationCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Admin\EncDec.aspx.cs">
+      <DependentUpon>EncDec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Admin\EncDec.aspx.designer.cs">
+      <DependentUpon>EncDec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Admin\ExamType.aspx.cs">
+      <DependentUpon>ExamType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Admin\ExamType.aspx.designer.cs">
+      <DependentUpon>ExamType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Admin\FosterStoreSetup.aspx.cs">
+      <DependentUpon>FosterStoreSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Admin\FosterStoreSetup.aspx.designer.cs">
+      <DependentUpon>FosterStoreSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Admin\Institute.aspx.cs">
+      <DependentUpon>Institute.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Admin\Institute.aspx.designer.cs">
+      <DependentUpon>Institute.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Admin\InstituteImageUpload.aspx.cs">
+      <DependentUpon>InstituteImageUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Admin\InstituteImageUpload.aspx.designer.cs">
+      <DependentUpon>InstituteImageUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Admin\Key.aspx.cs">
+      <DependentUpon>Key.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Admin\Key.aspx.designer.cs">
+      <DependentUpon>Key.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Admin\KeyValue.aspx.cs">
+      <DependentUpon>KeyValue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Admin\KeyValue.aspx.designer.cs">
+      <DependentUpon>KeyValue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Admin\MaintenanceSetup.aspx.cs">
+      <DependentUpon>MaintenanceSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Admin\MaintenanceSetup.aspx.designer.cs">
+      <DependentUpon>MaintenanceSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Admin\Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Admin\Menu.aspx.designer.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Admin\Quota.aspx.cs">
+      <DependentUpon>Quota.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Admin\Quota.aspx.designer.cs">
+      <DependentUpon>Quota.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Admin\StoreSetup.aspx.cs">
+      <DependentUpon>StoreSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Admin\StoreSetup.aspx.designer.cs">
+      <DependentUpon>StoreSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Admin\UndergradGradProgram.aspx.cs">
+      <DependentUpon>UndergradGradProgram.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Admin\UndergradGradProgram.aspx.designer.cs">
+      <DependentUpon>UndergradGradProgram.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\cancelurl.aspx.cs">
+      <DependentUpon>cancelurl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\cancelurl.aspx.designer.cs">
+      <DependentUpon>cancelurl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\cancelurlfpg.aspx.cs">
+      <DependentUpon>cancelurlfpg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\cancelurlfpg.aspx.designer.cs">
+      <DependentUpon>cancelurlfpg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\academicInfoAppForm.aspx.cs">
+      <DependentUpon>academicInfoAppForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\academicInfoAppForm.aspx.designer.cs">
+      <DependentUpon>academicInfoAppForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\ApplicationAdditional.aspx.cs">
+      <DependentUpon>ApplicationAdditional.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\ApplicationAdditional.aspx.designer.cs">
+      <DependentUpon>ApplicationAdditional.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\ApplicationAddress.aspx.cs">
+      <DependentUpon>ApplicationAddress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\ApplicationAddress.aspx.designer.cs">
+      <DependentUpon>ApplicationAddress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\ApplicationAttachment.aspx.cs">
+      <DependentUpon>ApplicationAttachment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\ApplicationAttachment.aspx.designer.cs">
+      <DependentUpon>ApplicationAttachment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\ApplicationBasic.aspx.cs">
+      <DependentUpon>ApplicationBasic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\ApplicationBasic.aspx.designer.cs">
+      <DependentUpon>ApplicationBasic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\FinalsubmitView.aspx.cs">
+      <DependentUpon>FinalsubmitView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\FinalsubmitView.aspx.designer.cs">
+      <DependentUpon>FinalsubmitView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\foreignStudentApplicationDeclaration.aspx.cs">
+      <DependentUpon>foreignStudentApplicationDeclaration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\foreignStudentApplicationDeclaration.aspx.designer.cs">
+      <DependentUpon>foreignStudentApplicationDeclaration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\ApplicationDeclaration.aspx.cs">
+      <DependentUpon>ApplicationDeclaration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\ApplicationDeclaration.aspx.designer.cs">
+      <DependentUpon>ApplicationDeclaration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\ApplicationEducation.aspx.cs">
+      <DependentUpon>ApplicationEducation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\ApplicationEducation.aspx.designer.cs">
+      <DependentUpon>ApplicationEducation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\ApplicationPriority.aspx.cs">
+      <DependentUpon>ApplicationPriority.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\ApplicationPriority.aspx.designer.cs">
+      <DependentUpon>ApplicationPriority.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\ApplicationPriorityS.aspx.cs">
+      <DependentUpon>ApplicationPriorityS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\ApplicationPriorityS.aspx.designer.cs">
+      <DependentUpon>ApplicationPriorityS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\ApplicationRelation.aspx.cs">
+      <DependentUpon>ApplicationRelation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\ApplicationRelation.aspx.designer.cs">
+      <DependentUpon>ApplicationRelation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\Declarationform.aspx.cs">
+      <DependentUpon>Declarationform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\Declarationform.aspx.designer.cs">
+      <DependentUpon>Declarationform.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\editPreview.aspx.cs">
+      <DependentUpon>editPreview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\editPreview.aspx.designer.cs">
+      <DependentUpon>editPreview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\finalsubmitPage.aspx.cs">
+      <DependentUpon>finalsubmitPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\finalsubmitPage.aspx.designer.cs">
+      <DependentUpon>finalsubmitPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\ForeignCandidateHome.aspx.cs">
+      <DependentUpon>ForeignCandidateHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\ForeignCandidateHome.aspx.designer.cs">
+      <DependentUpon>ForeignCandidateHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\foreignStudentInputInfo.aspx.cs">
+      <DependentUpon>foreignStudentInputInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\foreignStudentInputInfo.aspx.designer.cs">
+      <DependentUpon>foreignStudentInputInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\foreignStudentProgramSelection.aspx.cs">
+      <DependentUpon>foreignStudentProgramSelection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\foreignStudentProgramSelection.aspx.designer.cs">
+      <DependentUpon>foreignStudentProgramSelection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\Listofdocument.aspx.cs">
+      <DependentUpon>Listofdocument.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\Listofdocument.aspx.designer.cs">
+      <DependentUpon>Listofdocument.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\MassageAfterAdmissionClosed.aspx.cs">
+      <DependentUpon>MassageAfterAdmissionClosed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\MassageAfterAdmissionClosed.aspx.designer.cs">
+      <DependentUpon>MassageAfterAdmissionClosed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\MultipleApplication.aspx.cs">
+      <DependentUpon>MultipleApplication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\MultipleApplication.aspx.designer.cs">
+      <DependentUpon>MultipleApplication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\PaymentInformation.aspx.cs">
+      <DependentUpon>PaymentInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\PaymentInformation.aspx.designer.cs">
+      <DependentUpon>PaymentInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\PersonalInfoAppForm.aspx.cs">
+      <DependentUpon>PersonalInfoAppForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\PersonalInfoAppForm.aspx.designer.cs">
+      <DependentUpon>PersonalInfoAppForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\previewForm.aspx.cs">
+      <DependentUpon>previewForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\previewForm.aspx.designer.cs">
+      <DependentUpon>previewForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\Prints\AdmitCard.aspx.cs">
+      <DependentUpon>AdmitCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\Prints\AdmitCard.aspx.designer.cs">
+      <DependentUpon>AdmitCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\Prints\AdmitCardV2.aspx.cs">
+      <DependentUpon>AdmitCardV2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\Prints\AdmitCardV2.aspx.designer.cs">
+      <DependentUpon>AdmitCardV2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\PurchaseByBkash.aspx.cs">
+      <DependentUpon>PurchaseByBkash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\PurchaseByBkash.aspx.designer.cs">
+      <DependentUpon>PurchaseByBkash.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\PurchaseForm.aspx.cs">
+      <DependentUpon>PurchaseForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\PurchaseForm.aspx.designer.cs">
+      <DependentUpon>PurchaseForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\PurchaseFormBachelor.aspx.cs">
+      <DependentUpon>PurchaseFormBachelor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\PurchaseFormBachelor.aspx.designer.cs">
+      <DependentUpon>PurchaseFormBachelor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\PurchaseFormV2.aspx.cs">
+      <DependentUpon>PurchaseFormV2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\PurchaseFormV2.aspx.designer.cs">
+      <DependentUpon>PurchaseFormV2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\PurchaseFormV3.aspx.cs">
+      <DependentUpon>PurchaseFormV3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\PurchaseFormV3.aspx.designer.cs">
+      <DependentUpon>PurchaseFormV3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\PurchaseNotification.aspx.cs">
+      <DependentUpon>PurchaseNotification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\PurchaseNotification.aspx.designer.cs">
+      <DependentUpon>PurchaseNotification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\ReviewApplication.aspx.cs">
+      <DependentUpon>ReviewApplication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\ReviewApplication.aspx.designer.cs">
+      <DependentUpon>ReviewApplication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\SelectProgram.aspx.cs">
+      <DependentUpon>SelectProgram.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\SelectProgram.aspx.designer.cs">
+      <DependentUpon>SelectProgram.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\SelectProgramDiploma.aspx.cs">
+      <DependentUpon>SelectProgramDiploma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\SelectProgramDiploma.aspx.designer.cs">
+      <DependentUpon>SelectProgramDiploma.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\SelectProgramPhd.aspx.cs">
+      <DependentUpon>SelectProgramPhd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\SelectProgramPhd.aspx.designer.cs">
+      <DependentUpon>SelectProgramPhd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\SelectProgramV2.aspx.cs">
+      <DependentUpon>SelectProgramV2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\SelectProgramV2.aspx.designer.cs">
+      <DependentUpon>SelectProgramV2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\SelectProgramV3.aspx.cs">
+      <DependentUpon>SelectProgramV3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\SelectProgramV3.aspx.designer.cs">
+      <DependentUpon>SelectProgramV3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\SelectProgramV4.aspx.cs">
+      <DependentUpon>SelectProgramV4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\SelectProgramV4.aspx.designer.cs">
+      <DependentUpon>SelectProgramV4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\UnitInformation.aspx.cs">
+      <DependentUpon>UnitInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\UnitInformation.aspx.designer.cs">
+      <DependentUpon>UnitInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\upDocumentv2.aspx.cs">
+      <DependentUpon>upDocumentv2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\upDocumentv2.aspx.designer.cs">
+      <DependentUpon>upDocumentv2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\UploadDocumentsv1.aspx.cs">
+      <DependentUpon>UploadDocumentsv1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\UploadDocumentsv1.aspx.designer.cs">
+      <DependentUpon>UploadDocumentsv1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\CertificateCandidate\CertificateApplicationAdditional.aspx.cs">
+      <DependentUpon>CertificateApplicationAdditional.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\CertificateCandidate\CertificateApplicationAdditional.aspx.designer.cs">
+      <DependentUpon>CertificateApplicationAdditional.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\CertificateCandidate\CertificateApplicationAddress.aspx.cs">
+      <DependentUpon>CertificateApplicationAddress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\CertificateCandidate\CertificateApplicationAddress.aspx.designer.cs">
+      <DependentUpon>CertificateApplicationAddress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\CertificateCandidate\CertificateApplicationAttachment.aspx.cs">
+      <DependentUpon>CertificateApplicationAttachment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\CertificateCandidate\CertificateApplicationAttachment.aspx.designer.cs">
+      <DependentUpon>CertificateApplicationAttachment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\CertificateCandidate\CertificateApplicationBasic.aspx.cs">
+      <DependentUpon>CertificateApplicationBasic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\CertificateCandidate\CertificateApplicationBasic.aspx.designer.cs">
+      <DependentUpon>CertificateApplicationBasic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\CertificateCandidate\CertificateApplicationEducation.aspx.cs">
+      <DependentUpon>CertificateApplicationEducation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\CertificateCandidate\CertificateApplicationEducation.aspx.designer.cs">
+      <DependentUpon>CertificateApplicationEducation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\CertificateCandidate\CertificateApplicationRelation.aspx.cs">
+      <DependentUpon>CertificateApplicationRelation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\CertificateCandidate\CertificateApplicationRelation.aspx.designer.cs">
+      <DependentUpon>CertificateApplicationRelation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\CertificateCandidate\CertificatePurchaseForm.aspx.cs">
+      <DependentUpon>CertificatePurchaseForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\CertificateCandidate\CertificatePurchaseForm.aspx.designer.cs">
+      <DependentUpon>CertificatePurchaseForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\CertificateCandidate\CertificatePurchaseNotification.aspx.cs">
+      <DependentUpon>CertificatePurchaseNotification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\CertificateCandidate\CertificatePurchaseNotification.aspx.designer.cs">
+      <DependentUpon>CertificatePurchaseNotification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\CertificateCandidate\SelectCertificateProgram.aspx.cs">
+      <DependentUpon>SelectCertificateProgram.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\CertificateCandidate\SelectCertificateProgram.aspx.designer.cs">
+      <DependentUpon>SelectCertificateProgram.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\EkPayCanceled.aspx.cs">
+      <DependentUpon>EkPayCanceled.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\EkPayCanceled.aspx.designer.cs">
+      <DependentUpon>EkPayCanceled.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\EkPayFailed.aspx.cs">
+      <DependentUpon>EkPayFailed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\EkPayFailed.aspx.designer.cs">
+      <DependentUpon>EkPayFailed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\EkPayIPNListener.aspx.cs">
+      <DependentUpon>EkPayIPNListener.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\EkPayIPNListener.aspx.designer.cs">
+      <DependentUpon>EkPayIPNListener.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\EkPaySuccess.aspx.cs">
+      <DependentUpon>EkPaySuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\EkPaySuccess.aspx.designer.cs">
+      <DependentUpon>EkPaySuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\failurl.aspx.cs">
+      <DependentUpon>failurl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\failurl.aspx.designer.cs">
+      <DependentUpon>failurl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\failurlfpg.aspx.cs">
+      <DependentUpon>failurlfpg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\failurlfpg.aspx.designer.cs">
+      <DependentUpon>failurlfpg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\AdmssionCircular.aspx.cs">
+      <DependentUpon>AdmssionCircular.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\AdmssionCircular.aspx.designer.cs">
+      <DependentUpon>AdmssionCircular.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\FAQ.aspx.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\FAQ.aspx.designer.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\GeneralInstructions.aspx.cs">
+      <DependentUpon>GeneralInstructions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\GeneralInstructions.aspx.designer.cs">
+      <DependentUpon>GeneralInstructions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\HelpDesk\CheckPaymentFromGatewayHelpDesk.aspx.cs">
+      <DependentUpon>CheckPaymentFromGatewayHelpDesk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\HelpDesk\CheckPaymentFromGatewayHelpDesk.aspx.designer.cs">
+      <DependentUpon>CheckPaymentFromGatewayHelpDesk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\HelpDesk\DistrictSeatLimitSetup.aspx.cs">
+      <DependentUpon>DistrictSeatLimitSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\HelpDesk\DistrictSeatLimitSetup.aspx.designer.cs">
+      <DependentUpon>DistrictSeatLimitSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\HelpDesk\FormRequestHelpDesk.aspx.cs">
+      <DependentUpon>FormRequestHelpDesk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\HelpDesk\FormRequestHelpDesk.aspx.designer.cs">
+      <DependentUpon>FormRequestHelpDesk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\HelpDesk\HD_ApplicationAdditional.aspx.cs">
+      <DependentUpon>HD_ApplicationAdditional.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\HelpDesk\HD_ApplicationAdditional.aspx.designer.cs">
+      <DependentUpon>HD_ApplicationAdditional.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\HelpDesk\HD_ApplicationAddress.aspx.cs">
+      <DependentUpon>HD_ApplicationAddress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\HelpDesk\HD_ApplicationAddress.aspx.designer.cs">
+      <DependentUpon>HD_ApplicationAddress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\HelpDesk\HD_ApplicationAttachment.aspx.cs">
+      <DependentUpon>HD_ApplicationAttachment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\HelpDesk\HD_ApplicationAttachment.aspx.designer.cs">
+      <DependentUpon>HD_ApplicationAttachment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\HelpDesk\HD_ApplicationBasic.aspx.cs">
+      <DependentUpon>HD_ApplicationBasic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\HelpDesk\HD_ApplicationBasic.aspx.designer.cs">
+      <DependentUpon>HD_ApplicationBasic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\HelpDesk\HD_ApplicationEducation.aspx.cs">
+      <DependentUpon>HD_ApplicationEducation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\HelpDesk\HD_ApplicationEducation.aspx.designer.cs">
+      <DependentUpon>HD_ApplicationEducation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\HelpDesk\HD_ApplicationPriority.aspx.cs">
+      <DependentUpon>HD_ApplicationPriority.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\HelpDesk\HD_ApplicationPriority.aspx.designer.cs">
+      <DependentUpon>HD_ApplicationPriority.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\HelpDesk\HD_ApplicationRelation.aspx.cs">
+      <DependentUpon>HD_ApplicationRelation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\HelpDesk\HD_ApplicationRelation.aspx.designer.cs">
+      <DependentUpon>HD_ApplicationRelation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\HelpDesk\HD_PrintCandidateAdmitCard.aspx.cs">
+      <DependentUpon>HD_PrintCandidateAdmitCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\HelpDesk\HD_PrintCandidateAdmitCard.aspx.designer.cs">
+      <DependentUpon>HD_PrintCandidateAdmitCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\HelpDesk\HD_UpdateBasicInfo.aspx.cs">
+      <DependentUpon>HD_UpdateBasicInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\HelpDesk\HD_UpdateBasicInfo.aspx.designer.cs">
+      <DependentUpon>HD_UpdateBasicInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\HelpDesk\ReceiveFormHelpDesk.aspx.cs">
+      <DependentUpon>ReceiveFormHelpDesk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\HelpDesk\ReceiveFormHelpDesk.aspx.designer.cs">
+      <DependentUpon>ReceiveFormHelpDesk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\HelpDesk\ResendSmsHelpDesk.aspx.cs">
+      <DependentUpon>ResendSmsHelpDesk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\HelpDesk\ResendSmsHelpDesk.aspx.designer.cs">
+      <DependentUpon>ResendSmsHelpDesk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\HomeOld.aspx.cs">
+      <DependentUpon>HomeOld.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\HomeOld.aspx.designer.cs">
+      <DependentUpon>HomeOld.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\HowToApply.aspx.cs">
+      <DependentUpon>HowToApply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\HowToApply.aspx.designer.cs">
+      <DependentUpon>HowToApply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\IPNListener.aspx.cs">
+      <DependentUpon>IPNListener.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\IPNListener.aspx.designer.cs">
+      <DependentUpon>IPNListener.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\ipnsuccessurl.aspx.cs">
+      <DependentUpon>ipnsuccessurl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\ipnsuccessurl.aspx.designer.cs">
+      <DependentUpon>ipnsuccessurl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Message.aspx.cs">
+      <DependentUpon>Message.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Message.aspx.designer.cs">
+      <DependentUpon>Message.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\NoticeAll.aspx.cs">
+      <DependentUpon>NoticeAll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\NoticeAll.aspx.designer.cs">
+      <DependentUpon>NoticeAll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\NoticeView.aspx.cs">
+      <DependentUpon>NoticeView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\NoticeView.aspx.designer.cs">
+      <DependentUpon>NoticeView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\AdmissionHSCSSCPercentageSetup.aspx.cs">
+      <DependentUpon>AdmissionHSCSSCPercentageSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\AdmissionHSCSSCPercentageSetup.aspx.designer.cs">
+      <DependentUpon>AdmissionHSCSSCPercentageSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\AdmissionHSCSSCTotalMarkSetup.aspx.cs">
+      <DependentUpon>AdmissionHSCSSCTotalMarkSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\AdmissionHSCSSCTotalMarkSetup.aspx.designer.cs">
+      <DependentUpon>AdmissionHSCSSCTotalMarkSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\AdmissionMeritListGeneration.aspx.cs">
+      <DependentUpon>AdmissionMeritListGeneration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\AdmissionMeritListGeneration.aspx.designer.cs">
+      <DependentUpon>AdmissionMeritListGeneration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\AdmissionPropertySetup.aspx.cs">
+      <DependentUpon>AdmissionPropertySetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\AdmissionPropertySetup.aspx.designer.cs">
+      <DependentUpon>AdmissionPropertySetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\AdmissionSetupOfDiplomaPrograms.aspx.cs">
+      <DependentUpon>AdmissionSetupOfDiplomaPrograms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\AdmissionSetupOfDiplomaPrograms.aspx.designer.cs">
+      <DependentUpon>AdmissionSetupOfDiplomaPrograms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\AdmissionSetupOfMPhilAndPhdPrograms.aspx.cs">
+      <DependentUpon>AdmissionSetupOfMPhilAndPhdPrograms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\AdmissionSetupOfMPhilAndPhdPrograms.aspx.designer.cs">
+      <DependentUpon>AdmissionSetupOfMPhilAndPhdPrograms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\AdmissionSetupOfOtherMSCPrograms.aspx.cs">
+      <DependentUpon>AdmissionSetupOfOtherMSCPrograms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\AdmissionSetupOfOtherMSCPrograms.aspx.designer.cs">
+      <DependentUpon>AdmissionSetupOfOtherMSCPrograms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\AdmissionSscHscGpa.aspx.cs">
+      <DependentUpon>AdmissionSscHscGpa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\AdmissionSscHscGpa.aspx.designer.cs">
+      <DependentUpon>AdmissionSscHscGpa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\AdmissionSSCHSCPassingYearSetup.aspx.cs">
+      <DependentUpon>AdmissionSSCHSCPassingYearSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\AdmissionSSCHSCPassingYearSetup.aspx.designer.cs">
+      <DependentUpon>AdmissionSSCHSCPassingYearSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\AdmissionStudentPriorityExcelUpload.aspx.cs">
+      <DependentUpon>AdmissionStudentPriorityExcelUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\AdmissionStudentPriorityExcelUpload.aspx.designer.cs">
+      <DependentUpon>AdmissionStudentPriorityExcelUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\AdmissionTestMarkExcelUpload.aspx.cs">
+      <DependentUpon>AdmissionTestMarkExcelUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\AdmissionTestMarkExcelUpload.aspx.designer.cs">
+      <DependentUpon>AdmissionTestMarkExcelUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\AdmissionUnitPrograms.aspx.cs">
+      <DependentUpon>AdmissionUnitPrograms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\AdmissionUnitPrograms.aspx.designer.cs">
+      <DependentUpon>AdmissionUnitPrograms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\CandidateHome.aspx.cs">
+      <DependentUpon>CandidateHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\CandidateHome.aspx.designer.cs">
+      <DependentUpon>CandidateHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Candidate\ProgramInformation.aspx.cs">
+      <DependentUpon>ProgramInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Candidate\ProgramInformation.aspx.designer.cs">
+      <DependentUpon>ProgramInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\AdmissionSetup.aspx.cs">
+      <DependentUpon>AdmissionSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\AdmissionSetup.aspx.designer.cs">
+      <DependentUpon>AdmissionSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\AdmissionUnit.aspx.cs">
+      <DependentUpon>AdmissionUnit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\AdmissionUnit.aspx.designer.cs">
+      <DependentUpon>AdmissionUnit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Admin\BackupCandidateDocuments.aspx.cs">
+      <DependentUpon>BackupCandidateDocuments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Admin\BackupCandidateDocuments.aspx.designer.cs">
+      <DependentUpon>BackupCandidateDocuments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\AdmitCardBulkDownload.aspx.cs">
+      <DependentUpon>AdmitCardBulkDownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\AdmitCardBulkDownload.aspx.designer.cs">
+      <DependentUpon>AdmitCardBulkDownload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\AdmitCardBulkGenerate.aspx.cs">
+      <DependentUpon>AdmitCardBulkGenerate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\AdmitCardBulkGenerate.aspx.designer.cs">
+      <DependentUpon>AdmitCardBulkGenerate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\ApproveCandidate.aspx.cs">
+      <DependentUpon>ApproveCandidate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\ApproveCandidate.aspx.designer.cs">
+      <DependentUpon>ApproveCandidate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\ApproveCandidateGrad.aspx.cs">
+      <DependentUpon>ApproveCandidateGrad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\ApproveCandidateGrad.aspx.designer.cs">
+      <DependentUpon>ApproveCandidateGrad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\ApproveCandidateV2.aspx.cs">
+      <DependentUpon>ApproveCandidateV2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\ApproveCandidateV2.aspx.designer.cs">
+      <DependentUpon>ApproveCandidateV2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\ApproveCandidateV3.aspx.cs">
+      <DependentUpon>ApproveCandidateV3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\ApproveCandidateV3.aspx.designer.cs">
+      <DependentUpon>ApproveCandidateV3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\ApproveCandidateV4.aspx.cs">
+      <DependentUpon>ApproveCandidateV4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\ApproveCandidateV4.aspx.designer.cs">
+      <DependentUpon>ApproveCandidateV4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\BuildingSetup.aspx.cs">
+      <DependentUpon>BuildingSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\BuildingSetup.aspx.designer.cs">
+      <DependentUpon>BuildingSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\BulkAdmitCardFileManager.aspx.cs">
+      <DependentUpon>BulkAdmitCardFileManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\BulkAdmitCardFileManager.aspx.designer.cs">
+      <DependentUpon>BulkAdmitCardFileManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\CampusSetup.aspx.cs">
+      <DependentUpon>CampusSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\CampusSetup.aspx.designer.cs">
+      <DependentUpon>CampusSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateByPass\CandidateByPassPurchaseForm.aspx.cs">
+      <DependentUpon>CandidateByPassPurchaseForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateByPass\CandidateByPassPurchaseForm.aspx.designer.cs">
+      <DependentUpon>CandidateByPassPurchaseForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateByPass\CandidateByPassPurchaseNotification.aspx.cs">
+      <DependentUpon>CandidateByPassPurchaseNotification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateByPass\CandidateByPassPurchaseNotification.aspx.designer.cs">
+      <DependentUpon>CandidateByPassPurchaseNotification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateByPass\CandidateByPassSelectProgram.aspx.cs">
+      <DependentUpon>CandidateByPassSelectProgram.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateByPass\CandidateByPassSelectProgram.aspx.designer.cs">
+      <DependentUpon>CandidateByPassSelectProgram.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateInformation.aspx.cs">
+      <DependentUpon>CandidateInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateInformation.aspx.designer.cs">
+      <DependentUpon>CandidateInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateInfo\CandApplicationAdditional.aspx.cs">
+      <DependentUpon>CandApplicationAdditional.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateInfo\CandApplicationAdditional.aspx.designer.cs">
+      <DependentUpon>CandApplicationAdditional.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateInfo\CandApplicationAddress.aspx.cs">
+      <DependentUpon>CandApplicationAddress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateInfo\CandApplicationAddress.aspx.designer.cs">
+      <DependentUpon>CandApplicationAddress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateInfo\CandApplicationAttachment.aspx.cs">
+      <DependentUpon>CandApplicationAttachment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateInfo\CandApplicationAttachment.aspx.designer.cs">
+      <DependentUpon>CandApplicationAttachment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateInfo\CandApplicationBasic.aspx.cs">
+      <DependentUpon>CandApplicationBasic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateInfo\CandApplicationBasic.aspx.designer.cs">
+      <DependentUpon>CandApplicationBasic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateInfo\CandApplicationDeclaration.aspx.cs">
+      <DependentUpon>CandApplicationDeclaration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateInfo\CandApplicationDeclaration.aspx.designer.cs">
+      <DependentUpon>CandApplicationDeclaration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateInfo\CandApplicationEducation.aspx.cs">
+      <DependentUpon>CandApplicationEducation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateInfo\CandApplicationEducation.aspx.designer.cs">
+      <DependentUpon>CandApplicationEducation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateInfo\CandApplicationPriority.aspx.cs">
+      <DependentUpon>CandApplicationPriority.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateInfo\CandApplicationPriority.aspx.designer.cs">
+      <DependentUpon>CandApplicationPriority.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateInfo\CandApplicationRelation.aspx.cs">
+      <DependentUpon>CandApplicationRelation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateInfo\CandApplicationRelation.aspx.designer.cs">
+      <DependentUpon>CandApplicationRelation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateLoginCredentials.aspx.cs">
+      <DependentUpon>CandidateLoginCredentials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateLoginCredentials.aspx.designer.cs">
+      <DependentUpon>CandidateLoginCredentials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateRoomChange.aspx.cs">
+      <DependentUpon>CandidateRoomChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateRoomChange.aspx.designer.cs">
+      <DependentUpon>CandidateRoomChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateTransaction.aspx.cs">
+      <DependentUpon>CandidateTransaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\CandidateTransaction.aspx.designer.cs">
+      <DependentUpon>CandidateTransaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\DistrictForSeatPlanSetup.aspx.cs">
+      <DependentUpon>DistrictForSeatPlanSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\DistrictForSeatPlanSetup.aspx.designer.cs">
+      <DependentUpon>DistrictForSeatPlanSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\DistrictSeatLimitSetup.aspx.cs">
+      <DependentUpon>DistrictSeatLimitSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\DistrictSeatLimitSetup.aspx.designer.cs">
+      <DependentUpon>DistrictSeatLimitSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\DistrictSeatLimitView.aspx.cs">
+      <DependentUpon>DistrictSeatLimitView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\DistrictSeatLimitView.aspx.designer.cs">
+      <DependentUpon>DistrictSeatLimitView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\EnrollCandidateV2.aspx.cs">
+      <DependentUpon>EnrollCandidateV2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\EnrollCandidateV2.aspx.designer.cs">
+      <DependentUpon>EnrollCandidateV2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\FacultyWiseQuota.aspx.cs">
+      <DependentUpon>FacultyWiseQuota.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\FacultyWiseQuota.aspx.designer.cs">
+      <DependentUpon>FacultyWiseQuota.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\FormRequestForeign.aspx.cs">
+      <DependentUpon>FormRequestForeign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\FormRequestForeign.aspx.designer.cs">
+      <DependentUpon>FormRequestForeign.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\FormRequest.aspx.cs">
+      <DependentUpon>FormRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\FormRequest.aspx.designer.cs">
+      <DependentUpon>FormRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\GeneralDataLog.aspx.cs">
+      <DependentUpon>GeneralDataLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\GeneralDataLog.aspx.designer.cs">
+      <DependentUpon>GeneralDataLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\GeneralInstructionSetup.aspx.cs">
+      <DependentUpon>GeneralInstructionSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\GeneralInstructionSetup.aspx.designer.cs">
+      <DependentUpon>GeneralInstructionSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\GlobalAdmissionAppSetup.aspx.cs">
+      <DependentUpon>GlobalAdmissionAppSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\GlobalAdmissionAppSetup.aspx.designer.cs">
+      <DependentUpon>GlobalAdmissionAppSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\HowToApplySetup.aspx.cs">
+      <DependentUpon>HowToApplySetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\HowToApplySetup.aspx.designer.cs">
+      <DependentUpon>HowToApplySetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\ImageTransferFromAdmissionToUCAM.aspx.cs">
+      <DependentUpon>ImageTransferFromAdmissionToUCAM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\ImageTransferFromAdmissionToUCAM.aspx.designer.cs">
+      <DependentUpon>ImageTransferFromAdmissionToUCAM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\ImageTransferManualAdmissionToFolder.aspx.cs">
+      <DependentUpon>ImageTransferManualAdmissionToFolder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\ImageTransferManualAdmissionToFolder.aspx.designer.cs">
+      <DependentUpon>ImageTransferManualAdmissionToFolder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\ImportantNotice.aspx.cs">
+      <DependentUpon>ImportantNotice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\ImportantNotice.aspx.designer.cs">
+      <DependentUpon>ImportantNotice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\MenuInRole.aspx.cs">
+      <DependentUpon>MenuInRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\MenuInRole.aspx.designer.cs">
+      <DependentUpon>MenuInRole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Notice.aspx.cs">
+      <DependentUpon>Notice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Notice.aspx.designer.cs">
+      <DependentUpon>Notice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\AdmitCardInstructionSetup.aspx.cs">
+      <DependentUpon>AdmitCardInstructionSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\AdmitCardInstructionSetup.aspx.designer.cs">
+      <DependentUpon>AdmitCardInstructionSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\NoticeForHomeImportant.aspx.cs">
+      <DependentUpon>NoticeForHomeImportant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\NoticeForHomeImportant.aspx.designer.cs">
+      <DependentUpon>NoticeForHomeImportant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\OfficeHome.aspx.cs">
+      <DependentUpon>OfficeHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\OfficeHome.aspx.designer.cs">
+      <DependentUpon>OfficeHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\PostgraduateDiplomaFormRequest.aspx.cs">
+      <DependentUpon>PostgraduateDiplomaFormRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\PostgraduateDiplomaFormRequest.aspx.designer.cs">
+      <DependentUpon>PostgraduateDiplomaFormRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Prints\PrintMoneyReceipt.aspx.cs">
+      <DependentUpon>PrintMoneyReceipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Prints\PrintMoneyReceipt.aspx.designer.cs">
+      <DependentUpon>PrintMoneyReceipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Prints\PrintPurchaseReceipt.aspx.cs">
+      <DependentUpon>PrintPurchaseReceipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Prints\PrintPurchaseReceipt.aspx.designer.cs">
+      <DependentUpon>PrintPurchaseReceipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\ProgramandQoutaWiseSetup.aspx.cs">
+      <DependentUpon>ProgramandQoutaWiseSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\ProgramandQoutaWiseSetup.aspx.designer.cs">
+      <DependentUpon>ProgramandQoutaWiseSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\ProgramDetails.aspx.cs">
+      <DependentUpon>ProgramDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\ProgramDetails.aspx.designer.cs">
+      <DependentUpon>ProgramDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\ProgramWiseTotalSeatSetup.aspx.cs">
+      <DependentUpon>ProgramWiseTotalSeatSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\ProgramWiseTotalSeatSetup.aspx.designer.cs">
+      <DependentUpon>ProgramWiseTotalSeatSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\ReceiveFormForeign.aspx.cs">
+      <DependentUpon>ReceiveFormForeign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\ReceiveFormForeign.aspx.designer.cs">
+      <DependentUpon>ReceiveFormForeign.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\ReceiveForm.aspx.cs">
+      <DependentUpon>ReceiveForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\ReceiveForm.aspx.designer.cs">
+      <DependentUpon>ReceiveForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\ReceiveFormCertificate.aspx.cs">
+      <DependentUpon>ReceiveFormCertificate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\ReceiveFormCertificate.aspx.designer.cs">
+      <DependentUpon>ReceiveFormCertificate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\BulkAdmitCardGenerate.aspx.cs">
+      <DependentUpon>BulkAdmitCardGenerate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\BulkAdmitCardGenerate.aspx.designer.cs">
+      <DependentUpon>BulkAdmitCardGenerate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\FacultyWiseQuotaCount.aspx.cs">
+      <DependentUpon>FacultyWiseQuotaCount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\FacultyWiseQuotaCount.aspx.designer.cs">
+      <DependentUpon>FacultyWiseQuotaCount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\PaymentCheckInterface.aspx.cs">
+      <DependentUpon>PaymentCheckInterface.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\PaymentCheckInterface.aspx.designer.cs">
+      <DependentUpon>PaymentCheckInterface.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RptAdmissionMeritList.aspx.cs">
+      <DependentUpon>RptAdmissionMeritList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RptAdmissionMeritList.aspx.designer.cs">
+      <DependentUpon>RptAdmissionMeritList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTAdmissionSeatToken.aspx.cs">
+      <DependentUpon>RPTAdmissionSeatToken.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTAdmissionSeatToken.aspx.designer.cs">
+      <DependentUpon>RPTAdmissionSeatToken.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTApprovedCandidatesWithTestRoll.aspx.cs">
+      <DependentUpon>RPTApprovedCandidatesWithTestRoll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTApprovedCandidatesWithTestRoll.aspx.designer.cs">
+      <DependentUpon>RPTApprovedCandidatesWithTestRoll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTAttendanceReport.aspx.cs">
+      <DependentUpon>RPTAttendanceReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTAttendanceReport.aspx.designer.cs">
+      <DependentUpon>RPTAttendanceReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTAttendanceRoomWise.aspx.cs">
+      <DependentUpon>RPTAttendanceRoomWise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTAttendanceRoomWise.aspx.designer.cs">
+      <DependentUpon>RPTAttendanceRoomWise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTAttendanceRoomWiseV2.aspx.cs">
+      <DependentUpon>RPTAttendanceRoomWiseV2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTAttendanceRoomWiseV2.aspx.designer.cs">
+      <DependentUpon>RPTAttendanceRoomWiseV2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTCampusWiseSeatPlan.aspx.cs">
+      <DependentUpon>RPTCampusWiseSeatPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTCampusWiseSeatPlan.aspx.designer.cs">
+      <DependentUpon>RPTCampusWiseSeatPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTCampusWiseSeatPlanAllCampus.aspx.cs">
+      <DependentUpon>RPTCampusWiseSeatPlanAllCampus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTCampusWiseSeatPlanAllCampus.aspx.designer.cs">
+      <DependentUpon>RPTCampusWiseSeatPlanAllCampus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RptCandidateInfoSelParam.aspx.cs">
+      <DependentUpon>RptCandidateInfoSelParam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RptCandidateInfoSelParam.aspx.designer.cs">
+      <DependentUpon>RptCandidateInfoSelParam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTDetailsForVivaGraduate.aspx.cs">
+      <DependentUpon>RPTDetailsForVivaGraduate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTDetailsForVivaGraduate.aspx.designer.cs">
+      <DependentUpon>RPTDetailsForVivaGraduate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTDetailsForVivaUndergraduate.aspx.cs">
+      <DependentUpon>RPTDetailsForVivaUndergraduate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTDetailsForVivaUndergraduate.aspx.designer.cs">
+      <DependentUpon>RPTDetailsForVivaUndergraduate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTEligibilityList.aspx.cs">
+      <DependentUpon>RPTEligibilityList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTEligibilityList.aspx.designer.cs">
+      <DependentUpon>RPTEligibilityList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTEligibleRollNumber.aspx.cs">
+      <DependentUpon>RPTEligibleRollNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTEligibleRollNumber.aspx.designer.cs">
+      <DependentUpon>RPTEligibleRollNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTPaidandFinalSumbitReport.aspx.cs">
+      <DependentUpon>RPTPaidandFinalSumbitReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTPaidandFinalSumbitReport.aspx.designer.cs">
+      <DependentUpon>RPTPaidandFinalSumbitReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTPrintCandidateAdmitCard.aspx.cs">
+      <DependentUpon>RPTPrintCandidateAdmitCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTPrintCandidateAdmitCard.aspx.designer.cs">
+      <DependentUpon>RPTPrintCandidateAdmitCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTQuotaReport.aspx.cs">
+      <DependentUpon>RPTQuotaReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTQuotaReport.aspx.designer.cs">
+      <DependentUpon>RPTQuotaReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTQuotaReportDetails.aspx.cs">
+      <DependentUpon>RPTQuotaReportDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTQuotaReportDetails.aspx.designer.cs">
+      <DependentUpon>RPTQuotaReportDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTRoomWiseTestRollSheet.aspx.cs">
+      <DependentUpon>RPTRoomWiseTestRollSheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTRoomWiseTestRollSheet.aspx.designer.cs">
+      <DependentUpon>RPTRoomWiseTestRollSheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTRoomWiseTestRollSheet_HtmlReport.aspx.cs">
+      <DependentUpon>RPTRoomWiseTestRollSheet_HtmlReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTRoomWiseTestRollSheet_HtmlReport.aspx.designer.cs">
+      <DependentUpon>RPTRoomWiseTestRollSheet_HtmlReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTStatusReport.aspx.cs">
+      <DependentUpon>RPTStatusReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTStatusReport.aspx.designer.cs">
+      <DependentUpon>RPTStatusReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTStatusReportFinalSubmit.aspx.cs">
+      <DependentUpon>RPTStatusReportFinalSubmit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTStatusReportFinalSubmit.aspx.designer.cs">
+      <DependentUpon>RPTStatusReportFinalSubmit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTTeleTalkBoardResult.aspx.cs">
+      <DependentUpon>RPTTeleTalkBoardResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\RPTTeleTalkBoardResult.aspx.designer.cs">
+      <DependentUpon>RPTTeleTalkBoardResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\PaymentUpdateV2.aspx.cs">
+      <DependentUpon>PaymentUpdateV2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Reports\PaymentUpdateV2.aspx.designer.cs">
+      <DependentUpon>PaymentUpdateV2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\ResendSms.aspx.cs">
+      <DependentUpon>ResendSms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\ResendSms.aspx.designer.cs">
+      <DependentUpon>ResendSms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\Role.aspx.cs">
+      <DependentUpon>Role.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\Role.aspx.designer.cs">
+      <DependentUpon>Role.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\RoomSetup.aspx.cs">
+      <DependentUpon>RoomSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\RoomSetup.aspx.designer.cs">
+      <DependentUpon>RoomSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\SeatPlanDelete.aspx.cs">
+      <DependentUpon>SeatPlanDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\SeatPlanDelete.aspx.designer.cs">
+      <DependentUpon>SeatPlanDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\SeatPlanGeneration.aspx.cs">
+      <DependentUpon>SeatPlanGeneration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\SeatPlanGeneration.aspx.designer.cs">
+      <DependentUpon>SeatPlanGeneration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\SSCHSCBasicInfoDataUpdate.aspx.cs">
+      <DependentUpon>SSCHSCBasicInfoDataUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\SSCHSCBasicInfoDataUpdate.aspx.designer.cs">
+      <DependentUpon>SSCHSCBasicInfoDataUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\SSCHSCVarification.aspx.cs">
+      <DependentUpon>SSCHSCVarification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\SSCHSCVarification.aspx.designer.cs">
+      <DependentUpon>SSCHSCVarification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\TestRollDelete.aspx.cs">
+      <DependentUpon>TestRollDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\TestRollDelete.aspx.designer.cs">
+      <DependentUpon>TestRollDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\TestRollGeneration.aspx.cs">
+      <DependentUpon>TestRollGeneration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\TestRollGeneration.aspx.designer.cs">
+      <DependentUpon>TestRollGeneration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\TransactionHistoryBkash.aspx.cs">
+      <DependentUpon>TransactionHistoryBkash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\TransactionHistoryBkash.aspx.designer.cs">
+      <DependentUpon>TransactionHistoryBkash.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\TransactionsHistory.aspx.cs">
+      <DependentUpon>TransactionsHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\TransactionsHistory.aspx.designer.cs">
+      <DependentUpon>TransactionsHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\UnitProgramSetup.aspx.cs">
+      <DependentUpon>UnitProgramSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\UnitProgramSetup.aspx.designer.cs">
+      <DependentUpon>UnitProgramSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\UnitWiseBuildingSetup.aspx.cs">
+      <DependentUpon>UnitWiseBuildingSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\UnitWiseBuildingSetup.aspx.designer.cs">
+      <DependentUpon>UnitWiseBuildingSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\UnitWiseCampusSetup.aspx.cs">
+      <DependentUpon>UnitWiseCampusSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\UnitWiseCampusSetup.aspx.designer.cs">
+      <DependentUpon>UnitWiseCampusSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\UnitWiseDistrictSetup.aspx.cs">
+      <DependentUpon>UnitWiseDistrictSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\UnitWiseDistrictSetup.aspx.designer.cs">
+      <DependentUpon>UnitWiseDistrictSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\UnitWiseRoomSetup.aspx.cs">
+      <DependentUpon>UnitWiseRoomSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\UnitWiseRoomSetup.aspx.designer.cs">
+      <DependentUpon>UnitWiseRoomSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\UserAccessProgram.aspx.cs">
+      <DependentUpon>UserAccessProgram.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\UserAccessProgram.aspx.designer.cs">
+      <DependentUpon>UserAccessProgram.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\UserAccessSchool.aspx.cs">
+      <DependentUpon>UserAccessSchool.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\UserAccessSchool.aspx.designer.cs">
+      <DependentUpon>UserAccessSchool.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\UserPasswordChange.aspx.cs">
+      <DependentUpon>UserPasswordChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\UserPasswordChange.aspx.designer.cs">
+      <DependentUpon>UserPasswordChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Office\VivaInfoForSelectedCandidate.aspx.cs">
+      <DependentUpon>VivaInfoForSelectedCandidate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\Office\VivaInfoForSelectedCandidate.aspx.designer.cs">
+      <DependentUpon>VivaInfoForSelectedCandidate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\PDCandidateInfo\CandApplicationAdditional.aspx.cs">
+      <DependentUpon>CandApplicationAdditional.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\PDCandidateInfo\CandApplicationAdditional.aspx.designer.cs">
+      <DependentUpon>CandApplicationAdditional.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\PDCandidateInfo\CandApplicationAddress.aspx.cs">
+      <DependentUpon>CandApplicationAddress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\PDCandidateInfo\CandApplicationAddress.aspx.designer.cs">
+      <DependentUpon>CandApplicationAddress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\PDCandidateInfo\CandApplicationAttachment.aspx.cs">
+      <DependentUpon>CandApplicationAttachment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\PDCandidateInfo\CandApplicationAttachment.aspx.designer.cs">
+      <DependentUpon>CandApplicationAttachment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\PDCandidateInfo\CandApplicationBasic.aspx.cs">
+      <DependentUpon>CandApplicationBasic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\PDCandidateInfo\CandApplicationBasic.aspx.designer.cs">
+      <DependentUpon>CandApplicationBasic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\PDCandidateInfo\CandApplicationEducation.aspx.cs">
+      <DependentUpon>CandApplicationEducation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\PDCandidateInfo\CandApplicationEducation.aspx.designer.cs">
+      <DependentUpon>CandApplicationEducation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\PDCandidateInfo\CandApplicationRelation.aspx.cs">
+      <DependentUpon>CandApplicationRelation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\PDCandidateInfo\CandApplicationRelation.aspx.designer.cs">
+      <DependentUpon>CandApplicationRelation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\PostgraduateDiplomaApplicationAdditional.aspx.cs">
+      <DependentUpon>PostgraduateDiplomaApplicationAdditional.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\PostgraduateDiplomaApplicationAdditional.aspx.designer.cs">
+      <DependentUpon>PostgraduateDiplomaApplicationAdditional.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\PostgraduateDiplomaApplicationAddress.aspx.cs">
+      <DependentUpon>PostgraduateDiplomaApplicationAddress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\PostgraduateDiplomaApplicationAddress.aspx.designer.cs">
+      <DependentUpon>PostgraduateDiplomaApplicationAddress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\PostgraduateDiplomaApplicationAttachment.aspx.cs">
+      <DependentUpon>PostgraduateDiplomaApplicationAttachment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\PostgraduateDiplomaApplicationAttachment.aspx.designer.cs">
+      <DependentUpon>PostgraduateDiplomaApplicationAttachment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\PostgraduateDiplomaApplicationBasic.aspx.cs">
+      <DependentUpon>PostgraduateDiplomaApplicationBasic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\PostgraduateDiplomaApplicationBasic.aspx.designer.cs">
+      <DependentUpon>PostgraduateDiplomaApplicationBasic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\PostgraduateDiplomaApplicationEducation.aspx.cs">
+      <DependentUpon>PostgraduateDiplomaApplicationEducation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\PostgraduateDiplomaApplicationEducation.aspx.designer.cs">
+      <DependentUpon>PostgraduateDiplomaApplicationEducation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\PostgraduateDiplomaApplicationRelation.aspx.cs">
+      <DependentUpon>PostgraduateDiplomaApplicationRelation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\PostgraduateDiplomaApplicationRelation.aspx.designer.cs">
+      <DependentUpon>PostgraduateDiplomaApplicationRelation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\PostgraduateDiplomaPurchaseForm.aspx.cs">
+      <DependentUpon>PostgraduateDiplomaPurchaseForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\PostgraduateDiplomaPurchaseForm.aspx.designer.cs">
+      <DependentUpon>PostgraduateDiplomaPurchaseForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\PostgraduateDiplomaPurchaseNotification.aspx.cs">
+      <DependentUpon>PostgraduateDiplomaPurchaseNotification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\PostgraduateDiplomaPurchaseNotification.aspx.designer.cs">
+      <DependentUpon>PostgraduateDiplomaPurchaseNotification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\Report\RPTPostgraduateDiplomaPaidCandidateList.aspx.cs">
+      <DependentUpon>RPTPostgraduateDiplomaPaidCandidateList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\Report\RPTPostgraduateDiplomaPaidCandidateList.aspx.designer.cs">
+      <DependentUpon>RPTPostgraduateDiplomaPaidCandidateList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\SelectPostgraduateDiplomaProgram.aspx.cs">
+      <DependentUpon>SelectPostgraduateDiplomaProgram.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\PostgraduateDiploma\SelectPostgraduateDiplomaProgram.aspx.designer.cs">
+      <DependentUpon>SelectPostgraduateDiplomaProgram.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\SiteUnderMaintenance.aspx.cs">
+      <DependentUpon>SiteUnderMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\SiteUnderMaintenance.aspx.designer.cs">
+      <DependentUpon>SiteUnderMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\SpecialNotice.aspx.cs">
+      <DependentUpon>SpecialNotice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\SpecialNotice.aspx.designer.cs">
+      <DependentUpon>SpecialNotice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\successurl.aspx.cs">
+      <DependentUpon>successurl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\successurl.aspx.designer.cs">
+      <DependentUpon>successurl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\successurlfpg.aspx.cs">
+      <DependentUpon>successurlfpg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\successurlfpg.aspx.designer.cs">
+      <DependentUpon>successurlfpg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\successurlfpgCertificate.aspx.cs">
+      <DependentUpon>successurlfpgCertificate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\successurlfpgCertificate.aspx.designer.cs">
+      <DependentUpon>successurlfpgCertificate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\successurlRocket.aspx.cs">
+      <DependentUpon>successurlRocket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\successurlRocket.aspx.designer.cs">
+      <DependentUpon>successurlRocket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\testFpg.aspx.cs">
+      <DependentUpon>testFpg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\testFpg.aspx.designer.cs">
+      <DependentUpon>testFpg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\TestPage.aspx.cs">
+      <DependentUpon>TestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\TestPage.aspx.designer.cs">
+      <DependentUpon>TestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\VerifyPayment.aspx.cs">
+      <DependentUpon>VerifyPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admission\VerifyPayment.aspx.designer.cs">
+      <DependentUpon>VerifyPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AdmissionToUCAMImageController.cs" />
+    <Compile Include="Controllers\EkPayPaymentGatewayController.cs" />
+    <Compile Include="Controllers\PaymentCheckApiController.cs" />
+    <Compile Include="Controllers\TestCustomeApiController.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MyWebFormsFriendlyUrlResolver.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SiteAdmin.Master.cs">
+      <DependentUpon>SiteAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteAdmin.Master.designer.cs">
+      <DependentUpon>SiteAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SiteV2.Master.cs">
+      <DependentUpon>SiteV2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteV2.Master.designer.cs">
+      <DependentUpon>SiteV2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Temp2.aspx.cs">
+      <DependentUpon>Temp2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Temp2.aspx.designer.cs">
+      <DependentUpon>Temp2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TempAdmin.aspx.cs">
+      <DependentUpon>TempAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TempAdmin.aspx.designer.cs">
+      <DependentUpon>TempAdmin.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ApplicationDocs\BulkAdmitCard\" />
+    <Folder Include="App_Code\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="Backup\" />
+    <Folder Include="Models\" />
+    <Folder Include="Properties\PublishProfiles\" />
+    <Folder Include="Upload\Attendance\" />
+    <Folder Include="Upload\Notices\" />
+    <Folder Include="Upload\RoomFileUpload\" />
+    <Folder Include="Upload\SampleExcel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admission\Candidate\Prints\AdmitCard.rdlc">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Admission\HelpDesk\AdmitCard.rdlc" />
+    <Content Include="Admission\Candidate\Prints\AdmitCardMasters.rdlc" />
+    <Content Include="Admission\Candidate\Prints\AdmitCardMBAProfessional.rdlc" />
+    <Content Include="Admission\Candidate\Prints\AdmitCardLLMProfessional.rdlc" />
+    <Content Include="Admission\Candidate\Prints\AdmitCardMPCHRS.rdlc" />
+    <Content Include="Admission\Candidate\Prints\AdmitCardMICT.rdlc" />
+    <Content Include="Admission\Candidate\Prints\AdmitCardMISS.rdlc" />
+    <Content Include="Admission\Candidate\Prints\AdmitCardMPH.rdlc" />
+    <Content Include="Admission\Candidate\Prints\AdmitCardMCSE.rdlc" />
+    <Content Include="Admission\Candidate\Prints\AdmitCardMDSProfessional.rdlc" />
+    <Content Include="Admission\Candidate\Prints\AdmitCardMCS.rdlc" />
+    <Content Include="Admission\Candidate\Prints\AdmitCardMESM.rdlc" />
+    <Content Include="Admission\Candidate\Prints\AdmitCardHospitalM.rdlc" />
+    <EmbeddedResource Include="Admission\Office\Prints\PrintMoneyReceipt.rdlc" />
+    <EmbeddedResource Include="Admission\Office\Prints\PrintPurchaseReceipt.rdlc" />
+    <Content Include="Admission\Office\Reports\AdmitCard.rdlc" />
+    <Content Include="Admission\Office\Reports\RptAttendanceRoomWise.rdlc" />
+    <Content Include="Admission\Office\Reports\RptDetailsForVivaGraduate.rdlc" />
+    <Content Include="Admission\Office\Reports\RptDetailsForVivaUndergraduate.rdlc" />
+    <Content Include="Admission\Office\Reports\RptEligibilityList.rdlc" />
+    <Content Include="Admission\Office\Reports\RptApprovedCandidatesWithTestRoll.rdlc" />
+    <Content Include="Admission\Office\Reports\RptCampusWiseSeatPlan.rdlc" />
+    <Content Include="Admission\Office\Reports\RPTAttendanceRoomWiseV3.rdlc" />
+    <Content Include="Admission\PostgraduateDiploma\Report\RPTPostgraduateDiplomaPaidCandidateList.rdlc" />
+    <Content Include="Admission\Office\Reports\RPTCampusWiseSeatPlanAllCampus.rdlc" />
+    <Content Include="Admission\Office\Reports\FacultyWiseQuotaCount.rdlc">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Admission\Office\Reports\AdmitCardMasters.rdlc" />
+    <Content Include="Admission\Office\VivaInfoForSelectedCandidate.rdlc" />
+    <Content Include="Admission\Office\Reports\RPTAttendanceRoomWiseV3 - Copy.rdlc" />
+    <Content Include="Admission\Office\Reports\RPTStatusReport.rdlc" />
+    <Content Include="Admission\Office\Reports\RPTStatusReportFinalSubmit.rdlc" />
+    <Content Include="Admission\Office\Reports\RPTAdmissionSeatToken.rdlc" />
+    <Content Include="Admission\Office\Reports\RPTTeleTalkBoardResult.rdlc" />
+    <Content Include="Admission\Office\RPTEkPayUnPaidCandidateInfo.rdlc" />
+    <Content Include="Admission\Office\Reports\RPTPaidandFinalSumbitReport.rdlc" />
+    <Content Include="Admission\Office\Reports\RPTQuotaReportDetails.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonUtility\CommonUtility.csproj">
+      <Project>{61e8962b-337a-43f0-aabb-ce90c30cbac1}</Project>
+      <Name>CommonUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{8de8fdcf-6ae9-4492-8918-dde628a5df13}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL_Log\DAL_Log.csproj">
+      <Project>{419ef822-649f-4dcb-961a-d53518c4a5d7}</Project>
+      <Name>DAL_Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL_UCAM\DAL_UCAM.csproj">
+      <Project>{7b485c79-388d-42ad-b031-6f44fb7a5006}</Project>
+      <Name>DAL_UCAM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DATAMANAGER\DATAMANAGER.csproj">
+      <Project>{267e84b7-778b-47aa-8684-6bf4a15edd1e}</Project>
+      <Name>DATAMANAGER</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>17122</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:17124/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

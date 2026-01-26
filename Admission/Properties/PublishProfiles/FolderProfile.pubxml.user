@@ -1,0 +1,2609 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- https://go.microsoft.com/fwlink/?LinkID=208121. -->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\Publish\CRP_Admission</_PublishTargetUrl>
+    <History>False|2026-01-26T09:22:29.2792321Z||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="About.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Admin/AdminHome.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Admin/BackupCandidateDocuments.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Admin/BackupDb.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Admin/CandidateFormSl.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Admin/Country.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Admin/District.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Admin/Division.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Admin/DocumentType.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Admin/EducationBoard.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Admin/EducationCategory.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Admin/EncDec.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Admin/ExamType.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Admin/FosterStoreSetup.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Admin/Institute.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Admin/InstituteImageUpload.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Admin/Key.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Admin/KeyValue.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Admin/MaintenanceSetup.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Admin/Menu.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Admin/Quota.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Admin/StoreSetup.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Admin/UndergradGradProgram.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/AdmssionCircular.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/cancelurl.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/cancelurlfpg.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/academicInfoAppForm.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/ApplicationAdditional.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/ApplicationAddress.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/ApplicationAttachment.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/ApplicationBasic.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/ApplicationDeclaration.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/ApplicationEducation.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/ApplicationPriority.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/ApplicationPriorityS.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/ApplicationRelation.aspx">
+      <publishTime>01/26/2026 13:00:26</publishTime>
+    </File>
+    <File Include="Admission/Candidate/CandidateHome.aspx">
+      <publishTime>01/26/2026 13:04:52</publishTime>
+    </File>
+    <File Include="Admission/Candidate/Declarationform.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/editPreview.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/finalsubmitPage.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/FinalsubmitView.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/ForeignCandidateHome.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/foreignStudentApplicationDeclaration.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/foreignStudentInputInfo.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/foreignStudentProgramSelection.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/Listofdocument.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/MassageAfterAdmissionClosed.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/MultipleApplication.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/PaymentInformation.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/PersonalInfoAppForm.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/previewForm.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/Prints/AdmitCard.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/Prints/AdmitCard.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/Prints/AdmitCardHospitalM.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/Prints/AdmitCardLLMProfessional.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/Prints/AdmitCardMasters.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/Prints/AdmitCardMBAProfessional.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/Prints/AdmitCardMCS.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/Prints/AdmitCardMCSE.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/Prints/AdmitCardMDSProfessional.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/Prints/AdmitCardMESM.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/Prints/AdmitCardMICT.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/Prints/AdmitCardMISS.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/Prints/AdmitCardMPCHRS.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/Prints/AdmitCardMPH.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/Prints/AdmitCardV2.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/ProgramInformation.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/PurchaseByBkash.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/PurchaseForm.aspx">
+      <publishTime>01/21/2026 10:57:23</publishTime>
+    </File>
+    <File Include="Admission/Candidate/PurchaseFormBachelor.aspx">
+      <publishTime>01/26/2026 14:35:09</publishTime>
+    </File>
+    <File Include="Admission/Candidate/PurchaseFormV2.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/PurchaseFormV3.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/PurchaseNotification.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/ReviewApplication.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/Scripts/AdditionalInfoValidation.js">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/Scripts/AddressValidation.js">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/Scripts/BasicInfoValidation.js">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/Scripts/EducationValidation.js">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/Scripts/RelationInfoValidation.js">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/Scripts/UploadImages.js">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/SelectProgram.aspx">
+      <publishTime>01/26/2026 11:25:51</publishTime>
+    </File>
+    <File Include="Admission/Candidate/SelectProgramDiploma.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/SelectProgramPhd.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/SelectProgramV2.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/SelectProgramV3.aspx">
+      <publishTime>01/26/2026 11:29:53</publishTime>
+    </File>
+    <File Include="Admission/Candidate/SelectProgramV4.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/UnitInformation.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/upDocumentv2.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Candidate/UploadDocumentsv1.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/CertificateCandidate/CertificateApplicationAdditional.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/CertificateCandidate/CertificateApplicationAddress.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/CertificateCandidate/CertificateApplicationAttachment.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/CertificateCandidate/CertificateApplicationBasic.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/CertificateCandidate/CertificateApplicationEducation.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/CertificateCandidate/CertificateApplicationRelation.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/CertificateCandidate/CertificatePurchaseForm.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/CertificateCandidate/CertificatePurchaseNotification.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/CertificateCandidate/SelectCertificateProgram.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/EkPayCanceled.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/EkPayFailed.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/EkPayIPNListener.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/EkPaySuccess.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/failurl.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/failurlfpg.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/FAQ.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/ForgotPassword.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/GeneralInstructions.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/HelpDesk/AdmitCard.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/HelpDesk/CheckPaymentFromGatewayHelpDesk.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/HelpDesk/DistrictSeatLimitSetup.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/HelpDesk/FormRequestHelpDesk.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/HelpDesk/HD_ApplicationAdditional.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/HelpDesk/HD_ApplicationAddress.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/HelpDesk/HD_ApplicationAttachment.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/HelpDesk/HD_ApplicationBasic.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/HelpDesk/HD_ApplicationEducation.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/HelpDesk/HD_ApplicationPriority.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/HelpDesk/HD_ApplicationRelation.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/HelpDesk/HD_PrintCandidateAdmitCard.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/HelpDesk/HD_UpdateBasicInfo.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/HelpDesk/ReceiveFormHelpDesk.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/HelpDesk/ResendSmsHelpDesk.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Home.aspx">
+      <publishTime>01/26/2026 12:17:26</publishTime>
+    </File>
+    <File Include="Admission/HomeOld.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/HowToApply.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/IPNListener.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/ipnsuccessurl.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Login.aspx">
+      <publishTime>01/26/2026 11:00:09</publishTime>
+    </File>
+    <File Include="Admission/Message.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/NoticeAll.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/NoticeView.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/AdmissionHSCSSCPercentageSetup.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/AdmissionHSCSSCTotalMarkSetup.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/AdmissionMeritListGeneration.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/AdmissionPropertySetup.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/AdmissionSetup.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/AdmissionSetupOfDiplomaPrograms.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/AdmissionSetupOfMPhilAndPhdPrograms.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/AdmissionSetupOfOtherMSCPrograms.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/AdmissionSscHscGpa.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/AdmissionSSCHSCPassingYearSetup.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/AdmissionStudentPriorityExcelUpload.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/AdmissionTestMarkExcelUpload.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/AdmissionUnit.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/AdmissionUnitPrograms.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/AdmitCardBulkDownload.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/AdmitCardBulkGenerate.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/AdmitCardInstructionSetup.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/ApproveCandidate.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/ApproveCandidateGrad.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/ApproveCandidateV2.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/ApproveCandidateV3.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/ApproveCandidateV4.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/BuildingSetup.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/BulkAdmitCardFileManager.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/CampusSetup.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/CandidateByPass/CandidateByPassPurchaseForm.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/CandidateByPass/CandidateByPassPurchaseNotification.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/CandidateByPass/CandidateByPassSelectProgram.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/CandidateInfo/CandApplicationAdditional.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/CandidateInfo/CandApplicationAddress.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/CandidateInfo/CandApplicationAttachment.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/CandidateInfo/CandApplicationBasic.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/CandidateInfo/CandApplicationDeclaration.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/CandidateInfo/CandApplicationEducation.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/CandidateInfo/CandApplicationPriority.aspx">
+      <publishTime>01/22/2026 11:13:41</publishTime>
+    </File>
+    <File Include="Admission/Office/CandidateInfo/CandApplicationRelation.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/CandidateInformation.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/CandidateLoginCredentials.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/CandidateRoomChange.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/CandidateTransaction.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/DistrictForSeatPlanSetup.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/DistrictSeatLimitSetup.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/DistrictSeatLimitView.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/EnrollCandidateV2.aspx">
+      <publishTime>01/22/2026 15:43:05</publishTime>
+    </File>
+    <File Include="Admission/Office/FacultyWiseQuota.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/FormRequest.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/FormRequestForeign.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/GeneralDataLog.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/GeneralInstructionSetup.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/GlobalAdmissionAppSetup.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/HowToApplySetup.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/ImageTransferFromAdmissionToUCAM.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/ImageTransferManualAdmissionToFolder.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/ImportantNotice.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/MenuInRole.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Notice.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/NoticeForHomeImportant.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/OfficeHome.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/PostgraduateDiplomaFormRequest.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Prints/PrintMoneyReceipt.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Prints/PrintPurchaseReceipt.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/ProgramandQoutaWiseSetup.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/ProgramDetails.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/ProgramWiseTotalSeatSetup.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/ReceiveForm.aspx">
+      <publishTime>01/26/2026 14:11:05</publishTime>
+    </File>
+    <File Include="Admission/Office/ReceiveFormCertificate.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/ReceiveFormForeign.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/AdmitCard.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/AdmitCardMasters.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/BulkAdmitCardGenerate.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/FacultyWiseQuotaCount.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/FacultyWiseQuotaCount.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/PaymentCheckInterface.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/PaymentUpdateV2.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RptAdmissionMeritList.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTAdmissionSeatToken.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTAdmissionSeatToken.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTApprovedCandidatesWithTestRoll.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RptApprovedCandidatesWithTestRoll.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTAttendanceReport.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTAttendanceRoomWise.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RptAttendanceRoomWise.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTAttendanceRoomWiseV2.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTAttendanceRoomWiseV3 - Copy.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTAttendanceRoomWiseV3.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTCampusWiseSeatPlan.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RptCampusWiseSeatPlan.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTCampusWiseSeatPlanAllCampus.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTCampusWiseSeatPlanAllCampus.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RptCandidateInfoSelParam.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTDetailsForVivaGraduate.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RptDetailsForVivaGraduate.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTDetailsForVivaUndergraduate.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RptDetailsForVivaUndergraduate.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTEligibilityList.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RptEligibilityList.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTEligibleRollNumber.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTPaidandFinalSumbitReport.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTPaidandFinalSumbitReport.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTPrintCandidateAdmitCard.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTQuotaReport.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTQuotaReport.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTQuotaReportDetails.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTQuotaReportDetails.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTRoomWiseTestRollSheet.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTRoomWiseTestRollSheet.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTRoomWiseTestRollSheet_HtmlReport.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTStatusReport.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTStatusReport.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTStatusReportFinalSubmit.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTStatusReportFinalSubmit.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTTeleTalkBoardResult.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Reports/RPTTeleTalkBoardResult.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/ResendSms.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/Role.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/RoomSetup.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/RPTEkPayUnPaidCandidateInfo.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/SeatPlanDelete.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/SeatPlanGeneration.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/SSCHSCBasicInfoDataUpdate.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/SSCHSCVarification.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/TestRollDelete.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/TestRollGeneration.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/TransactionHistoryBkash.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/TransactionsHistory.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/UnitProgramSetup.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/UnitWiseBuildingSetup.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/UnitWiseCampusSetup.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/UnitWiseDistrictSetup.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/UnitWiseRoomSetup.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/User.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/UserAccessProgram.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/UserAccessSchool.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/UserPasswordChange.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/VivaInfoForSelectedCandidate.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/Office/VivaInfoForSelectedCandidate.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/PostgraduateDiploma/PDCandidateInfo/CandApplicationAdditional.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/PostgraduateDiploma/PDCandidateInfo/CandApplicationAddress.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/PostgraduateDiploma/PDCandidateInfo/CandApplicationAttachment.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/PostgraduateDiploma/PDCandidateInfo/CandApplicationBasic.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/PostgraduateDiploma/PDCandidateInfo/CandApplicationEducation.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/PostgraduateDiploma/PDCandidateInfo/CandApplicationRelation.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/PostgraduateDiploma/PostgraduateDiplomaApplicationAdditional.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/PostgraduateDiploma/PostgraduateDiplomaApplicationAddress.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/PostgraduateDiploma/PostgraduateDiplomaApplicationAttachment.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/PostgraduateDiploma/PostgraduateDiplomaApplicationBasic.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/PostgraduateDiploma/PostgraduateDiplomaApplicationEducation.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/PostgraduateDiploma/PostgraduateDiplomaApplicationRelation.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/PostgraduateDiploma/PostgraduateDiplomaPurchaseForm.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/PostgraduateDiploma/PostgraduateDiplomaPurchaseNotification.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/PostgraduateDiploma/Report/RPTPostgraduateDiplomaPaidCandidateList.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/PostgraduateDiploma/Report/RPTPostgraduateDiplomaPaidCandidateList.rdlc">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/PostgraduateDiploma/SelectPostgraduateDiplomaProgram.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/SiteUnderMaintenance.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/SpecialNotice.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/successurl.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/successurlfpg.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/successurlfpgCertificate.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/successurlRocket.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/testFpg.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/TestPage.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="Admission/VerifyPayment.aspx">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="ApplicationDocs/AdmissionTestResultNotice.pdf">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="ApplicationDocs/AdmitCardImages/AdmitCardBanner-2.jpg">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="ApplicationDocs/AdmitCardImages/bupMonoJpg-2Black.jpg">
+      <publishTime>01/20/2026 18:20:25</publishTime>
+    </File>
+    <File Include="ApplicationDocs/BulkAdmitCard/temp.txt">
+      <publishTime>12/30/2025 11:18:08</publishTime>
+    </File>
+    <File Include="ApplicationDocs/exam_center.pdf">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="ApplicationDocs/HowToPayByBkash.PNG">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="ApplicationDocs/Institute/BUP_banner.jpg">
+      <publishTime>01/25/2026 17:25:54</publishTime>
+    </File>
+    <File Include="ApplicationDocs/Institute/BUP_Logo.png">
+      <publishTime>01/25/2026 17:25:54</publishTime>
+    </File>
+    <File Include="ApplicationDocs/TEMP/temp.txt">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="ApplicationInsights.config">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="ApplicationOfflineData/importantNotice.json">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="ApplicationOfflineData/maintainNotice.json">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="bin/Admission.dll">
+      <publishTime>01/26/2026 15:29:48</publishTime>
+    </File>
+    <File Include="bin/Admission.pdb">
+      <publishTime>01/26/2026 15:29:48</publishTime>
+    </File>
+    <File Include="bin/AjaxControlToolkit.dll">
+      <publishTime>01/20/2026 18:20:27</publishTime>
+    </File>
+    <File Include="bin/AjaxControlToolkit.HtmlEditor.Sanitizer.dll">
+      <publishTime>01/20/2026 18:20:27</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>01/20/2026 18:20:27</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>01/20/2026 18:20:27</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="bin/AspNet.ScriptManager.bootstrap.dll">
+      <publishTime>01/20/2026 18:20:27</publishTime>
+    </File>
+    <File Include="bin/AspNet.ScriptManager.jQuery.dll">
+      <publishTime>01/20/2026 18:20:27</publishTime>
+    </File>
+    <File Include="bin/ClosedXML.dll">
+      <publishTime>01/20/2026 18:20:27</publishTime>
+    </File>
+    <File Include="bin/ClosedXML.pdb">
+      <publishTime>01/20/2026 18:20:27</publishTime>
+    </File>
+    <File Include="bin/CommonUtility.dll">
+      <publishTime>01/26/2026 15:22:01</publishTime>
+    </File>
+    <File Include="bin/CommonUtility.pdb">
+      <publishTime>01/26/2026 15:22:01</publishTime>
+    </File>
+    <File Include="bin/DAL.dll">
+      <publishTime>01/26/2026 15:21:59</publishTime>
+    </File>
+    <File Include="bin/DAL.dll.config">
+      <publishTime>01/20/2026 18:20:27</publishTime>
+    </File>
+    <File Include="bin/DAL.pdb">
+      <publishTime>01/26/2026 15:21:59</publishTime>
+    </File>
+    <File Include="bin/DAL_Log.dll">
+      <publishTime>01/26/2026 15:21:56</publishTime>
+    </File>
+    <File Include="bin/DAL_Log.dll.config">
+      <publishTime>01/20/2026 18:20:27</publishTime>
+    </File>
+    <File Include="bin/DAL_Log.pdb">
+      <publishTime>01/26/2026 15:21:56</publishTime>
+    </File>
+    <File Include="bin/DAL_UCAM.dll">
+      <publishTime>01/26/2026 15:21:56</publishTime>
+    </File>
+    <File Include="bin/DAL_UCAM.dll.config">
+      <publishTime>02/06/2024 16:14:49</publishTime>
+    </File>
+    <File Include="bin/DAL_UCAM.pdb">
+      <publishTime>01/26/2026 15:21:56</publishTime>
+    </File>
+    <File Include="bin/DATAMANAGER.dll">
+      <publishTime>01/26/2026 15:22:00</publishTime>
+    </File>
+    <File Include="bin/DATAMANAGER.dll.config">
+      <publishTime>01/20/2026 18:20:27</publishTime>
+    </File>
+    <File Include="bin/DATAMANAGER.pdb">
+      <publishTime>01/26/2026 15:22:00</publishTime>
+    </File>
+    <File Include="bin/DocumentFormat.OpenXml.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/DotNetZip.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/HtmlAgilityPack.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/HtmlAgilityPack.pdb">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.EntityDataSource.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.FriendlyUrls.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Web.Optimization.WebForms.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.Common.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.DataVisualization.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.ProcessingObjectModel.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.WebForms.dll">
+      <publishTime>05/29/2015 21:27:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.WinForms.dll">
+      <publishTime>05/29/2015 21:27:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ScriptManager.MSAjax.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ScriptManager.WebForms.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>01/20/2026 18:20:29</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>01/20/2026 18:20:28</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>01/20/2026 18:20:29</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap-grid.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap-grid.css.map">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap-grid.min.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap-grid.min.css.map">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap-reboot.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap-reboot.css.map">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap-reboot.min.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap-reboot.min.css.map">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap.css.map">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap.min.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap.min.css.map">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Bootstrap/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Bootstrap/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Bootstrap/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Bootstrap/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Bootstrap/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Bootstrap/js/bootstrap.bundle.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Bootstrap/js/bootstrap.bundle.js.map">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Bootstrap/js/bootstrap.bundle.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Bootstrap/js/bootstrap.bundle.min.js.map">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Bootstrap/js/bootstrap.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Bootstrap/js/bootstrap.js.map">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Bootstrap/js/bootstrap.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Bootstrap/js/bootstrap.min.js.map">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Bootstrap/js/jquery.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Bootstrap/js/npm.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Bootstrap/js/popper.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Bundle.config">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="ConnectionString.config">
+      <publishTime>01/25/2026 19:09:19</publishTime>
+    </File>
+    <File Include="Contact.aspx">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/ApplicationForm.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css.map">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css.map">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css.map">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css.map">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/adapters/jquery.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/build-config.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/ckeditor.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/config.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/contents.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/af.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/ar.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/az.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/bg.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/bn.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/bs.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/ca.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/cs.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/cy.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/da.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/de-ch.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/de.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/el.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/en-au.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/en-ca.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/en-gb.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/en.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/eo.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/es-mx.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/es.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/et.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/eu.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/fa.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/fi.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/fo.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/fr-ca.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/fr.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/gl.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/gu.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/he.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/hi.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/hr.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/hu.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/id.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/is.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/it.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/ja.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/ka.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/km.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/ko.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/ku.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/lt.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/lv.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/mk.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/mn.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/ms.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/nb.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/nl.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/no.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/oc.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/pl.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/pt-br.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/pt.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/ro.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/ru.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/si.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/sk.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/sl.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/sq.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/sr-latn.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/sr.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/sv.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/th.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/tr.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/tt.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/ug.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/uk.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/vi.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/zh-cn.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/lang/zh.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/a11yhelp.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/af.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/ar.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/az.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/bg.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/ca.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/cs.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/cy.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/da.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/de-ch.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/de.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/el.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/en-au.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/en-gb.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/en.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/eo.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/es-mx.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/es.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/et.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/eu.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/fa.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/fi.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/fo.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/fr-ca.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/fr.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/gl.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/gu.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/he.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/hi.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/hr.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/hu.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/id.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/it.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/ja.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/km.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/ko.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/ku.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/lt.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/lv.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/mk.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/mn.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/nb.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/nl.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/no.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/oc.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/pl.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/pt-br.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/pt.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/ro.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/ru.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/si.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/sk.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/sl.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/sq.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/sr-latn.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/sr.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/sv.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/th.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/tr.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/tt.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/ug.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/uk.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/vi.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/zh-cn.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/zh.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/about/dialogs/about.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/about/dialogs/hidpi/logo_ckeditor.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/about/dialogs/logo_ckeditor.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/clipboard/dialogs/paste.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/dialog/dialogDefinition.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/dialog/styles/dialog.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/icons.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/icons_hidpi.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/image/dialogs/image.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/image/images/noimage.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/link/dialogs/anchor.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/link/dialogs/link.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/link/images/anchor.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/link/images/hidpi/anchor.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/magicline/images/hidpi/icon-rtl.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/magicline/images/hidpi/icon.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/magicline/images/icon-rtl.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/magicline/images/icon.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/pastefromgdocs/filter/default.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/pastefromword/filter/default.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/pastetools/filter/common.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/pastetools/filter/image.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/scayt/CHANGELOG.md">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/scayt/dialogs/dialog.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/scayt/dialogs/options.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/scayt/dialogs/toolbar.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/scayt/LICENSE.md">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/scayt/README.md">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/scayt/skins/moono-lisa/scayt.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/af.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/ar.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/az.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/bg.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/ca.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/cs.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/cy.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/da.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/de-ch.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/de.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/el.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/en-au.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/en-ca.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/en-gb.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/en.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/eo.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/es-mx.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/es.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/et.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/eu.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/fa.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/fi.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/fr-ca.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/fr.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/gl.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/he.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/hr.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/hu.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/id.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/it.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/ja.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/km.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/ko.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/ku.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/lt.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/lv.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/nb.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/nl.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/no.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/oc.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/pl.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/pt-br.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/pt.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/ro.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/ru.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/si.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/sk.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/sl.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/sq.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/sr-latn.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/sr.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/sv.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/th.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/tr.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/tt.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/ug.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/uk.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/vi.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/zh-cn.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/zh.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/lang/_translationstatus.txt">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/specialchar/dialogs/specialchar.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/table/dialogs/table.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/tableselection/styles/tableselection.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/tabletools/dialogs/tableCell.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/widget/images/handle.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/wsc/dialogs/ciframe.html">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/wsc/dialogs/tmpFrameset.html">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/wsc/dialogs/wsc.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/wsc/dialogs/wsc.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/wsc/dialogs/wsc_ie.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/wsc/LICENSE.md">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/wsc/README.md">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/plugins/wsc/skins/moono-lisa/wsc.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/skins/moono-lisa/dialog.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/skins/moono-lisa/dialog_ie.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/skins/moono-lisa/dialog_ie8.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/skins/moono-lisa/dialog_iequirks.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/skins/moono-lisa/editor.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/skins/moono-lisa/editor_gecko.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/skins/moono-lisa/editor_ie.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/skins/moono-lisa/editor_ie8.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/skins/moono-lisa/editor_iequirks.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/skins/moono-lisa/icons.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/skins/moono-lisa/icons_hidpi.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/skins/moono-lisa/images/arrow.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/skins/moono-lisa/images/close.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/skins/moono-lisa/images/hidpi/close.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/skins/moono-lisa/images/hidpi/lock-open.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/skins/moono-lisa/images/hidpi/lock.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/skins/moono-lisa/images/hidpi/refresh.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/skins/moono-lisa/images/lock-open.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/skins/moono-lisa/images/lock.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/skins/moono-lisa/images/refresh.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/skins/moono-lisa/images/spinner.gif">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/skins/moono-lisa/readme.md">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/styles.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/CKEditor/vendor/promise.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/formStyle.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/steper.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/Template/bootstrap-icons/bootstrap-icons.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/Template/bootstrap-icons/bootstrap-icons.json">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/Template/bootstrap-icons/fonts/bootstrap-icons.woff">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/Template/bootstrap-icons/fonts/bootstrap-icons.woff2">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/Template/bootstrap-icons/index.html">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/Template/css/style.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Content/Template/img/hero-bg.jpg">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Docs/AdmissionForm/temp.txt">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Docs/WebAdd/temp.txt">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Images/AdmitCardRegisterSignature/RegisterSign19032023.jpeg">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Images/AdmitCardRegisterSignature/registrarsignature.jpg">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Images/AdmitCardRegisterSignature/Regitrar-Sign-1.jpg">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Images/AppImg/ekpay.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Images/AppImg/img1.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Images/AppImg/Instruction.jpg">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Images/AppImg/InstructionF.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Images/AppImg/oscar_data_loop__1_.gif">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Images/AppImg/reload6.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Images/AppImg/sign2.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Images/AppImg/sslcommerz.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Images/AppImg/t1.gif">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Images/AppImg/t2.gif">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Images/AppImg/user7.jpg">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Images/Favicon/favicon.ico">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Images/Favicon/favicon.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="package.json">
+      <publishTime>01/20/2026 18:20:27</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>01/20/2026 18:20:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/Custom/fadeIn.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/Custom/Key/key_formValidation.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.min.map">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.slim.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.slim.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.slim.min.map">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.8.3.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/respond.matchmedia.addListener.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/respond.matchmedia.addListener.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/jquery.tinymce.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/langs/readme.md">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/license.txt">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/advlist/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/anchor/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/autolink/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/autoresize/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/autosave/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/bbcode/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/charmap/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/code/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/codesample/css/prism.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/codesample/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/colorpicker/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/contextmenu/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/directionality/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/emoticons/img/smiley-cool.gif">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/emoticons/img/smiley-cry.gif">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/emoticons/img/smiley-embarassed.gif">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/emoticons/img/smiley-foot-in-mouth.gif">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/emoticons/img/smiley-frown.gif">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/emoticons/img/smiley-innocent.gif">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/emoticons/img/smiley-kiss.gif">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/emoticons/img/smiley-laughing.gif">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/emoticons/img/smiley-money-mouth.gif">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/emoticons/img/smiley-sealed.gif">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/emoticons/img/smiley-smile.gif">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/emoticons/img/smiley-surprised.gif">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/emoticons/img/smiley-tongue-out.gif">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/emoticons/img/smiley-undecided.gif">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/emoticons/img/smiley-wink.gif">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/emoticons/img/smiley-yell.gif">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/emoticons/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/fullpage/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/fullscreen/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/help/img/logo.png">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/help/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/hr/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/image/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/imagetools/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/importcss/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/insertdatetime/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/legacyoutput/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/link/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/lists/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/media/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/nonbreaking/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/noneditable/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/pagebreak/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/paste/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/preview/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/print/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/save/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/searchreplace/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/spellchecker/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/tabfocus/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/table/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/template/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/textcolor/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/textpattern/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/toc/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/visualblocks/css/visualblocks.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/visualblocks/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/visualchars/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/plugins/wordcount/plugin.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/skins/lightgray/content.inline.min.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/skins/lightgray/content.min.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/skins/lightgray/fonts/tinymce-small.eot">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/skins/lightgray/fonts/tinymce-small.svg">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/skins/lightgray/fonts/tinymce-small.ttf">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/skins/lightgray/fonts/tinymce-small.woff">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/skins/lightgray/fonts/tinymce.eot">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/skins/lightgray/fonts/tinymce.svg">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/skins/lightgray/fonts/tinymce.ttf">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/skins/lightgray/fonts/tinymce.woff">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/skins/lightgray/img/anchor.gif">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/skins/lightgray/img/loader.gif">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/skins/lightgray/img/object.gif">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/skins/lightgray/img/trans.gif">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/skins/lightgray/skin.min.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/themes/inlite/theme.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/themes/modern/theme.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/tinymce/tinymce.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/DetailsView.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/Focus.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/GridView.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/Menu.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MenuStandards.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjax.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxApplicationServices.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxComponentModel.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxCore.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxGlobalization.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxHistory.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxNetwork.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxSerialization.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxTimer.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxWebForms.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxWebServices.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/SmartNav.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/TreeView.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/WebForms.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/WebParts.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/WebUIValidation.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Service References/Application Insights/ConnectedService.json">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Site.Master">
+      <publishTime>01/26/2026 11:32:52</publishTime>
+    </File>
+    <File Include="SiteAdmin.Master">
+      <publishTime>01/26/2026 14:09:02</publishTime>
+    </File>
+    <File Include="SiteV2.Master">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Temp2.aspx">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="TempAdmin.aspx">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Toastr/jquery.min.js">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Toastr/toastr.css">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Upload/Candidate/Others/test.txt">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Upload/Candidate/Photo/C-Ph1-1.jpg">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Upload/Candidate/QuotaDoc/test.txt">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Upload/Candidate/Signature/C-Sn1-1.jpg">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Upload/Candidate/TEMP/Download/C-Sn1-1.jpg">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Upload/Candidate/TEMP/Others/Test.txt">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Upload/Candidate/TEMP/Photo/C-Ph1-1.jpg">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Upload/Candidate/TEMP/Signature/C-Sn1-1.jpg">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Upload/TEMP/TextFile1.txt">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Upload/TempAdmitCardDownload/AdminDownload/temp.txt">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Upload/TempAdmitCardDownload/TextFile1.txt">
+      <publishTime>01/20/2026 18:20:26</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>01/26/2026 15:22:28</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,290 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteAdmin.master.cs" Inherits="Admission.SiteAdmin" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BHPI Admin - <%: Page.Title %></title>
+
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap.min.js"></script>
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/Images/Favicon/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <%-- === Font Awesome CDN Link === --%>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+    <%-- === Sweet Alert CDN Link === --%>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert.min.js"></script>
+
+    <%-- === Toastr CDN Link === --%>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+
+    <style type="text/css">
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f8faf9;
+            overflow-x: hidden;
+        }
+
+        /* Sidebar Wrapper Layout */
+        #wrapper {
+            display: flex;
+            align-items: stretch;
+            transition: all 0.3s;
+        }
+
+        #sidebar {
+            min-width: 260px;
+            max-width: 260px;
+            background: #006a4e; /* BHPI Green */
+            color: #fff;
+            transition: all 0.3s;
+            min-height: 100vh;
+            z-index: 999;
+            box-shadow: 4px 0 10px rgba(0,0,0,0.1);
+        }
+
+            #sidebar.active {
+                margin-left: -260px;
+            }
+
+            #sidebar .sidebar-header {
+                padding: 25px 20px;
+                background: #00563f; /* Darker Green */
+                text-align: center;
+                border-bottom: 4px solid #8a151b; /* BHPI Red Accent */
+            }
+
+        /* Sidebar Menu Styling */
+        .nav-sidebar {
+            padding: 20px 0;
+        }
+
+            /* Targeting the ASP.NET Menu output */
+            .nav-sidebar ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .nav-sidebar li a {
+                padding: 14px 25px;
+                display: block;
+                color: #e0f2f1;
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: 500;
+                border-bottom: 1px solid rgba(255,255,255,0.05);
+                transition: all 0.2s;
+            }
+
+                .nav-sidebar li a:hover {
+                    background: #8a151b; /* BHPI Red Hover */
+                    color: #fff;
+                    padding-left: 30px;
+                }
+
+        /* Page Content Area */
+        #content {
+            width: 100%;
+            padding: 0;
+            min-height: 100vh;
+            transition: all 0.3s;
+        }
+
+        .top-navbar {
+            padding: 15px 30px;
+            background: #fff;
+            border: none;
+            border-radius: 0;
+            margin-bottom: 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #sidebarCollapse {
+            background: #006a4e;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+            #sidebarCollapse:hover {
+                background: #8a151b;
+            }
+
+        .user-info {
+            font-weight: 600;
+            color: #006a4e;
+            font-size: 15px;
+        }
+
+        .spanAsterisk {
+            color: #8a151b !important;
+            font-weight: bold !important;
+        }
+
+        /* Login/Logout Section */
+        .sidebar-footer {
+            padding: 20px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: #00563f;
+        }
+
+        .btn-sm-block {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+        }
+
+        .btn-info {
+            background-color: #00897b;
+            color: white;
+        }
+
+        .btn-danger {
+            background-color: #8a151b;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            #sidebar {
+                margin-left: -260px;
+                position: absolute;
+            }
+
+                #sidebar.active {
+                    margin-left: 0;
+                }
+
+            .sidebar-footer {
+                position: relative;
+            }
+        }
+
+        .dropdown-menu {
+            background-color: #0c231d !important;
+            color:white !important;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function toastrWarning(msg, title) {
+            toastr.options = { "progressBar": true, "positionClass": "toast-top-right", "timeOut": "3000" };
+            toastr.warning(msg, title);
+        }
+
+        function toastrSuccess(msg, title) {
+            toastr.options = { "progressBar": false, "positionClass": "toast-top-right", "timeOut": "5000" };
+            toastr.success(msg, title);
+        }
+
+        function toastrError(msg, title) {
+            toastr.options = { "progressBar": true, "positionClass": "toast-top-right", "timeOut": "2500" };
+            toastr.error(msg, title);
+        }
+    </script>
+
+    <asp:ContentPlaceHolder ID="headContent" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div id="wrapper">
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h4 style="color: white; margin: 0; font-weight: 700; letter-spacing: 1px;">BHPI ADMIN</h4>
+                    <p style="font-size: 11px; color: #99dbca; margin-top: 5px; text-transform: uppercase;">Admission Panel</p>
+                </div>
+
+                <asp:UpdatePanel ID="updatePanel_Menu" runat="server" UpdateMode="Always">
+                    <ContentTemplate>
+                        <asp:Menu ID="menuAdmin" runat="server"
+                            CssClass="nav-sidebar"
+                            Orientation="Vertical"
+                            EnableViewState="false"
+                            IncludeStyleBlock="false"
+                            RenderingMode="List"
+                            StaticMenuStyle-CssClass="nav"
+                            DynamicMenuStyle-CssClass="dropdown-menu">
+                        </asp:Menu>
+                        <asp:Button ID="btnLogout" runat="server" Text="Logout"
+                            Visible="false" CssClass="btn btn-danger btn-sm btn-sm-block"
+                            OnClick="btnLogout_Click" />
+
+                        <asp:HyperLink ID="hrefLogin" runat="server" Text="<i class='fas fa-sign-in-alt'></i> Login" CssClass="btn btn-info btn-sm btn-sm-block"
+                            NavigateUrl="~/Admission/Login.aspx"></asp:HyperLink>
+
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+            </nav>
+
+            <div id="content">
+                <nav class="top-navbar">
+                    <button type="button" id="sidebarCollapse" class="btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+
+                    <div class="user-info">
+                        <span class="text-muted mr-2">Welcome,</span>
+                        <i class="fas fa-user-shield"></i>
+                        <asp:Label ID="lblUserName" runat="server" Text="Guest User" CssClass="ml-1"></asp:Label>
+                    </div>
+                </nav>
+
+                <div class="container-fluid" style="padding: 30px;">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                    <hr style="margin-top: 50px;" />
+                    <footer>
+                        <p style="text-align: center; color: #999; font-size: 13px;">
+                            &copy; <%: DateTime.Now.Year %> - Bangladesh Health Professions Institute (BHPI)<br />
+                            <small>Academic Wing of CRP</small>
+                        </p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+</html>

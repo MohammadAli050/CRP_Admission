@@ -1,0 +1,80 @@
+﻿.style_td {
+    font-weight: bold;
+    text-align: left;
+    font-size: 9pt;
+}
+
+.style_td_secondCol {
+    border-left: dotted;
+    border-color: gray;
+    border-width: 1px;
+}
+
+.spanAsterisk {
+    color: crimson;
+    font-size: 12pt;
+    font-weight: bolder;
+}
+
+.style_thead {
+    text-align: center;
+    /*background-color: lightgrey;*/
+    font-family: Calibri;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.verAlignMid{
+    vertical-align: middle;
+}
+
+.verAlignTop{
+    vertical-align: top;
+}
+
+.verAlignBot{
+    vertical-align: bottom;
+}
+
+.panelBody_edu_marginBottom {
+    margin-bottom: -5%;
+}
+
+.panelHeaderHeight {
+    height: 55px;
+}
+
+/*customize breadcrumb*/
+.breadcrumb {
+    /*background-color: #FAFAFA;*/
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+    /*change breadcrumb links color*/
+    .breadcrumb a {
+        color: #427ee7;
+    }
+
+        .breadcrumb a:hover {
+            text-decoration: none;
+        }
+
+    /*change active color*/
+    .breadcrumb > .active {
+        color: #04ACD1;
+        font-weight: bold;
+    }
+
+    /*change breadcrumb separator to raquo symbol*/
+    .breadcrumb > li + li:before {
+        content: "\00BB";
+        color: black;
+    }
+
+.validationErrorMsg {
+    color: crimson;
+    font-size: 11pt;
+}

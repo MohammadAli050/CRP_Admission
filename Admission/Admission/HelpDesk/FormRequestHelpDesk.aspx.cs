@@ -1,0 +1,718 @@
+﻿using Admission.App_Start;
+using CommonUtility;
+using DAL.ViewModels;
+using DATAMANAGER;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Drawing;
+using System.Linq;
+using System.Text.RegularExpressions;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace Admission.Admission.HelpDesk
+{
+    public partial class FormRequestHelpDesk : PageBase
+    {
+        private string _pageUrl = HttpContext.Current.Request.Url.AbsoluteUri;
+
+        long uId = 0;
+        string uRole = string.Empty;
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            uId = SessionSGD.GetObjFromSession<long>(SessionName.Common_UserId); //user primary key
+            uRole = SessionSGD.GetObjFromSession<string>(SessionName.Common_RoleName);
+
+            if (!IsPostBack)
+            {
+                LoadDDL();
+                LoadListView();
+            }
+        }
+
+        private void LoadDDL()
+        {
+            using (var db = new OfficeDataManager())
+            {
+                DDLHelper.Bind<DAL.AdmissionUnit>(ddlUnitProgram, db.GetAllAdmissionUnit(), "UnitName", "ID", EnumCollection.ListItemType.SelectAll);
+                DDLHelper.Bind<DAL.EducationCategory>(ddlEducationCategory, db.AdmissionDB.EducationCategories.Where(a => a.IsActive == true).ToList(), "CategoryName", "ID", EnumCollection.ListItemType.SelectAll);
+                DDLHelper.Bind<DAL.SPAcademicCalendarGetAll_Result>(ddlSession, db.AdmissionDB.SPAcademicCalendarGetAll().OrderByDescending(a => a.AcademicCalenderID).ToList(), "FullCode", "AcademicCalenderID", EnumCollection.ListItemType.Select);
+            }
+        }
+
+        private void LoadListView()
+        {
+            #region N/A
+            //using (var db = new CandidateDataManager())
+            //{
+            //    List<FormRequestListViewObject> list = (from candPayment in db.AdmissionDB.CandidatePayments
+            //                                            join candFormSl in db.AdmissionDB.CandidateFormSls on candPayment.ID equals candFormSl.CandidatePaymentID
+            //                                            join candidate in db.AdmissionDB.BasicInfoes on candFormSl.CandidateID equals candidate.ID
+            //                                            join admSetup in db.AdmissionDB.AdmissionSetups on candFormSl.AdmissionSetupID equals admSetup.ID
+            //                                            join admUnit in db.AdmissionDB.AdmissionUnits on admSetup.AdmissionUnitID equals admUnit.ID
+            //                                            where candPayment.IsPaid == false
+            //                                            select new FormRequestListViewObject
+            //                                            {
+            //                                                CandidateID = candidate.ID,
+            //                                                Name = candidate.FirstName,
+            //                                                CandidateFormSerialID = candFormSl.ID,
+            //                                                FormSerial = candFormSl.FormSerial,
+            //                                                CandidatePaymentID = candPayment.ID,
+            //                                                PaymentId = candPayment.PaymentId,
+            //                                                IsPaid = candPayment.IsPaid == true ? "Yes" : "No",
+            //                                                Mobile = candidate.SMSPhone,
+            //                                                Email = candidate.Email,
+            //                                                AdmissionSetupID = admSetup.ID,
+            //                                                AdmissionUnitID = admUnit.ID,
+            //                                                UNIT = admUnit.UnitName,
+            //                                                DateApplied = candidate.DateCreated
+            //                                            }).OrderByDescending(c=> c.DateApplied).Take(50).ToList();
+            //    if (list.Count() > 0)
+            //    {
+            //        lvFormRequest.DataSource = list.OrderByDescending(c => c.DateApplied).ToList();
+            //        lblCount.Text = list.Count().ToString();
+            //    }
+            //    else
+            //    {
+            //        lvFormRequest.DataSource = null;
+            //        lblCount.Text = "0";
+            //    }
+            //}
+            //lvFormRequest.DataBind(); 
+            #endregion
+
+            List<FormRequesAndReceiveFormtListViewObject> list = GetAllCandidateInfo();
+
+            if (list != null && list.Count > 0)
+            {
+                lvFormRequest.DataSource = list.OrderByDescending(c => c.PaymentId).Take(500).ToList();
+                lblCount.Text = list.Count().ToString();
+            }
+            else
+            {
+                lvFormRequest.DataSource = null;
+                lblCount.Text = "0";
+            }
+
+            lvFormRequest.DataBind();
+
+
+        }
+
+        private void LoadListView(string searchText, int? acaCalId)
+        {
+            #region N/A
+            //if (searchText != null)//search using search text
+            //{
+            //    using (var db = new CandidateDataManager())
+            //    {
+            //        List<DAL.SPFormRequestGetBySearchText_Result> list = db.AdmissionDB.SPFormRequestGetBySearchText(searchText, false).ToList();
+            //        if (list.Any())
+            //        {
+            //            List<FormRequestListViewObject> lvObjList = new List<FormRequestListViewObject>();
+            //            foreach (var item in list)
+            //            {
+            //                FormRequestListViewObject obj = new FormRequestListViewObject();
+            //                obj.CandidateID = item.CandidateID;
+            //                obj.Name = item.Name;
+            //                obj.CandidateFormSerialID = item.CandidateFormSerialID;
+            //                obj.FormSerial = item.FormSerial;
+            //                obj.CandidatePaymentID = item.CandidatePaymentID;
+            //                obj.PaymentId = item.PaymentId;
+            //                obj.Mobile = item.Mobile;
+            //                obj.Email = item.Email;
+            //                obj.AdmissionSetupID = item.AdmissionSetupID;
+            //                obj.AdmissionUnitID = item.AdmissionUnitID;
+            //                obj.UNIT = item.UNIT;
+            //                obj.DateApplied = item.DateApplied;
+            //                if (item.IsPaid == true)
+            //                {
+            //                    obj.IsPaid = "Yes";
+            //                }
+            //                else
+            //                {
+            //                    obj.IsPaid = "No";
+            //                }
+            //                lvObjList.Add(obj);
+            //            }
+            //            if (lvObjList.Any())
+            //            {
+            //                lvFormRequest.DataSource = lvObjList.OrderByDescending(c => c.CandidateFormSerialID).ToList();
+            //                lblCount.Text = lvObjList.Count.ToString();
+            //            }
+            //            else
+            //            {
+            //                lvFormRequest.DataSource = null;
+            //                lblCount.Text = "0";
+            //            }
+            //            lvFormRequest.DataBind();
+            //        }
+            //        else
+            //        {
+            //            lvFormRequest.DataSource = null;
+            //            lblCount.Text = "0";
+            //            lvFormRequest.DataBind();
+            //        }
+            //    }
+            //}
+            //else if (acaCalId != null || acaCalId > 0)// load data using dropdowns (to filter)
+            //{
+            //    long admissionUnitId = Convert.ToInt64(ddlUnitProgram.SelectedValue);
+            //    int educationCategoryId = Convert.ToInt32(ddlEducationCategory.SelectedValue);
+            //    int sessionId = Convert.ToInt32(ddlSession.SelectedValue);
+            //    using (var db = new CandidateDataManager())
+            //    {
+            //        List<DAL.SPFormRequestGetByAdmUnitIdAcaCalIdEduCatId_Result> list =
+            //            db.AdmissionDB.SPFormRequestGetByAdmUnitIdAcaCalIdEduCatId(admissionUnitId, sessionId, educationCategoryId, false).ToList();
+            //        if (list.Any())
+            //        {
+            //            List<FormRequestListViewObject> lvObjList = new List<FormRequestListViewObject>();
+            //            foreach (var item in list)
+            //            {
+            //                FormRequestListViewObject obj = new FormRequestListViewObject();
+            //                obj.CandidateID = item.CandidateID;
+            //                obj.Name = item.Name;
+            //                obj.CandidateFormSerialID = item.CandidateFormSerialID;
+            //                obj.FormSerial = item.FormSerial;
+            //                obj.CandidatePaymentID = item.CandidatePaymentID;
+            //                obj.PaymentId = item.PaymentId;
+            //                obj.Mobile = item.Mobile;
+            //                obj.Email = item.Email;
+            //                obj.AdmissionSetupID = item.AdmissionSetupID;
+            //                obj.AdmissionUnitID = item.AdmissionUnitID;
+            //                obj.UNIT = item.UNIT;
+            //                obj.DateApplied = item.DateApplied;
+            //                if (item.IsPaid == true)
+            //                {
+            //                    obj.IsPaid = "Yes";
+            //                }
+            //                else
+            //                {
+            //                    obj.IsPaid = "No";
+            //                }
+            //                lvObjList.Add(obj);
+            //            }
+            //            if (lvObjList.Any())
+            //            {
+            //                lvFormRequest.DataSource = lvObjList.OrderByDescending(c => c.CandidateFormSerialID).ToList();
+            //                lblCount.Text = lvObjList.Count.ToString();
+            //            }
+            //            else
+            //            {
+            //                lvFormRequest.DataSource = null;
+            //                lblCount.Text = "0";
+            //            }
+            //            lvFormRequest.DataBind();
+            //        }
+            //        else
+            //        {
+            //            lvFormRequest.DataSource = null;
+            //            lblCount.Text = "0";
+            //            lvFormRequest.DataBind();
+            //        }
+            //    }
+            //} 
+            #endregion
+
+            if (searchText != null)//search using search text
+            {
+                
+
+                List<FormRequesAndReceiveFormtListViewObject> list = GetAllCandidateInfo();
+
+                if (list.Count > 0)
+                {
+
+                    if (new EmailAddressAttribute().IsValid(searchText.Trim()))
+                    {
+                        list = list.Where(x => x.Email == searchText.Trim()).ToList();
+                    }
+                    else if (Regex.Match(searchText.Trim(), @"^(?:\+88|01)?\d{11}$").Success)
+                    {
+                        list = list.Where(x => x.Mobile == searchText.Trim()).ToList();
+                    }
+                    else
+                    {
+                        long paymentId = Convert.ToInt64(searchText.Trim());
+                        list = list.Where(x => x.PaymentId == paymentId).ToList();
+                    }
+
+
+                    if (list.Any())
+                    {
+                        lvFormRequest.DataSource = list.OrderByDescending(c => c.PaymentId).ToList();
+                        lblCount.Text = list.Count.ToString();
+                    }
+                    else
+                    {
+                        lvFormRequest.DataSource = null;
+                        lblCount.Text = "0";
+                    }
+                    lvFormRequest.DataBind();
+                }
+                else
+                {
+                    lvFormRequest.DataSource = null;
+                    lblCount.Text = "0";
+                    lvFormRequest.DataBind();
+                }
+
+
+
+            }
+            else if (acaCalId != null || acaCalId > 0)// load data using dropdowns (to filter)
+            {
+                long admissionUnitId = Convert.ToInt64(ddlUnitProgram.SelectedValue);
+                int educationCategoryId = Convert.ToInt32(ddlEducationCategory.SelectedValue);
+                int sessionId = Convert.ToInt32(ddlSession.SelectedValue);
+
+                List<DAL.SPFormRequestGetByAdmUnitIdAcaCalIdEduCatId_Result> candidateAllInfolist = null;
+                using (var db = new CandidateDataManager())
+                {
+                    candidateAllInfolist = db.AdmissionDB.SPFormRequestGetByAdmUnitIdAcaCalIdEduCatId(admissionUnitId, sessionId, educationCategoryId, false).ToList();
+                }
+
+                List<FormRequesAndReceiveFormtListViewObject> list = GetAllCandidateInfo();
+
+                list = list.Where(x => candidateAllInfolist.Any(y => y.PaymentId == x.PaymentId)).ToList();
+
+                if (list.Count > 0)
+                {
+                    list = list.Where(x => x.AcaCalId == acaCalId).ToList();
+                    if (list.Any())
+                    {
+                        lvFormRequest.DataSource = list.OrderByDescending(c => c.PaymentId).ToList();
+                        lblCount.Text = list.Count.ToString();
+                    }
+                    else
+                    {
+                        lvFormRequest.DataSource = null;
+                        lblCount.Text = "0";
+                    }
+                    lvFormRequest.DataBind();
+                }
+                else
+                {
+                    lvFormRequest.DataSource = null;
+                    lblCount.Text = "0";
+                    lvFormRequest.DataBind();
+                }
+
+
+            }
+
+
+        }
+
+        protected void btnLoad_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(ddlSession.SelectedValue) > 0)
+            {
+                LoadListView(null, Convert.ToInt32(ddlSession.SelectedValue));
+            }
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtSearchText.Text))
+            {
+                LoadListView(txtSearchText.Text, null);
+            }
+        }
+
+        protected void lvFormRequest_ItemDataBound(object sender, ListViewItemEventArgs e)
+        {
+            #region N/A
+            //if (e.Item.ItemType == ListViewItemType.DataItem)
+            //{
+            //    ListViewDataItem currentItem = (ListViewDataItem)e.Item;
+            //    FormRequestListViewObject obj = (FormRequestListViewObject)((ListViewDataItem)(e.Item)).DataItem;
+
+            //    //Label lblSerial = (Label)currentItem.FindControl("lblSerial");
+            //    Label lblName = (Label)currentItem.FindControl("lblName");
+            //    Label lblFormSerial = (Label)currentItem.FindControl("lblFormSerial");
+            //    Label lblPaymentId = (Label)currentItem.FindControl("lblPaymentId");
+            //    Label lblMobile = (Label)currentItem.FindControl("lblMobile");
+            //    Label lblEmail = (Label)currentItem.FindControl("lblEmail");
+            //    Label lblUnit = (Label)currentItem.FindControl("lblUnit");
+            //    Label lblDateApplied = (Label)currentItem.FindControl("lblDateApplied");
+            //    Label lblPaid = (Label)currentItem.FindControl("lblPaid");
+
+            //    LinkButton lbSendBkashInfo = (LinkButton)currentItem.FindControl("lbSendBkashInfo");
+
+            //    //lblSerial.Text = (e.Item.DisplayIndex + 1).ToString();
+            //    lblName.Text = obj.Name;
+            //    lblFormSerial.Text = obj.FormSerial.ToString();
+            //    lblPaymentId.Text = obj.PaymentId.ToString();
+            //    lblMobile.Text = obj.Mobile;
+            //    lblEmail.Text = obj.Email;
+            //    lblUnit.Text = obj.UNIT;
+            //    lblDateApplied.Text = obj.DateApplied.HasValue ? obj.DateApplied.Value.ToString("dd/MM/yyyy") : "N/A";
+            //    if (obj.IsPaid == "Yes")
+            //    {
+            //        lblPaid.Text = "✓";
+            //        lblPaid.ForeColor = Color.Green;
+            //    }
+            //    else
+            //    {
+            //        lblPaid.Text = "✕";
+            //        lblPaid.Font.Bold = true;
+            //        lblPaid.ForeColor = Color.Crimson;
+            //    }
+
+            //    //lbSendBkashInfo.CommandName = "SendBkashInfo";
+            //    //lbSendBkashInfo.CommandArgument = obj.PaymentId.ToString();
+            //} 
+            #endregion
+
+            if (e.Item.ItemType == ListViewItemType.DataItem)
+            {
+                ListViewDataItem currentItem = (ListViewDataItem)e.Item;
+                FormRequesAndReceiveFormtListViewObject obj = (FormRequesAndReceiveFormtListViewObject)((ListViewDataItem)(e.Item)).DataItem;
+
+                Label lblSerial = (Label)currentItem.FindControl("lblSerial");
+                Label lblName = (Label)currentItem.FindControl("lblName");
+                //Label lblFormSerial = (Label)currentItem.FindControl("lblFormSerial");
+                Label lblPaymentId = (Label)currentItem.FindControl("lblPaymentId");
+                Label lblMobile = (Label)currentItem.FindControl("lblMobile");
+                Label lblUnit = (Label)currentItem.FindControl("lblUnit");
+                Label lblDateApplied = (Label)currentItem.FindControl("lblDateApplied");
+                Label lblPaid = (Label)currentItem.FindControl("lblPaid");
+
+                LinkButton lnkPrintPurchaseReciept = (LinkButton)currentItem.FindControl("lnkPrintPurchaseReciept");
+                //LinkButton lnkPrintMoneyReciept = (LinkButton)currentItem.FindControl("lnkPrintMoneyReciept");
+
+                string facultyList = "";
+                long paymentId = Convert.ToInt64(obj.PaymentId);
+                using (var db = new CandidateDataManager())
+                {
+
+                    List<FormRequestListViewObject> list = (from candPayment in db.AdmissionDB.CandidatePayments
+                                                            join candFormSl in db.AdmissionDB.CandidateFormSls on candPayment.ID equals candFormSl.CandidatePaymentID
+                                                            join candidate in db.AdmissionDB.BasicInfoes on candFormSl.CandidateID equals candidate.ID
+                                                            join admSetup in db.AdmissionDB.AdmissionSetups on candFormSl.AdmissionSetupID equals admSetup.ID
+                                                            join admUnit in db.AdmissionDB.AdmissionUnits on admSetup.AdmissionUnitID equals admUnit.ID
+                                                            where candPayment.IsPaid == false && candPayment.PaymentId == paymentId
+                                                            select new FormRequestListViewObject
+                                                            {
+                                                                CandidateID = candidate.ID,
+                                                                Name = candidate.FirstName + " " + candidate.LastName,
+                                                                CandidateFormSerialID = candFormSl.ID,
+                                                                FormSerial = candFormSl.FormSerial,
+                                                                CandidatePaymentID = candPayment.ID,
+                                                                PaymentId = candPayment.PaymentId,
+                                                                IsPaid = candPayment.IsPaid == true ? "Yes" : "No",
+                                                                Mobile = candidate.SMSPhone,
+                                                                AdmissionSetupID = admSetup.ID,
+                                                                AdmissionUnitID = admUnit.ID,
+                                                                UNIT = admUnit.UnitName,
+                                                                DateApplied = candidate.DateCreated
+                                                            }).ToList();  //.Take(500)
+
+
+
+                    if (list.Count > 0)
+                    {
+                        foreach (var tData in list)
+                        {
+                            facultyList = facultyList + tData.UNIT + "<br/>";
+                        }
+                    }
+                }
+
+                lblSerial.Text = (e.Item.DisplayIndex + 1).ToString();
+                lblName.Text = obj.Name;
+                //lblFormSerial.Text = obj.FormSerial.ToString();
+                lblPaymentId.Text = obj.PaymentId.ToString();
+                lblMobile.Text = obj.Mobile;
+                lblUnit.Text = facultyList.ToString();
+                lblDateApplied.Text = obj.DateApplied.HasValue ? obj.DateApplied.Value.ToString("dd/MM/yyyy") : "N/A";
+                if (obj.IsPaid == "Yes")
+                {
+                    lblPaid.Text = obj.IsPaid;
+                    lblPaid.ForeColor = Color.Green;
+                }
+                else
+                {
+                    lblPaid.Text = obj.IsPaid;
+                    lblPaid.ForeColor = Color.Crimson;
+                }
+
+                //lnkPrintPurchaseReciept.CommandName = "PurchaseReciept";
+                //lnkPrintPurchaseReciept.CommandArgument = obj.PaymentId.ToString();
+            }
+
+
+        }
+
+        protected void lvFormRequest_ItemCommand(object sender, ListViewCommandEventArgs e)
+        {
+            #region N/A
+            //if (e.CommandName == "SendBkashInfo")
+            //{
+            //    long referenceNo = -1;
+            //    referenceNo = Convert.ToInt64(e.CommandArgument.ToString());
+
+            //    string paymentId = null;
+            //    string amountToPayStr = null;
+            //    string candidateName = null;
+            //    string candidateEmail = null;
+            //    string merchantAccountNo = null;
+            //    long candidateId = -1;
+
+            //    List<DAL.CandidatePayment> candidatePaymentList = null;
+
+            //    if (referenceNo > 0)
+            //    {
+            //        try
+            //        {
+            //            using (var db = new CandidateDataManager())
+            //            {
+            //                candidatePaymentList = db.AdmissionDB.CandidatePayments.Where(c => c.PaymentId == referenceNo).ToList();
+            //            }
+            //        }
+            //        catch (Exception)
+            //        {
+            //            panel_message.Visible = true;
+            //            lblMessage.Text = "Error getting candidate payment information.";
+            //            panel_message.CssClass = "alert alert-danger";
+            //            return;
+            //        }
+            //    }
+            //    else
+            //    {
+            //        panel_message.Visible = true;
+            //        lblMessage.Text = "Payment Id not available.";
+            //        panel_message.CssClass = "alert alert-danger";
+            //        return;
+            //    }
+
+            //    if (candidatePaymentList != null)
+            //    {
+            //        if (candidatePaymentList.Count == 1)
+            //        {
+            //            DAL.CandidatePayment cPayment = new DAL.CandidatePayment();
+            //            cPayment = candidatePaymentList.First();
+
+            //            if (cPayment.PaymentId == referenceNo)
+            //            {
+            //                int amountToBePaid = -1;
+            //                double amount = -0.0;
+            //                //string paymentIdStr = null;
+
+            //                amount = Convert.ToDouble(cPayment.Amount) + (Convert.ToDouble(cPayment.Amount) * (1.5 / 100));
+            //                amountToBePaid = Convert.ToInt32(Math.Ceiling(amount));
+
+            //                paymentId = cPayment.PaymentId.ToString();
+            //                amountToPayStr = amountToBePaid.ToString();
+            //                merchantAccountNo = "01769028780";
+            //            }
+
+            //            DAL.BasicInfo candidate = null;
+            //            try
+            //            {
+            //                using (var db = new CandidateDataManager())
+            //                {
+            //                    candidate = db.AdmissionDB.BasicInfoes.Find(cPayment.CandidateID);
+            //                }
+            //            }
+            //            catch (Exception)
+            //            {
+            //                panel_message.Visible = true;
+            //                lblMessage.Text = "Error getting candidate information.";
+            //                panel_message.CssClass = "alert alert-danger";
+            //                return;
+            //            }
+
+            //            if (candidate != null)
+            //            {
+            //                candidateName = candidate.FirstName;
+            //                candidateEmail = candidate.Email;
+            //                candidateId = candidate.ID;
+            //            }
+            //            else
+            //            {
+            //                candidateName = null;
+            //                candidateEmail = null;
+            //                candidateId = -1;
+            //            }
+            //        }
+            //        else if (candidatePaymentList.Count > 1)
+            //        {
+            //            paymentId = null;
+            //            amountToPayStr = null;
+            //            merchantAccountNo = null;
+
+            //            panel_message.Visible = true;
+            //            lblMessage.Text = "Multiple payment id found. Please contact system administrator for further information.";
+            //            panel_message.CssClass = "alert alert-danger";
+            //            return;
+            //        }
+            //    }
+            //    else
+            //    {
+            //        panel_message.Visible = true;
+            //        lblMessage.Text = "Candidate payment information not found Please contact system administrator for further information.";
+            //        panel_message.CssClass = "alert alert-danger";
+            //        return;
+            //    }
+
+            //    if (candidateName != null && candidateEmail != null && amountToPayStr != null
+            //                && merchantAccountNo != null && paymentId != null && candidateId > 0)
+            //    {
+            //        string mailBody = "Dear " + candidateName + ", <br/><br/>" +
+            //                    "<p>Please check the information below about how to pay using bKash: </p>" +
+            //                    "<br/>" +
+            //                    "<p>" +
+            //                        "1. Dial * 247#<br/>" +
+            //                        "2. Select 'Payment' option.<br/>" +
+            //                        "3. Enter Merchant bKash Account No: " + merchantAccountNo + "<br/>" +
+            //                        "4. Enter amount:" + amountToPayStr + "<br/>" +
+            //                        "5. Enter reference: " + paymentId + "<br/>" +
+            //                        "6. Enter counter number:  1 <br/>" +
+            //                        "7. Enter your PIN number.<br/>" +
+            //                    "</p>" +
+            //                    "<p>" +
+            //                        "* Once you have successfully made the payment, you will receive an SMS with your payment details.<br/>" +
+            //                        "* Go to Admission Home Page and click  Verify / Complete Payment .<br/>" +
+            //                        "* Enter your TrxID, that you have received via SMS, in the Verify or Complete Payment Made By bKash  section on the right. <br/>" +
+            //                        "* Click Verify bKash Transaction to verify your payment.<br/>" +
+            //                    "</p>" +
+            //                    "<p>" +
+            //                    "<strong>Important</strong><br/>" +
+            //                        "* Transactions can only be done using Personal bKash Account.<br/>" +
+            //                        "* The transaction has to be made using the Payment option from bKash menu.<br/>" +
+            //                        "* 10 digits Payment ID numbers must be used in the Reference section. No symbols, space or punctuation marks can be used.<br/>" +
+            //                        "* For counter number, individuals always has to input “1” in the designated section.<br/>" +
+            //                    "</p>" +
+            //                    "<br/>" +
+            //                    "Regards, <br/>" +
+            //                    "ICT, Bangladesh University of Professionals (BUP)" +
+            //                    "";
+
+            //        string fromAddress = "no-reply-2@bup.edu.bd";
+            //        string senderName = "BUP Admission";
+            //        string subject = "Instruction. How to Pay using bKash.";
+
+            //        bool isSentEmail = EmailUtility.SendMail(candidateEmail, fromAddress, senderName, subject, mailBody);
+
+            //        if (isSentEmail == true)
+            //        {
+            //            DAL_Log.EmailLog eLog = new DAL_Log.EmailLog();
+            //            eLog.MessageBody = mailBody;
+            //            eLog.MessageSubject = subject;
+            //            eLog.Page = "FormRequestHelpDesk.aspx";
+            //            eLog.SentBy = uId.ToString();
+            //            eLog.StudentId = candidateId;
+            //            eLog.ToAddress = candidateEmail;
+            //            eLog.ToName = candidateName;
+            //            eLog.DateSent = DateTime.Now;
+            //            eLog.FromAddress = fromAddress;
+            //            eLog.FromName = senderName;
+            //            eLog.Attribute1 = "Success";
+
+            //            LogWriter.EmailLog(eLog);
+
+            //            panel_message.Visible = true;
+            //            lblMessage.Text = "Email Sent.";
+            //            lblMessage.Focus();
+            //            panel_message.CssClass = "alert alert-success";
+            //        }
+            //        else if (isSentEmail == false)
+            //        {
+            //            DAL_Log.EmailLog eLog = new DAL_Log.EmailLog();
+            //            eLog.MessageBody = mailBody;
+            //            eLog.MessageSubject = subject;
+            //            eLog.Page = "FormRequestHelpDesk.aspx";
+            //            eLog.SentBy = uId.ToString();
+            //            eLog.StudentId = candidateId;
+            //            eLog.ToAddress = candidateEmail;
+            //            eLog.ToName = candidateName;
+            //            eLog.DateSent = DateTime.Now;
+            //            eLog.FromAddress = fromAddress;
+            //            eLog.FromName = senderName;
+            //            eLog.Attribute1 = "Failed";
+
+            //            LogWriter.EmailLog(eLog);
+
+            //            panel_message.Visible = true;
+            //            lblMessage.Text = "Email Not Sent.";
+            //            lblMessage.Focus();
+            //            panel_message.CssClass = "alert alert-danger";
+            //        }
+            //    }
+            //    else
+            //    {
+            //        panel_message.Visible = true;
+            //        lblMessage.Text = "Unable to send email. One or more info is missing.";
+            //        panel_message.CssClass = "alert alert-danger";
+            //        return;
+            //    }
+            //} 
+            #endregion
+        }
+
+        protected void lvFormRequest_PagePropertiesChanging(object sender, PagePropertiesChangingEventArgs e)
+        {
+            string searchText = txtSearchText.Text;
+            int sessionId = Convert.ToInt32(ddlSession.SelectedValue);
+            if ((string.IsNullOrEmpty(searchText.Trim())) && sessionId > 0)
+            {
+                lvDataPager.SetPageProperties(e.StartRowIndex, e.MaximumRows, false);
+                LoadListView(null, sessionId);
+            }
+            else if ((!string.IsNullOrEmpty(searchText.Trim())) && sessionId < 1)
+            {
+                lvDataPager.SetPageProperties(e.StartRowIndex, e.MaximumRows, false);
+                LoadListView(searchText, null);
+            }
+            else
+            {
+                lvDataPager.SetPageProperties(e.StartRowIndex, e.MaximumRows, false);
+                LoadListView();
+            }
+        }
+
+
+        protected List<FormRequesAndReceiveFormtListViewObject> GetAllCandidateInfo()
+        {
+            List<FormRequesAndReceiveFormtListViewObject> list = null;
+            using (var db = new CandidateDataManager())
+            {
+
+                list = (from candPayment in db.AdmissionDB.CandidatePayments
+                            //join candFormSl in db.AdmissionDB.CandidateFormSls on candPayment.ID equals candFormSl.CandidatePaymentID
+                        join candidate in db.AdmissionDB.BasicInfoes on candPayment.CandidateID equals candidate.ID
+                        //join admSetup in db.AdmissionDB.AdmissionSetups on candFormSl.AdmissionSetupID equals admSetup.ID
+                        //join admUnit in db.AdmissionDB.AdmissionUnits on admSetup.AdmissionUnitID equals admUnit.ID
+                        where candPayment.IsPaid == false
+                        orderby candPayment.PaymentId descending
+                        select new FormRequesAndReceiveFormtListViewObject
+                        {
+                            CandidateID = candidate.ID,
+                            Name = candidate.FirstName + " " + candidate.LastName,
+                            //CandidateFormSerialID = candFormSl.ID,
+                            //FormSerial = candFormSl.FormSerial,
+                            CandidatePaymentID = candPayment.ID,
+                            PaymentId = candPayment.PaymentId,
+                            IsPaid = candPayment.IsPaid == true ? "Yes" : "No",
+                            Mobile = candidate.SMSPhone,
+                            //AdmissionSetupID = admSetup.ID,
+                            //AdmissionUnitID = admUnit.ID,
+                            //UNIT = admUnit.UnitName,
+                            DateApplied = candidate.DateCreated,
+                            AcaCalId = candPayment.AcaCalID
+                        }).ToList();  //
+            }
+
+            return list;
+        }
+
+
+
+    }
+}

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e9344109ebb743a2a4daa0829bf1a537" Name="Diagram1" ZoomLevel="66">
+        <EntityTypeShape EntityType="AdmissionModel.AddressType" Width="1.5" PointX="9" PointY="32" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.BloodGroup" Width="1.5" PointX="3.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.Country" Width="1.5" PointX="0.75" PointY="42" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.District" Width="1.5" PointX="0.75" PointY="38" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.Division" Width="1.5" PointX="1.5" PointY="34.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.DocumentType" Width="1.5" PointX="6" PointY="33" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.EducationBoard" Width="1.5" PointX="9.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.EducationCategory" Width="1.5" PointX="6.75" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.EducationMedium" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.ExamType" Width="1.5" PointX="9" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.Gender" Width="1.5" PointX="3.75" PointY="36.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.GroupOrSubject" Width="1.5" PointX="9.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.Institute" Width="1.5" PointX="2.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.Key" Width="1.5" PointX="11.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.KeyValue" Width="1.5" PointX="14" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.Language" Width="1.5" PointX="5.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.MaritalStatu" Width="1.5" PointX="3.75" PointY="31" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.Menu" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.Quota" Width="1.5" PointX="3.75" PointY="47.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.RelationType" Width="1.5" PointX="15" PointY="31.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.Religion" Width="1.5" PointX="3.75" PointY="51.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.ResultDivision" Width="1.5" PointX="9.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.Semester" Width="1.5" PointX="14.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.SSC_HSC_Subject" Width="1.5" PointX="6.75" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.UndergradGradProgram" Width="1.5" PointX="9.75" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.AdditionalInfo" Width="1.5" PointX="14.25" PointY="39.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.Address" Width="1.5" PointX="11.25" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.AddressDetail" Width="1.5" PointX="3" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.BasicInfo" Width="1.5" PointX="6" PointY="37.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.CandidateFormSl" Width="1.5" PointX="11.5" PointY="46.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.DiscountDetail" Width="1.5" PointX="11.25" PointY="37.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.Document" Width="1.5" PointX="8.25" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.DocumentDetail" Width="1.5" PointX="6" PointY="50.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.Exam" Width="1.5" PointX="14.25" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.ExamDetail" Width="1.5" PointX="12" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.ExtraCurricularActivity" Width="1.5" PointX="8.25" PointY="61" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.FinancialGuarantorInfo" Width="1.5" PointX="8.25" PointY="65.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.ForeignStudentAdditionalInfo" Width="1.5" PointX="16.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.Reference" Width="1.5" PointX="8.25" PointY="76.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.Relation" Width="1.5" PointX="17.25" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.RelationDetail" Width="1.5" PointX="9" PointY="40" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.SchoolMark" Width="1.5" PointX="11.25" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.SchoolMarkDetail" Width="1.5" PointX="9" PointY="22.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.WorkExperience" Width="1.5" PointX="8.25" PointY="89.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.AdmissionUnit" Width="1.5" PointX="7" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.AdmissionUnitProgram" Width="1.5" PointX="12" PointY="55.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.Building" Width="1.5" PointX="14" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.Discount" Width="1.5" PointX="9" PointY="51.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.GlobalAdmissionSetting" Width="1.5" PointX="16.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.MenuInRole" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.MenuInUser" Width="1.5" PointX="16.75" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.ResultSetup" Width="1.5" PointX="18.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.Role" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.Room" Width="1.5" PointX="16.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.ScholarshipWaiver" Width="1.5" PointX="12" PointY="50.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.Store" Width="1.5" PointX="7" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.SystemUser" Width="1.5" PointX="0.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.SystemUserInRole" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.TransactionHistory" Width="1.5" PointX="18.75" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.UnitProgramDetail" Width="1.5" PointX="12.25" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.UserAccessProgram" Width="1.5" PointX="20.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.UserAccessSchool" Width="1.5" PointX="0.75" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdmissionModel.VivaSelectionSetup" Width="1.5" PointX="2.875" PointY="22.25" IsExpanded="true" />
+        <AssociationConnector Association="AdmissionModel.FK_Address_AddressType" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_BasicInfo_BloodGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_AddressDetails_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_BasicInfo_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_RelationDetails_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_AddressDetails_District" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_District_Division" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_RelationDetails_District" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_AddressDetails_Division" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_RelationDetails_Division" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_Document_DocumentType" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_ExamDetails_EducationBoard" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_AdmissionUnitPrograms_EducationCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_ExamType_EducationCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_UndergradGradProgram_EducationCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_UnitProgramDetails_EducationCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_Exam_ExamType" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_SchoolMark_ExamType" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_SSC_HSC_Subject_ExamType" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_BasicInfo_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_ExamDetails_GroupOrSubject" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_Application_KeyValues_Application_Keys_KeyID" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_BasicInfo_MaritalStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_Menu_Menu" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_MenuInRole_Menu" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_BasicInfo_Quota" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_Relation_RelationType" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_BasicInfo_Religion" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_ExamDetails_ResultDivision" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_SchoolMarkDetails_SSC_HSC_Subject" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_ExamDetails_UndergradGradProgram" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_AdditionalInfo_BasicInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_AdditionalInfo_ScholarshipWaiver" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_Address_AddressDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_Address_BasicInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_CandidateFormSl_BasicInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_DiscountDetails_BasicInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_Document_BasicInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_Exam_BasicInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_ExtraCurricularActivity_BasicInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_FinancialGuarantorInfo_BasicInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_Reference_BasicInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_Relation_BasicInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_SchoolMark_BasicInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_WorkExperience_BasicInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_DiscountDetails_Discount" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_Document_DocumentDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_Exam_ExamDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_Relation_RelationDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_SchoolMark_SchoolMarkDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_AdmissionUnitPrograms_AdmissionUnit" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_UnitProgramDetails_AdmissionUnit" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_Room_Building" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_MenuInRole_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_SystemUserInRole_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="AdmissionModel.FK_SystemUserInRole_SystemUser" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AdmissionModel.GeneralInstruction" Width="1.5" PointX="5.375" PointY="18.75" />
+        <AssociationConnector Association="AdmissionModel.FK_BasicInfo_Language" />
+        <EntityTypeShape EntityType="AdmissionModel.BkashTrxStatusCode" Width="1.5" PointX="21.375" PointY="5.75" />
+        <EntityTypeShape EntityType="AdmissionModel.TransactionHistoryBKash" Width="1.5" PointX="21.375" PointY="9.75" />
+        <EntityTypeShape EntityType="AdmissionModel.TemporaryTable_2" Width="1.5" PointX="21.375" PointY="22.75" />
+        <EntityTypeShape EntityType="AdmissionModel.HowToApply" Width="1.5" PointX="21.375" PointY="17.75" />
+        <EntityTypeShape EntityType="AdmissionModel.AdmissionSetup" Width="1.5" PointX="9.25" PointY="2.125" />
+        <AssociationConnector Association="AdmissionModel.FK_CandidateFormSl_AdmissionSetup" />
+        <AssociationConnector Association="AdmissionModel.FK_AdmissionSetup_AdmissionUnit" />
+        <EntityTypeShape EntityType="AdmissionModel.ProgramBuildingPriority" Width="1.5" PointX="23.375" PointY="6.75" />
+        <EntityTypeShape EntityType="AdmissionModel.ProgramRoomPriority" Width="1.5" PointX="23.375" PointY="16.75" />
+        <EntityTypeShape EntityType="AdmissionModel.AdmissionTestRoll" Width="1.5" PointX="23.375" PointY="22.75" />
+        <EntityTypeShape EntityType="AdmissionModel.ProgramPriority" Width="1.5" PointX="17.25" PointY="29.25" />
+        <AssociationConnector Association="AdmissionModel.FK_ProgramPriority_BasicInfo" />
+        <AssociationConnector Association="AdmissionModel.FK_ProgramPriority_AdmissionSetup" />
+        <AssociationConnector Association="AdmissionModel.FK_ProgramPriority_AdmissionUnit" />
+        <AssociationConnector Association="AdmissionModel.FK_ProgramPriority_AdmissionUnitPrograms" />
+        <EntityTypeShape EntityType="AdmissionModel.RelationOccupationType" Width="1.5" PointX="25.375" PointY="0.75" />
+        <EntityTypeShape EntityType="AdmissionModel.ApprovedList" Width="1.5" PointX="25.375" PointY="5.75" />
+        <EntityTypeShape EntityType="AdmissionModel.NoticeUrl" Width="1.5" PointX="25.375" PointY="11.75" />
+        <EntityTypeShape EntityType="AdmissionModel.Notice" Width="1.5" PointX="14.375" PointY="17.75" />
+        <EntityTypeShape EntityType="AdmissionModel.Gateway" Width="1.5" PointX="14.375" PointY="25.75" />
+        <EntityTypeShape EntityType="AdmissionModel.TransactionHistoryFPG" Width="1.5" PointX="25.375" PointY="21.75" />
+        <EntityTypeShape EntityType="AdmissionModel.CandidateOALevelGPA" Width="1.5" PointX="0.75" PointY="17.75" />
+        <EntityTypeShape EntityType="AdmissionModel.CertificateEducationCategory" Width="1.5" PointX="27.75" PointY="0.75" />
+        <EntityTypeShape EntityType="AdmissionModel.CertificateAdmissionSetup" Width="1.5" PointX="27.75" PointY="4.75" />
+        <EntityTypeShape EntityType="AdmissionModel.CertificateAdmissionUnit" Width="1.5" PointX="0.75" PointY="27.75" />
+        <EntityTypeShape EntityType="AdmissionModel.CertificateBasicInfo" Width="1.5" PointX="27.375" PointY="11.75" />
+        <EntityTypeShape EntityType="AdmissionModel.CertificateCandidateFormSl" Width="1.5" PointX="27.375" PointY="20.75" />
+        <EntityTypeShape EntityType="AdmissionModel.CertificateCandidatePayment" Width="1.5" PointX="21.375" PointY="27.75" />
+        <EntityTypeShape EntityType="AdmissionModel.CertificateCandidateUser" Width="1.5" PointX="27.375" PointY="25.75" />
+        <EntityTypeShape EntityType="AdmissionModel.CertificateExam" Width="1.5" PointX="29.375" PointY="15.75" />
+        <EntityTypeShape EntityType="AdmissionModel.CertificateExamDetail" Width="1.5" PointX="29.375" PointY="19.75" />
+        <EntityTypeShape EntityType="AdmissionModel.CertificateRelation" Width="1.5" PointX="29.375" PointY="11.75" />
+        <EntityTypeShape EntityType="AdmissionModel.CertificateRelationDetail" Width="1.5" PointX="23.375" PointY="29.75" />
+        <EntityTypeShape EntityType="AdmissionModel.CertificateAddress" Width="1.5" PointX="29.375" PointY="26.75" />
+        <EntityTypeShape EntityType="AdmissionModel.CertificateAddressDetail" Width="1.5" PointX="30.375" PointY="0.75" />
+        <EntityTypeShape EntityType="AdmissionModel.CertificateExtraCurricularActivity" Width="1.5" PointX="29.375" PointY="30.75" />
+        <EntityTypeShape EntityType="AdmissionModel.CertificateDocument" Width="1.5" PointX="31.375" PointY="8.75" />
+        <EntityTypeShape EntityType="AdmissionModel.CertificateDocumentDetail" Width="1.5" PointX="31.375" PointY="12.75" />
+        <EntityTypeShape EntityType="AdmissionModel.PostgraduateDiplomaBasicInfo" Width="1.5" PointX="31.375" PointY="16.75" />
+        <EntityTypeShape EntityType="AdmissionModel.PostgraduateDiplomaAdmissionSetup" Width="1.5" PointX="31.375" PointY="25.75" />
+        <EntityTypeShape EntityType="AdmissionModel.PostgraduateDiplomaAdmissionUnit" Width="1.5" PointX="25.375" PointY="31.75" />
+        <EntityTypeShape EntityType="AdmissionModel.PostgraduateDiplomaCandidateUser" Width="1.5" PointX="32.375" PointY="0.75" />
+        <EntityTypeShape EntityType="AdmissionModel.PostgraduateDiplomaCandidateFormSl" Width="1.5" PointX="19.375" PointY="32.75" />
+        <EntityTypeShape EntityType="AdmissionModel.PostgraduateDiplomaCandidatePayment" Width="1.5" PointX="31.375" PointY="32.75" />
+        <EntityTypeShape EntityType="AdmissionModel.PostgraduateDiplomaDocument" Width="1.5" PointX="33.375" PointY="6.75" />
+        <EntityTypeShape EntityType="AdmissionModel.PostgraduateDiplomaDocumentDetail" Width="1.5" PointX="33.375" PointY="10.75" />
+        <EntityTypeShape EntityType="AdmissionModel.PostgraduateDiplomaExam" Width="1.5" PointX="33.375" PointY="14.75" />
+        <EntityTypeShape EntityType="AdmissionModel.PostgraduateDiplomaExamDetail" Width="1.5" PointX="33.375" PointY="18.75" />
+        <EntityTypeShape EntityType="AdmissionModel.PostgraduateDiplomaExtraCurricularActivity" Width="1.5" PointX="33.375" PointY="25.75" />
+        <EntityTypeShape EntityType="AdmissionModel.PostgraduateDiplomaRelation" Width="1.5" PointX="33.375" PointY="30.75" />
+        <EntityTypeShape EntityType="AdmissionModel.PostgraduateDiplomaRelationDetail" Width="1.5" PointX="33.375" PointY="34.75" />
+        <EntityTypeShape EntityType="AdmissionModel.PostgraduateDiplomaAddress" Width="1.5" PointX="34.375" PointY="0.75" />
+        <EntityTypeShape EntityType="AdmissionModel.PostgraduateDiplomaAddressDetail" Width="1.5" PointX="35.375" PointY="4.75" />
+        <EntityTypeShape EntityType="AdmissionModel.ExcelTestRollAndScoreTemp" Width="1.5" PointX="35.375" PointY="12.75" />
+        <EntityTypeShape EntityType="AdmissionModel.EligibleRollNumber" Width="1.5" PointX="16.375" PointY="35.75" />
+        <EntityTypeShape EntityType="AdmissionModel.PropertyType" Width="1.5" PointX="35.375" PointY="17.75" />
+        <EntityTypeShape EntityType="AdmissionModel.URLProperty" Width="1.5" PointX="35.375" PointY="21.75" />
+        <EntityTypeShape EntityType="AdmissionModel.QuotaType" Width="1.5" PointX="27.375" PointY="35.75" />
+        <EntityTypeShape EntityType="AdmissionModel.AdmissionSscHscGpaSetup" Width="1.5" PointX="11.375" PointY="26.75" />
+        <EntityTypeShape EntityType="AdmissionModel.CandidateFacultyWiseDistrictSeat" Width="1.5" PointX="21.375" PointY="36.75" />
+        <EntityTypeShape EntityType="AdmissionModel.DistrictForSeatPlan" Width="1.5" PointX="3.375" PointY="27.75" />
+        <EntityTypeShape EntityType="AdmissionModel.DistrictSeatPlanSetup" Width="1.5" PointX="23.375" PointY="36.75" />
+        <EntityTypeShape EntityType="AdmissionModel.ProgramDistrictPriority" Width="1.5" PointX="37.375" PointY="4.75" />
+        <EntityTypeShape EntityType="AdmissionModel.ProgramCampusPriority" Width="1.5" PointX="37.375" PointY="9.75" />
+        <EntityTypeShape EntityType="AdmissionModel.CandidateUser" Width="1.5" PointX="37.375" PointY="15.125" />
+        <AssociationConnector Association="AdmissionModel.FK_BasicInfo_CandidateUser" />
+        <EntityTypeShape EntityType="AdmissionModel.PropertySetup" Width="1.5" PointX="35.375" PointY="27.75" />
+        <EntityTypeShape EntityType="AdmissionModel.StoreFoster" Width="1.5" PointX="37.375" PointY="21.75" />
+        <EntityTypeShape EntityType="AdmissionModel.CandidatePayment" Width="1.5" PointX="8.25" PointY="71.625" />
+        <AssociationConnector Association="AdmissionModel.FK_CandidatePayment_BasicInfo" />
+        <AssociationConnector Association="AdmissionModel.FK_CandidateFormSl_CandidatePayment" />
+        <EntityTypeShape EntityType="AdmissionModel.TemporaryTable_1" Width="1.5" PointX="14.375" PointY="22.75" />
+        <EntityTypeShape EntityType="AdmissionModel.BulkAdmitCardGenerateLOG" Width="1.5" PointX="37.375" PointY="27.75" />
+        <EntityTypeShape EntityType="AdmissionModel.VivaInfoSelectedCandidate" Width="1.5" PointX="29.375" PointY="37.75" />
+        <EntityTypeShape EntityType="AdmissionModel.CollectionOnlineAttempt" Width="1.5" PointX="37.375" PointY="32.75" />
+        <EntityTypeShape EntityType="AdmissionModel.SSCHSCPassingYearSetup" Width="1.5" PointX="18.375" PointY="37.75" />
+        <EntityTypeShape EntityType="AdmissionModel.OnlineCollectionAttempt" Width="1.5" PointX="37.375" PointY="38.75" />
+        <EntityTypeShape EntityType="AdmissionModel.ClientIPAddress" Width="1.5" PointX="39.375" PointY="19.75" />
+        <EntityTypeShape EntityType="AdmissionModel.QuotaGoverningBodie" Width="1.5" PointX="39.375" PointY="23.75" />
+        <EntityTypeShape EntityType="AdmissionModel.StoreEkPay" Width="1.5" PointX="39.375" PointY="0.75" />
+        <EntityTypeShape EntityType="AdmissionModel.DistrictSeatLimit" Width="1.5" PointX="25.375" PointY="39.75" />
+        <EntityTypeShape EntityType="AdmissionModel.QuotaDocument" Width="1.5" PointX="39.375" PointY="28.75" />
+        <EntityTypeShape EntityType="AdmissionModel.TeleTalkBoardResult" Width="1.5" PointX="36.375" PointY="0.75" />
+        <EntityTypeShape EntityType="AdmissionModel.EligibleTestRollWrittenExam" Width="1.5" PointX="39.375" PointY="16.75" />
+        <EntityTypeShape EntityType="AdmissionModel.QuotaInfo" Width="1.5" PointX="39.375" PointY="33.75" />
+        <EntityTypeShape EntityType="AdmissionModel.AdmissionSetupOtherProgram" Width="1.5" PointX="39.375" PointY="8.75" />
+        <EntityTypeShape EntityType="AdmissionModel.ForeignCandidatePaymentInformation" Width="1.5" PointX="20.375" PointY="40.75" />
+        <EntityTypeShape EntityType="AdmissionModel.ExamTypeWiseTotalMarksInformation" Width="1.5" PointX="22.375" PointY="40.75" />
+        <EntityTypeShape EntityType="AdmissionModel.OandALevelCandidateSubjectWiseResult" Width="1.5" PointX="41.375" PointY="0.75" />
+        <EntityTypeShape EntityType="AdmissionModel.AdmissionHSCSSCPercentageSetup" Width="1.5" PointX="41.375" PointY="6.75" />
+        <EntityTypeShape EntityType="AdmissionModel.ProgramandQuotaWiseSeat" Width="1.5" PointX="41.375" PointY="11.75" />
+        <EntityTypeShape EntityType="AdmissionModel.ProgramWiseTotalSeat" Width="1.5" PointX="41.375" PointY="16.75" />
+        <AssociationConnector Association="AdmissionModel.FK_ProgramandQuotaWiseSeat_ProgramandQuotaWiseSeat" />
+        <EntityTypeShape EntityType="AdmissionModel.AdmissionExamMark" Width="1.5" PointX="41.375" PointY="21.75" />
+        <EntityTypeShape EntityType="AdmissionModel.AdmissionTestMeritPosition" Width="1.5" PointX="41.375" PointY="28.75" />
+        <EntityTypeShape EntityType="AdmissionModel.FacultyandExamTypeWiseMarkParcentageSetup" Width="1.5" PointX="31.375" PointY="41.75" />
+        <EntityTypeShape EntityType="AdmissionModel.AdmitCardInstruction" Width="1.5" PointX="33.375" PointY="41.75" />
+        <EntityTypeShape EntityType="AdmissionModel.QuotaAssistantType" Width="1.5" PointX="41.375" PointY="35.75" />
+        <EntityTypeShape EntityType="AdmissionModel.QuotaAssistantDetail" Width="1.5" PointX="41.375" PointY="39.75" />
+        <EntityTypeShape EntityType="AdmissionModel.Campu" Width="1.5" PointX="11.75" PointY="1.375" />
+        <AssociationConnector Association="AdmissionModel.FK_Building_Campus" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

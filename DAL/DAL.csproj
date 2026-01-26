@@ -1,0 +1,912 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8DE8FDCF-6AE9-4492-8918-DDE628A5DF13}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAL</RootNamespace>
+    <AssemblyName>DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdditionalInfo.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Address.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AddressDetail.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AddressType.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdmissionDBEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdmissionDBEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdmissionDBEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdmissionDBEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdmissionDBEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="AdmissionExamMark.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdmissionHSCSSCPercentageSetup.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdmissionSetup.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdmissionSetupOtherProgram.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdmissionSscHscGpaSetup.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdmissionTestMeritPosition.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdmissionTestRoll.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdmissionUnit.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdmissionUnitProgram.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdmitCardInstruction.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApprovedList.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BasicInfo.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BkashTrxStatusCode.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BloodGroup.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Building.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BulkAdmitCardGenerateLOG.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Campu.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CandidateFacultyWiseDistrictSeat.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CandidateFormSl.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CandidateOALevelGPA.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CandidatePayment.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CandidateUser.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CertificateAddress.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CertificateAddressDetail.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CertificateAdmissionSetup.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CertificateAdmissionUnit.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CertificateBasicInfo.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CertificateCandidateFormSl.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CertificateCandidatePayment.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CertificateCandidateUser.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CertificateDocument.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CertificateDocumentDetail.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CertificateEducationCategory.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CertificateExam.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CertificateExamDetail.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CertificateExtraCurricularActivity.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CertificateRelation.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CertificateRelationDetail.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClientIPAddress.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CollectionOnlineAttempt.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Country.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Discount.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DiscountDetail.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="District.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DistrictForSeatPlan.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DistrictSeatLimit.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DistrictSeatPlanSetup.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Division.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Document.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentDetail.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentType.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EducationBoard.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EducationCategory.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EducationMedium.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EligibleRollNumber.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EligibleTestRollWrittenExam.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Exam.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExamDetail.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExamType.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExamTypeWiseTotalMarksInformation.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelTestRollAndScoreTemp.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExtraCurricularActivity.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FacultyandExamTypeWiseMarkParcentageSetup.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialGuarantorInfo.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ForeignCandidatePaymentInformation.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ForeignStudentAdditionalInfo.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Gateway.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Gender.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralInstruction.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GenerateMeritPosition_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAdmissitonMeritListForExcelDownload_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllQuotaInfoSummaryByFacultyAndQuotaWise_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllQuotaInfoWithTypes_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCandidateFormSerialInfoBySSCInfoAndAcacal_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCandidateListForMeritListGeneration_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCandidateListWithTestRollAndMeritPosition_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetHSCBasicDataFromEducationDB_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetHSCSubjectResultDataFromEducationDB_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetHSCTotalMarksDataFromEducationDB_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetPaidandFinalSumbittedCandidateListReport_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetSSCBasicDataFromEducationDB_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetSSCSubjectResultDataFromEducationDB_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetSSCTotalMarksDataFromEducationDB_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetTeletalkHSCSubjectWiseResult_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetTeletalkSSCSubjectWiseResult_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetTempTableCandidateList_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalAdmissionSetting.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GroupOrSubject.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HowToApply.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Institute.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Key.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KeyValue.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Language.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MaritalStatu.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MenuInRole.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MenuInUser.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NonDbObjects\ImportantNoticeObj.cs" />
+    <Compile Include="Notice.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NoticeUrl.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OandALevelCandidateSubjectWiseResult.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineCollectionAttempt.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PostgraduateDiplomaAddress.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PostgraduateDiplomaAddressDetail.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PostgraduateDiplomaAdmissionSetup.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PostgraduateDiplomaAdmissionUnit.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PostgraduateDiplomaBasicInfo.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PostgraduateDiplomaCandidateFormSl.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PostgraduateDiplomaCandidatePayment.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PostgraduateDiplomaCandidateUser.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PostgraduateDiplomaDocument.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PostgraduateDiplomaDocumentDetail.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PostgraduateDiplomaExam.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PostgraduateDiplomaExamDetail.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PostgraduateDiplomaExtraCurricularActivity.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PostgraduateDiplomaRelation.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PostgraduateDiplomaRelationDetail.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramandQuotaWiseSeat.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramBuildingPriority.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramCampusPriority.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramDistrictPriority.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramPriority.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramRoomPriority.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramWiseTotalSeat.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertySetup.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyType.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Quota.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuotaAssistantDetail.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuotaAssistantType.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuotaDocument.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuotaGoverningBodie.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuotaInfo.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuotaType.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Reference.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Relation.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RelationDetail.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RelationOccupationType.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RelationType.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Religion.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ResultDivision.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ResultSetup.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Role.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Room.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ScholarshipWaiver.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolMark.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolMarkDetail.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Semester.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPAcademicCalendarGetAllByProgram_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPAcademicCalendarGetAll_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPAcademicCalendarGetById_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPAdmissionSeatToken_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPAdmissionSetupByPaymentID_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPAdmissionSscHscGpaSetupByUnitExamTypeGroupGpaId_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPAdmissionSscHscGpaSetupGetAll_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPAdmissionUnitByCandidateID_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPAdmissionUnitProgramsByCandidateId_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPAttendanceReport_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPBatchGetAllByProgram_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPCandidateGetAllByAcaCalIdAdmUnitIdForTestRollGenerateDistrict_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPCandidateGetAllByAcaCalIdAdmUnitIdForTestRollGenerate_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPCandidateTestRollMaxV2District_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPCandidateTestRollMaxV2_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPCertificateFormRequestGetBySearchText_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPCertificateGetCandidateSMSEmailCntByPmtIdMobPurchaseNotification_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPFacultyWiseQuotaCount_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPFormRequestGetByAdmUnitIdAcaCalIdEduCatId_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPFormRequestGetBySearchText_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetAdmissionSscHscGpaSetupByAdmissionUnitIDExamTypeIDGroupID_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetAdmitCardDetailsForBulkAdmitCardGenerate_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetAllAdmissionSetupOtherPrograms_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetAllBachelorFacultys_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetAllCandidateSeatPlanInfo_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetAllExamInfoByCandidateId_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetAllImageInfoForImageTransfer_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetAllQuotaInfo_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetApprovedCandidateFromTestRollForBulkGenerateV2_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetApprovedCandidateFromTestRollForBulkGenerate_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetApprovedCandidatesWithTestRollByAdmUnitIDAcaCalID_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetApprovedListDocument_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetCandidateBasicInfoByPaymentIdMobileNo_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetCandidateDocumentDetailsByPaymentIdMobileNo_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetCandidateEducationCategoryByCandidateID_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetCandidateExamDetailsByPaymentIdMobileNo_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetCandidateFormSerialPaymentByPaymentIdMobileNo_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetCandidateListForApprovalGraduate_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetCandidateListForApprovalV2_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetCandidateListForApprovalV3New_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetCandidateListForApproval_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetCandidatePaidApprovedAppearedCountList_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetCandidatePaidCountSchoolWise_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetCandidatePaidUnPaidFormInfo_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetCandidatePriorityList_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetCandidateProgramPriorities_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetCandidateRelationDetailsByPaymentIdMobileNo_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetCandidateSMSEmailCntByPmtIdMobPurchaseNotification_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetCandidateSMSEmailCntByPmtIdMob_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetDetailsForAdmitCardByCandidateIDForAdmin_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetDetailsForAdmitCardByCandidateID_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetDetailsForAdmitCard_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetForeignCandidatePaidUnPaidFormInfo_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetGenderCountByAdmUnitIDAcaCalID_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetGeneralDataLogInfo_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetPaidCountForEachAdmissionSetup_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetProgramRoomPriorityForSeatPlanGenerateDISTRICTwise_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetProgramRoomPriorityForSeatPlanGenerate_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetSchoolForMultiplePurchase_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetSeatPlanByAcaCalIDAdmUnitID_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetTeleTalkBoardResultData_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetTeleTalkBoardResultVerification_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetTestRollByAcaCalIDAdmUnitID_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetUnPaidCandidateEkPay_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetUnpayRollByFromDateAndTodate_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPImageTransferAfterServerChange_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPMenuGetAllMenuByRoleName_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPPostgraduateDiplomaFormRequestGetBySearchText_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPPostgraduateDiplomaGetCandidateSMSEmailCntByPmtIdMobPurchaseNotification_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPProgramsGetAllFromUCAM_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPProgramsGetByIdFromUCAM_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPRetieveUsernamePasswordByPaymentID_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPRptAttendanceRoomWiseV2_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPRptAttendanceRoomWise_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPRptGetCandidateDetailsByTestRollFromExcelBulk_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPRptGetCandidateDetailsByTestRollFromExcelMBA_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPRptGetCandidateDetailsByTestRollFromExcelUndergraduateV2_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPRptGetCandidateDetailsByTestRollFromExcelUndergraduate_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPRptGetCandidateDetailsByTestRollFromExcelV2_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPRptGetCandidateDetailsByTestRollFromExcel_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPRPTGetPostgraduateDiplomaCandidateList_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPRptGetSeatPlanByAcaCalIDAdmUnitID_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPRPTRoomWiseTestRollSheet_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPStatusReport_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPVivaInformation_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Test_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SSCHSCPassingYearSetup.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SSC_HSC_Subject.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Store.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StoreEkPay.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StoreFoster.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUser.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUserInRole.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TeleTalkBoardResult.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TemporaryTable_1.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TemporaryTable_2.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionHistory.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionHistoryBKash.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionHistoryFPG.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UndergradGradProgram.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UnitProgramDetail.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCandidatePriorityFromExcel_Result.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="URLProperty.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccessProgram.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccessSchool.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\ApproveCandidateGridViewObject.cs" />
+    <Compile Include="ViewModels\BkashObject.cs" />
+    <Compile Include="ViewModels\BuildingVM.cs" />
+    <Compile Include="ViewModels\CandidateListForApprovalModel.cs" />
+    <Compile Include="ViewModels\CandidatePaymentModel.cs" />
+    <Compile Include="ViewModels\DistrictSeatLimitVM.cs" />
+    <Compile Include="ViewModels\EkPayModel\cust_info.cs" />
+    <Compile Include="ViewModels\EkPayModel\ek_pay.cs" />
+    <Compile Include="ViewModels\EkPayModel\feed_uri.cs" />
+    <Compile Include="ViewModels\EkPayModel\IPNModels\basic_Info.cs" />
+    <Compile Include="ViewModels\EkPayModel\IPNModels\cust_info.cs" />
+    <Compile Include="ViewModels\EkPayModel\IPNModels\EkPayIPNModel.cs" />
+    <Compile Include="ViewModels\EkPayModel\IPNModels\pi_det_info.cs" />
+    <Compile Include="ViewModels\EkPayModel\IPNModels\trnx_info.cs" />
+    <Compile Include="ViewModels\EkPayModel\ipn_info.cs" />
+    <Compile Include="ViewModels\EkPayModel\mer_info.cs" />
+    <Compile Include="ViewModels\EkPayModel\ResponseEkPay.cs" />
+    <Compile Include="ViewModels\EkPayModel\SuccessResponse.cs" />
+    <Compile Include="ViewModels\EkPayModel\trns_info.cs" />
+    <Compile Include="ViewModels\EkPayModel\UnsuccessResponse.cs" />
+    <Compile Include="ViewModels\FormRequesAndReceiveFormtListViewObject.cs" />
+    <Compile Include="ViewModels\FormRequestListViewObject.cs" />
+    <Compile Include="ViewModels\MessageModel.cs" />
+    <Compile Include="ViewModels\ResponseAPI.cs" />
+    <Compile Include="ViewModels\SeatPlanDeleteProgramRoomPriorityObject.cs" />
+    <Compile Include="ViewModels\TelitalkEducationResultModelHSC.cs" />
+    <Compile Include="ViewModels\TelitalkEducationResultModelSSC.cs" />
+    <Compile Include="ViewModels\TelitalkEducationSubjectModel.cs" />
+    <Compile Include="VivaInfoSelectedCandidate.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VivaSelectionSetup.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WorkExperience.cs">
+      <DependentUpon>AdmissionDBEntities.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="AdmissionDBEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AdmissionDBEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="AdmissionDBEntities.edmx.diagram">
+      <DependentUpon>AdmissionDBEntities.edmx</DependentUpon>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdmissionDBEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AdmissionDBEntities.edmx</DependentUpon>
+      <LastGenOutput>AdmissionDBEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="AdmissionDBEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AdmissionDBEntities.edmx</DependentUpon>
+      <LastGenOutput>AdmissionDBEntities.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

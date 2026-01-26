@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BUP_Admission_LOG_V2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AccessLog">
+          <Key>
+            <PropertyRef Name="SL" />
+          </Key>
+          <Property Name="SL" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateTime" Type="datetime" />
+          <Property Name="LoginID" Type="nvarchar" MaxLength="50" />
+          <Property Name="PasswordAttempts" Type="nvarchar" MaxLength="50" />
+          <Property Name="loginStatus" Type="nvarchar" MaxLength="50" />
+          <Property Name="LogInLogOut" Type="nvarchar" MaxLength="50" />
+          <Property Name="IpAddress" Type="nvarchar" MaxLength="100" />
+          <Property Name="SessionInformation" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Message" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Attribute1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Attribute2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Attribute3" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CandidateAdmitCardDownloadClickLog">
+          <Key>
+            <PropertyRef Name="CandidateAdmitCardDownloadClickLogId" />
+          </Key>
+          <Property Name="CandidateAdmitCardDownloadClickLogId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PaymentId" Type="bigint" />
+          <Property Name="AcaCalId" Type="int" />
+          <Property Name="AdmissionUnitId" Type="bigint" />
+          <Property Name="TestRoll" Type="nvarchar(max)" />
+          <Property Name="Attribute1" Type="nvarchar(max)" />
+          <Property Name="Attribute2" Type="nvarchar(max)" />
+          <Property Name="Attribute3" Type="nvarchar(max)" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="int" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="EducationCategoryId" Type="int" />
+          <Property Name="AdmissionSetupId" Type="bigint" />
+        </EntityType>
+        <EntityType Name="CandidateByPassLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SystemUserID" Type="bigint" />
+          <Property Name="CandidateID" Type="bigint" />
+          <Property Name="CandidatePaymentID" Type="bigint" />
+          <Property Name="Page" Type="nvarchar" MaxLength="50" />
+          <Property Name="CandidateApplyDate" Type="datetime" />
+          <Property Name="Attribute1" Type="nvarchar" MaxLength="200" />
+          <Property Name="Attribute2" Type="nvarchar" MaxLength="200" />
+          <Property Name="Attribute3" Type="nvarchar" MaxLength="200" />
+          <Property Name="Attribute4" Type="nvarchar" MaxLength="200" />
+          <Property Name="Attribute5" Type="nvarchar" MaxLength="200" />
+          <Property Name="Attribute6" Type="nvarchar" MaxLength="200" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="bigint" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="bigint" />
+        </EntityType>
+        <EntityType Name="DataLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateTime" Type="datetime" />
+          <Property Name="UserId" Type="bigint" Nullable="false" />
+          <Property Name="PageName" Type="nvarchar" MaxLength="250" />
+          <Property Name="EventName" Type="nvarchar" MaxLength="250" />
+          <Property Name="HostName" Type="nvarchar" MaxLength="500" />
+          <Property Name="IpAddress" Type="nvarchar" MaxLength="100" />
+          <Property Name="SessionInformation" Type="nvarchar" MaxLength="1000" />
+          <Property Name="OldData" Type="nvarchar(max)" />
+          <Property Name="NewData" Type="nvarchar(max)" />
+          <Property Name="Attribute1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Attribute2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Attribute3" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateCreated" Type="datetime" />
+          <Property Name="CandidateId" Type="bigint" />
+        </EntityType>
+        <EntityType Name="EmailLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SentBy" Type="nvarchar" MaxLength="250" />
+          <Property Name="Page" Type="nvarchar" MaxLength="250" />
+          <Property Name="StudentId" Type="bigint" />
+          <Property Name="ToAddress" Type="nvarchar" MaxLength="250" />
+          <Property Name="FromAddress" Type="nvarchar" MaxLength="250" />
+          <Property Name="ToName" Type="nvarchar" MaxLength="250" />
+          <Property Name="FromName" Type="nvarchar" MaxLength="250" />
+          <Property Name="MessageBody" Type="nvarchar(max)" />
+          <Property Name="MessageSubject" Type="nvarchar(max)" />
+          <Property Name="DateSent" Type="datetime" />
+          <Property Name="Attribute1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Attribute2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Attribute3" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SmsLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SenderUserId" Type="bigint" />
+          <Property Name="StudentId" Type="bigint" />
+          <Property Name="PersonId" Type="bigint" />
+          <Property Name="AcaCalId" Type="nvarchar" MaxLength="50" />
+          <Property Name="PhoneNo" Type="varchar" MaxLength="50" />
+          <Property Name="Message" Type="varchar(max)" />
+          <Property Name="MessageCount" Type="int" />
+          <Property Name="SmsSendDate" Type="datetime" />
+          <Property Name="SmsSendStatus" Type="bit" />
+          <Property Name="SmsType" Type="int" />
+          <Property Name="CurrentSMSReferenceNo" Type="varchar" MaxLength="500" />
+          <Property Name="SentReferenceId" Type="varchar" MaxLength="500" />
+          <Property Name="SentSMSId" Type="varchar" MaxLength="50" />
+          <Property Name="Attribute1" Type="varchar" MaxLength="50" />
+          <Property Name="Attribute2" Type="varchar" MaxLength="50" />
+          <Property Name="Attribute3" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="bigint" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="bigint" />
+        </EntityType>
+        <EntityContainer Name="BUP_Admission_LOG_V2ModelStoreContainer">
+          <EntitySet Name="AccessLog" EntityType="Self.AccessLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CandidateAdmitCardDownloadClickLog" EntityType="Self.CandidateAdmitCardDownloadClickLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CandidateByPassLog" EntityType="Self.CandidateByPassLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DataLog" EntityType="Self.DataLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EmailLog" EntityType="Self.EmailLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SmsLog" EntityType="Self.SmsLog" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BUP_Admission_LOG_V2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AccessLog">
+          <Key>
+            <PropertyRef Name="SL" />
+          </Key>
+          <Property Name="SL" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateTime" Type="DateTime" Precision="3" />
+          <Property Name="LoginID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PasswordAttempts" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="loginStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LogInLogOut" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IpAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SessionInformation" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Message" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Attribute1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Attribute2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Attribute3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SmsLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SenderUserId" Type="Int64" />
+          <Property Name="StudentId" Type="Int64" />
+          <Property Name="PersonId" Type="Int64" />
+          <Property Name="AcaCalId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MessageCount" Type="Int32" />
+          <Property Name="SmsSendDate" Type="DateTime" Precision="3" />
+          <Property Name="SmsSendStatus" Type="Boolean" />
+          <Property Name="SmsType" Type="Int32" />
+          <Property Name="CurrentSMSReferenceNo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="SentReferenceId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="SentSMSId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Attribute1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Attribute2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Attribute3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="Int64" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="Int64" />
+        </EntityType>
+        <EntityContainer Name="EntitiesLog" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AccessLogs" EntityType="Self.AccessLog" />
+          <EntitySet Name="SmsLogs" EntityType="Self.SmsLog" />
+          <EntitySet Name="EmailLogs" EntityType="BUP_Admission_LOG_V2Model.EmailLog" />
+          <EntitySet Name="CandidateByPassLogs" EntityType="BUP_Admission_LOG_V2Model.CandidateByPassLog" />
+          <EntitySet Name="CandidateAdmitCardDownloadClickLogs" EntityType="BUP_Admission_LOG_V2Model.CandidateAdmitCardDownloadClickLog" />
+          <EntitySet Name="DataLogs" EntityType="BUP_Admission_LOG_V2Model.DataLog" />
+        </EntityContainer>
+        <EntityType Name="EmailLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SentBy" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Page" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="StudentId" Type="Int64" />
+          <Property Name="ToAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FromAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ToName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FromName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="MessageBody" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MessageSubject" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DateSent" Type="DateTime" Precision="3" />
+          <Property Name="Attribute1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Attribute2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Attribute3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CandidateByPassLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SystemUserID" Type="Int64" />
+          <Property Name="CandidateID" Type="Int64" />
+          <Property Name="CandidatePaymentID" Type="Int64" />
+          <Property Name="Page" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CandidateApplyDate" Type="DateTime" Precision="3" />
+          <Property Name="Attribute1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Attribute2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Attribute3" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Attribute4" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Attribute5" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Attribute6" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="Int64" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="Int64" />
+        </EntityType>
+        <EntityType Name="CandidateAdmitCardDownloadClickLog">
+          <Key>
+            <PropertyRef Name="CandidateAdmitCardDownloadClickLogId" />
+          </Key>
+          <Property Name="CandidateAdmitCardDownloadClickLogId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PaymentId" Type="Int64" />
+          <Property Name="AcaCalId" Type="Int32" />
+          <Property Name="AdmissionUnitId" Type="Int64" />
+          <Property Name="TestRoll" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Attribute1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Attribute2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Attribute3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="Int32" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="EducationCategoryId" Type="Int32" />
+          <Property Name="AdmissionSetupId" Type="Int64" />
+        </EntityType>
+        <EntityType Name="DataLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateTime" Type="DateTime" Precision="3" />
+          <Property Name="UserId" Type="Int64" Nullable="false" />
+          <Property Name="PageName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="EventName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="HostName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="IpAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SessionInformation" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="OldData" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NewData" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Attribute1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Attribute2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Attribute3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DateCreated" Type="DateTime" Precision="3" />
+          <Property Name="CandidateId" Type="Int64" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BUP_Admission_LOG_V2ModelStoreContainer" CdmEntityContainer="EntitiesLog">
+          <EntitySetMapping Name="AccessLogs">
+            <EntityTypeMapping TypeName="BUP_Admission_LOG_V2Model.AccessLog">
+              <MappingFragment StoreEntitySet="AccessLog">
+                <ScalarProperty Name="SL" ColumnName="SL" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="LoginID" ColumnName="LoginID" />
+                <ScalarProperty Name="PasswordAttempts" ColumnName="PasswordAttempts" />
+                <ScalarProperty Name="loginStatus" ColumnName="loginStatus" />
+                <ScalarProperty Name="LogInLogOut" ColumnName="LogInLogOut" />
+                <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+                <ScalarProperty Name="SessionInformation" ColumnName="SessionInformation" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Attribute1" ColumnName="Attribute1" />
+                <ScalarProperty Name="Attribute2" ColumnName="Attribute2" />
+                <ScalarProperty Name="Attribute3" ColumnName="Attribute3" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SmsLogs">
+            <EntityTypeMapping TypeName="BUP_Admission_LOG_V2Model.SmsLog">
+              <MappingFragment StoreEntitySet="SmsLog">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="SenderUserId" ColumnName="SenderUserId" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+                <ScalarProperty Name="AcaCalId" ColumnName="AcaCalId" />
+                <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="MessageCount" ColumnName="MessageCount" />
+                <ScalarProperty Name="SmsSendDate" ColumnName="SmsSendDate" />
+                <ScalarProperty Name="SmsSendStatus" ColumnName="SmsSendStatus" />
+                <ScalarProperty Name="SmsType" ColumnName="SmsType" />
+                <ScalarProperty Name="CurrentSMSReferenceNo" ColumnName="CurrentSMSReferenceNo" />
+                <ScalarProperty Name="SentReferenceId" ColumnName="SentReferenceId" />
+                <ScalarProperty Name="SentSMSId" ColumnName="SentSMSId" />
+                <ScalarProperty Name="Attribute1" ColumnName="Attribute1" />
+                <ScalarProperty Name="Attribute2" ColumnName="Attribute2" />
+                <ScalarProperty Name="Attribute3" ColumnName="Attribute3" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmailLogs">
+            <EntityTypeMapping TypeName="BUP_Admission_LOG_V2Model.EmailLog">
+              <MappingFragment StoreEntitySet="EmailLog">
+                <ScalarProperty Name="Attribute3" ColumnName="Attribute3" />
+                <ScalarProperty Name="Attribute2" ColumnName="Attribute2" />
+                <ScalarProperty Name="Attribute1" ColumnName="Attribute1" />
+                <ScalarProperty Name="DateSent" ColumnName="DateSent" />
+                <ScalarProperty Name="MessageSubject" ColumnName="MessageSubject" />
+                <ScalarProperty Name="MessageBody" ColumnName="MessageBody" />
+                <ScalarProperty Name="FromName" ColumnName="FromName" />
+                <ScalarProperty Name="ToName" ColumnName="ToName" />
+                <ScalarProperty Name="FromAddress" ColumnName="FromAddress" />
+                <ScalarProperty Name="ToAddress" ColumnName="ToAddress" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="Page" ColumnName="Page" />
+                <ScalarProperty Name="SentBy" ColumnName="SentBy" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CandidateByPassLogs">
+            <EntityTypeMapping TypeName="BUP_Admission_LOG_V2Model.CandidateByPassLog">
+              <MappingFragment StoreEntitySet="CandidateByPassLog">
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Attribute6" ColumnName="Attribute6" />
+                <ScalarProperty Name="Attribute5" ColumnName="Attribute5" />
+                <ScalarProperty Name="Attribute4" ColumnName="Attribute4" />
+                <ScalarProperty Name="Attribute3" ColumnName="Attribute3" />
+                <ScalarProperty Name="Attribute2" ColumnName="Attribute2" />
+                <ScalarProperty Name="Attribute1" ColumnName="Attribute1" />
+                <ScalarProperty Name="CandidateApplyDate" ColumnName="CandidateApplyDate" />
+                <ScalarProperty Name="Page" ColumnName="Page" />
+                <ScalarProperty Name="CandidatePaymentID" ColumnName="CandidatePaymentID" />
+                <ScalarProperty Name="CandidateID" ColumnName="CandidateID" />
+                <ScalarProperty Name="SystemUserID" ColumnName="SystemUserID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CandidateAdmitCardDownloadClickLogs">
+            <EntityTypeMapping TypeName="BUP_Admission_LOG_V2Model.CandidateAdmitCardDownloadClickLog">
+              <MappingFragment StoreEntitySet="CandidateAdmitCardDownloadClickLog">
+                <ScalarProperty Name="AdmissionSetupId" ColumnName="AdmissionSetupId" />
+                <ScalarProperty Name="EducationCategoryId" ColumnName="EducationCategoryId" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Attribute3" ColumnName="Attribute3" />
+                <ScalarProperty Name="Attribute2" ColumnName="Attribute2" />
+                <ScalarProperty Name="Attribute1" ColumnName="Attribute1" />
+                <ScalarProperty Name="TestRoll" ColumnName="TestRoll" />
+                <ScalarProperty Name="AdmissionUnitId" ColumnName="AdmissionUnitId" />
+                <ScalarProperty Name="AcaCalId" ColumnName="AcaCalId" />
+                <ScalarProperty Name="PaymentId" ColumnName="PaymentId" />
+                <ScalarProperty Name="CandidateAdmitCardDownloadClickLogId" ColumnName="CandidateAdmitCardDownloadClickLogId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DataLogs">
+            <EntityTypeMapping TypeName="BUP_Admission_LOG_V2Model.DataLog">
+              <MappingFragment StoreEntitySet="DataLog">
+                <ScalarProperty Name="CandidateId" ColumnName="CandidateId" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="Attribute3" ColumnName="Attribute3" />
+                <ScalarProperty Name="Attribute2" ColumnName="Attribute2" />
+                <ScalarProperty Name="Attribute1" ColumnName="Attribute1" />
+                <ScalarProperty Name="NewData" ColumnName="NewData" />
+                <ScalarProperty Name="OldData" ColumnName="OldData" />
+                <ScalarProperty Name="SessionInformation" ColumnName="SessionInformation" />
+                <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+                <ScalarProperty Name="HostName" ColumnName="HostName" />
+                <ScalarProperty Name="EventName" ColumnName="EventName" />
+                <ScalarProperty Name="PageName" ColumnName="PageName" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

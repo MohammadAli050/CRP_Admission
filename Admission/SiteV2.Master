@@ -1,0 +1,233 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteV2.master.cs" Inherits="Admission.SiteV2" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BUP - <%: Page.Title %></title>
+
+    <link href="Images/Favicon/favicon.png" rel="shortcut icon" type="image/x-icon" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Font Awesome Icone -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+    <%--<link href="<%= string.Format("{0}/Bootstrap/css/bootstrap.min.css", CommonUtility.AppPath.ApplicationPath) %>" rel="stylesheet" />
+    <link href="<%= string.Format("{0}/Content/Template/bootstrap-icons/bootstrap-icons.css", CommonUtility.AppPath.ApplicationPath) %>" rel="stylesheet" />--%>
+    <%--<link href="<%= string.Format("{0}/ContentCSS/SiteMaster.CSS", CommonUtility.AppPath.ApplicationPath) %>" rel="stylesheet" />--%>
+
+    <%--<link href="<%= string.Format("{0}/Content/Template/css/style.css", CommonUtility.AppPath.ApplicationPath) %>" rel="stylesheet" />--%>
+
+    <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/Template/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="Content/Template/css/style.css" rel="stylesheet" />
+
+    <style type="text/css">
+        .modalBackground {
+            background-color: #2a2d2a;
+            filter: alpha(opacity=80);
+            opacity: 0.8;
+            z-index: 10000;
+        }
+
+        .modalPopup {
+            background-color: #FFFFFF;
+            border-width: 3px;
+            border-style: solid;
+            border-color: black;
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+
+
+        @media screen and (max-width: 767px) {
+            #bupLogoSmall {
+                display: none !important;
+            }
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="CSS_ContentPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+
+    <%--<script src="<%= string.Format("{0}/JavaScript/jquery-1.7.1.js", CommonUtility.AppPath.ApplicationPath) %>"></script>--%>
+    <%--<script src="<%= string.Format("{0}/Bootstrap/js/jquery.min.js", CommonUtility.AppPath.ApplicationPath) %>"></script>
+    <script src="<%= string.Format("{0}/Bootstrap/js/popper.min.js", CommonUtility.AppPath.ApplicationPath) %>"></script>
+    <script src="<%= string.Format("{0}/Bootstrap/js/bootstrap.min.js", CommonUtility.AppPath.ApplicationPath) %>"></script>--%>
+    <script src="../../Bootstrap/js/jquery.min.js"></script>
+    <script src="../../Bootstrap/js/popper.min.js"></script>
+    <script src="../../Bootstrap/js/bootstrap.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="JS_ContentPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script>
+        function Apply() {
+            $('html, body').animate({
+                scrollTop: $("#featured-services").offset().top + 0
+            }, 1000);
+        }
+
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+
+
+    </script>
+
+
+    <%--<script type="text/javascript">
+        $(document).ready(function () {
+            $('.backtotop').fadeOut();
+        });
+        $(document).scroll(function () {
+            var y = $(this).scrollTop();
+            if (y > 1) {
+                $('.backtotop').fadeIn();
+            } else {
+                $('.backtotop').fadeOut();
+            }
+        });
+
+        $("a[href='#top']").click(function () {
+            window.scroll({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            });
+        });
+
+    </script>--%>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager runat="server"></asp:ScriptManager>
+
+
+        <!-- ======= Top Bar ======= -->
+        <section id="topbar" class="d-flex align-items-center">
+            <div class="container d-flex justify-content-center justify-content-md-between">
+                <div class="contact-info d-flex align-items-center">
+                    <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:info@bup.edu.bd">info@bup.edu.bd</a></i>
+                    <i class="bi bi-phone d-flex align-items-center ms-4 ml-2"><span>09666 790 790</span></i>
+                </div>
+                <div class="social-links d-none d-md-flex align-items-center">
+                    <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======= Header ======= -->
+        <header id="header" class="d-flex align-items-center">
+            <div class="container d-flex align-items-center justify-content-between">
+
+                <%--<a href="javascript:void(0)" class="logo">
+                    <img src="<%= string.Format("{0}/ApplicationDocs/Institute/BUP_Logo.png", CommonUtility.AppPath.ApplicationPath) %>" alt=""><span style='font-size: 20px; font-weight: bold; font-family: "Roboto", sans-serif'>Bangladesh University of Professionals</span>
+                </a>--%>
+                <asp:HyperLink ID="HyperLink3" runat="server" CssClass="logo" NavigateUrl="~/Admission/HomeOld.aspx">
+                    <img id="bupLogoSmall" src="../../ApplicationDocs/Institute/BUP_Logo.png" alt="" /><span style='font-size: 20px; font-weight: bold; font-family: "Roboto", sans-serif; color: #222'>&nbsp;Bangladesh University of Professionals</span>
+                </asp:HyperLink>
+
+
+                <nav id="navbar" class="navbar">
+                    <ul>
+                        <li>
+                            <%--<a class="nav-link scrollto" href="#">Home</a>--%>
+                            <asp:HyperLink ID="HyperLink2" runat="server" CssClass="nav-link scrollto" NavigateUrl="~/Admission/HomeOld.aspx">Home</asp:HyperLink>
+                        </li>
+
+                        <li>
+                            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                <ContentTemplate>
+                                    <asp:LinkButton ID="LinkButton1" runat="server" OnClick="btnAdd_Click"
+                                        data-toggle="tooltip" data-placement="bottom" title="I have a Payment ID, but did not complete my payment">Payment</asp:LinkButton>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+                        </li>
+
+                        <li>
+                            <%--<a class="nav-link scrollto" href="#">Login</a>--%>
+                            <asp:HyperLink ID="HyperLink1" runat="server" CssClass="nav-link scrollto" NavigateUrl="~/Admission/Login.aspx">Login</asp:HyperLink>
+
+                        </li>
+
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav>
+                <!-- .navbar -->
+
+            </div>
+        </header>
+        <!-- End Header -->
+
+
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+
+
+        <%--<asp:Button ID="Button1" runat="server" Text="Add" OnClick="btnAdd_Click" />--%>
+
+        <asp:UpdatePanel ID="UpdatePanel4" runat="server">
+            <ContentTemplate>
+                <asp:Button ID="btnShowPopup" runat="server" Style="display: none" />
+                <ajaxToolkit:ModalPopupExtender ID="ModalPopupExtender1" runat="server" TargetControlID="btnShowPopup" PopupControlID="pnlpopup"
+                    CancelControlID="btnCancel" BackgroundCssClass="modalBackground">
+                </ajaxToolkit:ModalPopupExtender>
+                <asp:Panel ID="pnlpopup" runat="server" BackColor="#e3eaeb" Width="1000px" Style="display: none">
+                    <div style="padding: 10px;">
+
+                        <h3 class="mb-0 text-center">I have a Payment ID, but did not complete my payment</h3>
+                        <hr />
+
+                        <div class="row">
+                            <div class="col-sm-4 col-md-4 col-lg-4 text-right">
+                                <strong>Payment ID</strong>
+                            </div>
+                            <div class="col-sm-4 col-md-4 col-lg-4">
+                                <asp:TextBox ID="txtPaymentId" runat="server" CssClass="form-control" onkeydown="return (event.keyCode!=13);"></asp:TextBox>
+                                <asp:RequiredFieldValidator runat="server" ID="RequiredFieldValidator1" Display="Dynamic"
+                                    ControlToValidate="txtPaymentId" ErrorMessage="Required" 
+                                    ForeColor="Crimson" ValidationGroup="gr1"></asp:RequiredFieldValidator>
+                            </div>
+                            <div class="col-sm-4 col-md-4 col-lg-4 ">
+                                <asp:LinkButton ID="btnGoForPayment" runat="server" OnClick="btnGoForPayment_Click" 
+                                ValidationGroup="gr1" Class="btn btn-info w-100"><i class="fas fa-paper-plane"></i>&nbsp;Go For Payment</asp:LinkButton>
+                            </div>
+                        </div>
+
+                        <br />
+                        <asp:Label ID="lblOLevelResult" runat="server" Text="" Style="font-weight: bold; color: crimson;"></asp:Label>
+
+                        <hr />
+                        <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
+                    </div>
+                </asp:Panel>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+
+
+
+
+
+        <footer>
+            <p style="text-align: center; padding-top: 24px; padding-bottom: 24px; background-color: #f1f6fe; margin-bottom: 0px;">&copy; <%: DateTime.Now.Year %> - Bangladesh University of Professionals</p>
+        </footer>
+
+
+    </form>
+
+    <%-- <div class="backtotop">
+        <a href="#top" class="back-to-top d-flex align-items-center justify-content-center active"><i class="bi bi-arrow-up-short"></i></a>
+    </div>--%>
+</body>
+</html>

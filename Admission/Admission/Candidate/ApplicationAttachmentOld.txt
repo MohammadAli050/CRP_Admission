@@ -1,0 +1,523 @@
+﻿<%@ Page Title="Application Form - Attachment" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ApplicationAttachment.aspx.cs" Inherits="Admission.Admission.Candidate.ApplicationAttachment" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="headContent" runat="server">
+
+    <link href="../../Content/ApplicationForm.css" rel="stylesheet" />
+    <link href="../../Content/steper.css" rel="stylesheet" />
+    <script async src="https://docs.opencv.org/4.x/opencv.js" onload="onOpenCvReady();"></script>
+    <script>
+
+        //function onOpenCvReady() {
+        //    console.log("OpenCV.js is ready.");
+        //    loadModel();
+        //}
+        //async function loadModel() {
+        //    console.log("Loading face detection model...");
+
+        //    // Load face detection model file
+        //    const modelURL = 'https://raw.githubusercontent.com/opencv/opencv/master/data/haarcascades/haarcascade_frontalface_default.xml';
+        //    const response = await fetch(modelURL);
+        //    const modelData = await response.arrayBuffer();
+
+        //    // Load model into OpenCV's filesystem
+        //    cv.FS_createDataFile("/", "haarcascade_frontalface_default.xml", new Uint8Array(modelData), true, false);
+        //    console.log("Model loaded successfully.");
+        //}
+
+        function UploadPhoto(fileUpload) {
+            if (fileUpload.value != '') {
+                var file = fileUpload.files[0];
+                var fileName = fileUpload.files[0].name;
+                var fileSize = fileUpload.files[0].size;
+                var fileExtension = fileName.split('.')[1].toLowerCase(); //fileUpload.files[0].name.substring(1 + 1, 5).toLowerCase();
+                var errorCount = 0;
+
+                if (fileSize > 204800) {
+                   errorCount++;
+                   alert("File size is over then 150KB");
+                    $('#MainContent_FileUploadPhoto').val('');
+                    //document.getElementById("MainContent_FileUploadPhoto").value = '';
+                    //console.log($('#MainContent_FileUploadPhoto').val())
+
+                    //const img = new Image();
+                    //img.src = URL.createObjectURL(file);
+                    //await img.decode();
+
+                    //const canvas = document.getElementById('canvas');
+                    //const context = canvas.getContext('2d');
+                    //canvas.width = img.width;
+                    //canvas.height = img.height;
+                    //context.drawImage(img, 0, 0);
+                    //console.log("Image drawn on canvas with dimensions:", img.width, "x", img.height);
+
+                    //const src = cv.imread(canvas);
+                    //const gray = new cv.Mat();
+                    //cv.cvtColor(src, gray, cv.COLOR_RGBA2GRAY);
+
+                    //const faceCascade = new cv.CascadeClassifier();
+                    //faceCascade.load('/haarcascade_frontalface_default.xml');
+
+                    // Detect faces
+                    //const faces = new cv.RectVector();
+                    //faceCascade.detectMultiScale(gray, faces, 1.1, 3, 0, new cv.Size(30, 30), new cv.Size());
+
+                    //if (faces.size() > 0) {
+                      //  console.log("Face(s) detected:", faces.size());
+
+                        // Use the first detected face for cropping
+                        //const face = faces.get(0);
+                        //const { x, y, width, height } = face;
+                
+                        // Define padding and crop size around the face
+                        //const padding = Math.min(width, height) * 2; // Adjust this padding as needed
+                        //const cropSize = 200; // Standard passport photo size
+
+                        //const cropX = Math.max(0, x + width / 2 - padding / 2);
+                        //const cropY = Math.max(0, y + height / 2 - padding / 2);
+                        //const cropWidth = Math.min(canvas.width - cropX, padding);
+                        //const cropHeight = Math.min(canvas.height - cropY, padding);
+
+                        //console.log("Cropping image with dimensions:", { cropX, cropY, cropWidth, cropHeight });
+
+                        // Prepare a new canvas for the cropped area
+                        //const faceCanvas = document.createElement('canvas');
+                        //faceCanvas.width = cropSize;
+                        //faceCanvas.height = cropSize;
+                        //const faceContext = faceCanvas.getContext('2d');
+
+                        // Draw cropped face image to the new canvas
+                        //faceContext.drawImage(canvas, cropX, cropY, cropWidth, cropHeight, 0, 0, cropSize, cropSize);
+                        //console.log("Face cropped and resized to 200x200 for passport photo.");
+
+                        // Set cropped image preview
+                        //document.getElementById('preview').src = faceCanvas.toDataURL();
+                        //console.log("Cropped image preview set.");
+
+                        //localStorage.setItem('croppedImage',faceCanvas.toDataURL());
+
+                        <%--faceCanvas.toBlob(async (blob) => {                         
+                    
+
+                    document.getElementById("<%=croppedImageBase64.ClientID %>").value = faceCanvas.toDataURL(); ;
+                    document.getElementById("<%=btnUploadPhoto.ClientID %>").click();
+                    // Optionally, you can now trigger the upload button click
+                    
+                }, 'image/jpeg')--%>
+
+                        //const uriString = faceCanvas.toDataURL("image/jpeg");
+                        //const base64Data = uriString.replace(/^data:image\/jpeg;base64,/, '');
+                        //document.getElementById("<%=croppedImageBase64.ClientID %>").value = base64Data;
+                        //document.getElementById("<%=btnUploadPhoto.ClientID %>").click();
+                        
+                        <%--faceCanvas.toBlob(async (blob) => {
+                            const reader = new FileReader();
+                            reader.onloadend = () => {
+                                // Set the base64 string of the cropped image to a hidden field
+                                const uriString = reader.result;
+        
+                                // Remove the "data:image/jpeg;base64," prefix for a clean base64 string
+                                const base64Data = uriString.replace(/^data:image\/jpeg;base64,/, '');
+        
+                                // Set the hidden field to this base64 data
+                                document.getElementById("<%=croppedImageBase64.ClientID %>").value = base64Data;
+        
+                                // Trigger the server-side upload button
+                                document.getElementById("<%=btnUploadPhoto.ClientID %>").click();
+                            };
+                            reader.readAsDataURL(blob);
+                        }, 'image/jpeg');--%>
+
+                        //document.getElementById("<%=croppedImageBase64.ClientID %>").value = uriString;
+
+                        
+                    //} else {
+                    //    console.warn("No face detected!");
+                    //    alert("No face detected!");
+                    //}
+
+
+                    //src.delete();
+                    //gray.delete();
+                    //faces.delete();
+                    //faceCascade.delete();
+                }
+
+                if (fileExtension != 'jpg' && fileExtension != 'jpeg' && fileExtension != 'png') {
+                    errorCount++;
+                    alert("File Extension is not correct !");
+                    $('#MainContent_FileUploadPhoto').val('');
+                    //document.getElementById("MainContent_FileUploadPhoto").value = '';
+                }
+
+                if (errorCount == 0) {
+                    document.getElementById("<%=btnUploadPhoto.ClientID %>").click();
+                }
+
+
+            }
+        }
+
+        function UploadSignature(fileUpload) {
+            if (fileUpload.value != '') {
+
+                var fileName = fileUpload.files[0].name;
+                var fileSize = fileUpload.files[0].size;
+                var fileExtension = fileName.split('.')[1].toLowerCase(); //fileUpload.files[0].name.substring(1 + 1, 5).toLowerCase();
+                var errorCount = 0;
+
+                if (fileSize > 204800) {
+                    errorCount++;
+                    alert("File size is over then 150KB");
+                    $('#MainContent_FileUploadSignature').val('');
+                    //document.getElementById("MainContent_FileUploadSignature").value = '';
+                }
+
+                if (fileExtension != 'jpg' && fileExtension != 'jpeg' && fileExtension != 'png') {
+                    errorCount++;
+                    alert("File Extension is not correct !");
+                    $('#MainContent_FileUploadSignature').val('');
+                    //document.getElementById("MainContent_FileUploadSignature").value = '';
+                }
+
+                if (errorCount == 0) {
+                    document.getElementById("<%=btnUploadSignature.ClientID %>").click();
+                }
+
+            }
+        }
+
+
+
+        <%--function UploadPhoto(fileUpload) {
+            if (fileUpload.value != '') {
+                document.getElementById("<%=btnUploadPhoto.ClientID %>").click();
+            }
+        }
+
+        function UploadSignature(fileUpload) {
+            if (fileUpload.value != '') {
+                document.getElementById("<%=btnUploadSignature.ClientID %>").click();
+            }
+        }--%>
+
+        <%--function UploadFGSign(fileUpload) {
+            if (fileUpload.value != '') {
+                document.getElementById("<%=btnUploadFinGuarSignature.ClientID %>").click();
+            }
+        }--%>
+    </script>
+    <style>
+        .navio {
+            padding: 10px 10px !important;
+        }
+
+        @media screen and (min-width: 768px) {
+            .navi {
+                height: 41px !important;
+                margin-bottom: 0px !important;
+                min-height: auto;
+            }
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="row">
+        <div class="col-md-12">
+            <%--====================== For Bachelor ===============================--%>
+            <nav class="navbar navi" id="bachelorsBreadcrumb" runat="server">
+                <%--<a class="navbar-brand navio" href="#">Basic</a>--%>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                 <div class="Steper" style="display: block;">
+                    <nav>
+                        <ol class="cd-breadcrumb triangle">
+                            <li><a href="ApplicationBasic.aspx">Basic</a></li>
+                            <li><a href="ApplicationEducation.aspx">Education</a></li>
+                            <li><a href="ApplicationPriorityS.aspx">Program Priority</a></li>
+                            <li><a href="ApplicationRelation.aspx">Parent/Guardian</a></li>
+                            <li><a href="ApplicationAddress.aspx">Address</a></li>
+                            <li  class="current"><a href="#">Upload Photo</a></li>
+                            <li><a href="ApplicationDeclaration.aspx">Declaration</a></li>
+                        </ol>
+                    </nav>
+                </div>
+
+               <%-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link navio" href="ApplicationBasic.aspx">Basic</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link navio" href="ApplicationPriorityS.aspx">Program Priority</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navio" href="ApplicationEducation.aspx">Education</a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="nav-link navio " href="ApplicationRelation.aspx">Parent/Guardian</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link navio" href="ApplicationAddress.aspx">Address</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navio" href="ApplicationAdditional.aspx">Additional Info/Work Experience</a>
+                        </li>
+                       
+                        <li class="nav-item active">
+                            <a class="nav-link navio" href="#">Upload Photo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navio" href="ApplicationDeclaration.aspx">Declaration</a>
+                        </li>
+                    </ul>
+                </div>--%>
+            </nav>
+            <%--====================== END For Bachelor ===============================--%>
+
+
+
+            <%--====================== For Masters ===============================--%>
+            <nav class="navbar navi" id="mastersBreadcrumb" runat="server" >
+                <%--<a class="navbar-brand navio" href="#">Basic</a>--%>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <div class="Steper" style="display: block">
+                    <nav>
+                        <ol class="cd-breadcrumb triangle">
+
+                            <li><a href="ApplicationBasic.aspx">Basic Masters</a></li>
+                            <li><a href="ApplicationEducation.aspx">Education</a></li>
+                            <li><a href="ApplicationRelation.aspx">Parent/Guardian</a></li>
+                            <li ><a href="ApplicationAddress.aspx">Address</a></li>
+                            <li><a href="ApplicationAdditional.aspx">Additional Info/Work Experience</a></li>
+                            <li class="current"><a href="#">Upload Photo</a></li>
+
+                            <li><a href="ApplicationDeclaration.aspx">Declaration</a></li>
+
+                        </ol>
+                    </nav>
+                </div>
+
+                <%--<div class="collapse navbar-collapse" id="navbarSupportedContent1">
+                    <ul class="nav navbar-nav mr-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link navio" href="ApplicationBasic.aspx">Basic</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link navio" href="ApplicationEducation.aspx">Education</a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="nav-link navio" href="ApplicationRelation.aspx">Parent/Guardian</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link navio" href="ApplicationAddress.aspx">Address</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link navio" href="ApplicationAdditional.aspx">Additional Info/Work Experience</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link navio" href="#">Upload Photo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navio" href="ApplicationDeclaration.aspx">Declaration</a>
+                        </li>
+                    </ul>
+                </div>--%>
+            </nav>
+
+            <%--====================== STEPER START ===============================--%>
+
+
+
+
+            <%--====================== STEPER END ===============================--%>
+            <%--====================== For Masters ===============================--%>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading panelHeaderHeight">
+                    <%--====================== For Bachelor ===============================--%>
+                    <%--<ol class="breadcrumb" id="bachelorsBreadcrumb" runat="server">
+                        <li><a href="ApplicationBasic.aspx">Basic</a></li>
+                        <li><a href="ApplicationPriorityS.aspx">Program Priority</a></li>
+                        <li><a href="ApplicationEducation.aspx">Education</a></li>
+                        <li><a href="ApplicationRelation.aspx">Parent/Guardian</a></li>
+                        <li><a href="ApplicationAddress.aspx">Address</a></li>
+                        <li><a href="ApplicationAdditional.aspx">Additional Info/Work Experience</a></li>
+                        <%--<li><a href="ApplicationFinancialGuarantor.aspx">Financial Guarantor</a></li>-->
+                        <li class="active">Upload Photo</li>
+                        <li><a href="ApplicationDeclaration.aspx">Declaration</a></li>
+                    </ol>--%>
+                    <%--====================== End For Bachelor ===============================--%>
+
+                    <%--====================== For Masters ===============================--%>
+                    <%--<ol class="breadcrumb" id="mastersBreadcrumb" runat="server">
+	                   <li><a href="ApplicationBasic.aspx">Basic</a></li>
+                        <li><a href="ApplicationEducation.aspx">Education</a></li>
+                        <li><a href="ApplicationRelation.aspx">Parent/Guardian</a></li>
+                        <li><a href="ApplicationAddress.aspx">Address</a></li>
+                        <li><a href="ApplicationAdditional.aspx">Additional Info/Work Experience</a></li>
+                        <li class="active">Upload Photo</li>
+                        <li><a href="ApplicationDeclaration.aspx">Declaration</a></li>
+                    </ol>--%>
+                    <%--====================== END For Masters ===============================--%>
+                </div>
+                <%-- end panel heading --%>
+                <div class="panel-body">
+
+                    <asp:Panel ID="messagePanel" runat="server">
+                        <asp:Label ID="lblMessage" runat="server"></asp:Label>
+                        <br />
+                    </asp:Panel>
+
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="alert alert-info" style="margin-bottom: 0px; padding: 5px;">
+                                <strong>Note:</strong>
+                                <ul style="font-weight: bold;">
+                                    <%--<li>Please Upload your Photo and Signature Image</li>--%>
+                                    <li style="color: crimson; font-size: 16px">Your Photo size should be maximum 150KB</li>
+                                    <li style="color: crimson; font-size: 16px">Your Signature Image size should be maximum 150KB</li>
+                                    <li style="color: crimson; font-size: 16px">Only Passport size photo(JPEG,JPG,PNG) will be accepted</li>
+                                    <li style="color: crimson; font-size: 16px">Photograph dimensions is 300 X 300 pixels (Width X Height)</li>
+                                    <li style="color: crimson; font-size: 16px">Signature dimensions is 300 X 80 pixels (Width X Height)</li>
+                                </ul>
+                            </div>
+                            <br />
+
+                            <div class="col-md-4">
+                                <div class="panel panel-default">
+
+                                    <div class="panel-heading style_thead">
+                                        Photo
+                                    </div>
+                                    <div class="panel-body">
+                                        <%--<asp:UpdatePanel ID="updPanelPhotoUpload" runat="server" ChildrenAsTriggers="true">
+                                            <ContentTemplate>--%>
+                                        <div style="text-align: center">
+                                            <asp:Image ID="ImagePhoto" runat="server"
+                                                ImageUrl="~/Images/AppImg/user7.jpg"
+                                                Width="154" Height="154" />
+                                        </div>
+                                        <div style="color: crimson; font-weight: bold;"><sup>File size: 150KB</sup></div>
+                                        <asp:FileUpload ID="FileUploadPhoto" runat="server" AllowMultiple="false" accept="image/*" />
+                                        <asp:RegularExpressionValidator ID="rexvPhoto" runat="server" ControlToValidate="FileUploadPhoto"
+                                            ErrorMessage="Only .jpg, .png, and .jpeg" Display="Dynamic" ForeColor="Crimson"
+                                            ValidationExpression="(.*\.([Jj][Pp][Gg])|.*\.([pP][nN][gG])|.*\.([Jj][Pp]Ee][Gg])$)"></asp:RegularExpressionValidator>
+                                        <asp:Button ID="btnUploadPhoto" runat="server"
+                                            Text="Upload Photo"
+                                            Style="display: none"
+                                            OnClick="btnUploadPhoto_Click" />
+                                        <asp:HiddenField ID="croppedImageBase64" runat="server" />
+                                        <asp:Panel ID="messagePanel_Photo" runat="server">
+                                            <asp:Label ID="lblMessagePhoto" runat="server"></asp:Label>
+                                        </asp:Panel>
+                                        <%--</ContentTemplate>
+                                            <Triggers>
+                                                <asp:AsyncPostBackTrigger ControlID="btnUploadPhoto" />
+                                            </Triggers>
+                                        </asp:UpdatePanel>--%>
+                                    </div>
+                                </div>
+                            </div>
+                            <canvas id="canvas" style="display:none"></canvas>
+                            <img id="preview" />
+                            <%-- PHOTO --%>
+                            <div class="col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading style_thead">
+                                        Signature
+                                    </div>
+                                    <div class="panel-body">
+                                        <%--<asp:UpdatePanel ID="updPnlSignatureUpload" runat="server">
+                                            <ContentTemplate>--%>
+                                        <%--<label>Upload your clear signature.</label>--%>
+                                        <div style="text-align: center">
+                                            <asp:Image ID="ImageSignature" runat="server"
+                                                ImageUrl="~/Images/AppImg/sign2.png"
+                                                Width="256" Height="128" />
+                                        </div>
+                                        <div style="color: crimson; font-weight: bold;"><sup>File size: 150KB</sup></div>
+                                        <asp:FileUpload ID="FileUploadSignature" runat="server" AllowMultiple="false" accept="image/*" />
+                                        <asp:RegularExpressionValidator ID="rexvSignature" runat="server" ControlToValidate="FileUploadSignature"
+                                            ErrorMessage="Only .jpg, .png, and .jpeg" Display="Dynamic" ForeColor="Crimson"
+                                            ValidationExpression="(.*\.([Jj][Pp][Gg])|.*\.([pP][nN][gG])|.*\.([Jj][Pp][Ee][Gg])$)"></asp:RegularExpressionValidator>
+                                        <asp:Button ID="btnUploadSignature" runat="server"
+                                            Text="Upload signature"
+                                            Style="display: none"
+                                            OnClick="btnUploadSignature_Click" />
+                                        <asp:Panel ID="messagePanel_Sign" runat="server">
+                                            <asp:Label ID="lblMessageSign" runat="server"></asp:Label>
+                                        </asp:Panel>
+                                        <%--</ContentTemplate>
+                                            <Triggers>
+                                                <asp:AsyncPostBackTrigger ControlID="btnUploadSignature" />
+                                            </Triggers>
+                                        </asp:UpdatePanel>--%>
+                                    </div>
+                                </div>
+                            </div>
+                            <%-- SIGNATURE --%>
+
+                            <%--<div class="col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading style_thead">
+                                        Financial Guarantor's Signature
+                                    </div>
+                                    <div class="panel-body">
+                                        <label>Upload signature with full name.</label>
+                                        <div style="text-align: center">
+                                            <asp:Image ID="ImageFinGuarSignature" runat="server"
+                                                ImageUrl="~/Images/AppImg/sign2.png"
+                                                Width="256" Height="128" />
+                                        </div>
+                                        <div style="color: red;"><sup>File size: 150kb</sup></div>
+                                        <asp:FileUpload ID="FileUploadFinGuarSignature" runat="server" AllowMultiple="false" accept="image/*" />
+                                        <asp:RegularExpressionValidator ID="rexvFinGuarSign" runat="server" ControlToValidate="FileUploadFinGuarSignature"
+                                            ErrorMessage="Only .jpg, .png, and .jpeg" Display="Dynamic" ForeColor="Crimson"
+                                            ValidationExpression="(.*\.([Jj][Pp][Gg])|.*\.([pP][nN][gG])|.*\.([Jj][Pp][Ee][Gg])$)"></asp:RegularExpressionValidator>
+                                        <asp:Button ID="btnUploadFinGuarSignature" runat="server"
+                                            Text="Upload signature"
+                                            Style="display: none"
+                                            OnClick="btnUploadFinGuarSignature_Click" />
+                                        <asp:Panel ID="messagePanel_FinGuarSign" runat="server">
+                                            <asp:Label ID="lblMessageFinGuarSign" runat="server"></asp:Label>
+                                        </asp:Panel>
+                                        
+                                    </div>
+                                </div>
+                            </div>--%>
+                            <%-- SIGNATURE --%>
+                        </div>
+                        <%-- END COL-MD-12 --%>
+                    </div>
+                    <%-- END ROW --%>
+
+                    <asp:Button ID="btnNext" runat="server" Text="Upload/Update"
+                        CssClass="btn btn-primary" OnClick="btnNext_Click" />
+
+                </div>
+                <%-- end panel body --%>
+            </div>
+            <%-- end panel default --%>
+        </div>
+        <%-- end col-md-12 --%>
+    </div>
+    <%-- end row --%>
+</asp:Content>
