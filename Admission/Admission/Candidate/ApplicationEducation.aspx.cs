@@ -69,8 +69,8 @@ namespace Admission.Admission.Candidate
                 List<DAL.ExamType> examTypeList = db.GetAllExamType_ND();
                 if (examTypeList != null && examTypeList.Any())
                 {
-                    DDLHelper.Bind<DAL.ExamType>(ddlSec_ExamType, examTypeList.Where(a => a.EducationCategory_ID == 2).ToList(), "ExamTypeName", "ID", EnumCollection.ListItemType.ExamType);
-                    DDLHelper.Bind<DAL.ExamType>(ddlHigherSec_ExamType, examTypeList.Where(a => a.EducationCategory_ID == 3).ToList(), "ExamTypeName", "ID", EnumCollection.ListItemType.ExamType);
+                    DDLHelper.Bind<DAL.ExamType>(ddlSec_ExamType, examTypeList.Where(a => a.EducationCategory_ID == 2 && a.IsActive==true).ToList(), "ExamTypeName", "ID", EnumCollection.ListItemType.ExamType);
+                    DDLHelper.Bind<DAL.ExamType>(ddlHigherSec_ExamType, examTypeList.Where(a => a.EducationCategory_ID == 3 && a.IsActive==true).ToList(), "ExamTypeName", "ID", EnumCollection.ListItemType.ExamType);
                 }
 
                 List<DAL.EducationBoard> educationBoardList = db.GetAllEducationBoard_ND();
