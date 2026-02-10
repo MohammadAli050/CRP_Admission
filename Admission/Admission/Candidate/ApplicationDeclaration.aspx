@@ -301,7 +301,7 @@
         }
 
         .btn-final-submit {
-            background: linear-gradient(145deg, var(--danger), #dc2626);
+            background: red;
             color: white;
             border: none;
             padding: 1rem 3rem;
@@ -642,7 +642,7 @@
 
                 <!-- Submit Section -->
                 <div class="submit-section">
-                    <asp:Button ID="btnSave_Declaration" runat="server" Text="Final Submit & Payment"
+                    <asp:Button ID="btnSave_Declaration" runat="server" Text="Final Submit"
                         OnClientClick="this.value = 'Please wait....'; this.disabled = true;" UseSubmitBehavior="false"
                         CssClass="btn-final-submit" OnClick="btnSave_Declaration_Click"></asp:Button>
                 </div>

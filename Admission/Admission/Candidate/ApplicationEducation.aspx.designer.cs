@@ -213,6 +213,15 @@ namespace Admission.Admission.Candidate
         protected global::System.Web.UI.WebControls.DropDownList ddlSec_PassingYear;
 
         /// <summary>
+        /// ddlSec_StudentCat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlSec_StudentCat;
+
+        /// <summary>
         /// divSubjectWiseGradeOLevel control.
         /// </summary>
         /// <remarks>
@@ -490,6 +499,15 @@ namespace Admission.Admission.Candidate
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlHigherSec_PassingYear;
+
+        /// <summary>
+        /// ddlhsc_StudentCat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlhsc_StudentCat;
 
         /// <summary>
         /// divSubjectWiseGradeALevel control.

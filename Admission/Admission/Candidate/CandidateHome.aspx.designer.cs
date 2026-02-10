@@ -87,31 +87,13 @@ namespace Admission.Admission.Candidate
         protected global::System.Web.UI.WebControls.Label lblDateOfBirth;
 
         /// <summary>
-        /// lblQuota control.
+        /// lblPaymentStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblQuota;
-
-        /// <summary>
-        /// quotarow control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow quotarow;
-
-        /// <summary>
-        /// lblQuotaStatus control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblQuotaStatus;
+        protected global::System.Web.UI.WebControls.Label lblPaymentStatus;
 
         /// <summary>
         /// panelFacultyWiseProgramPriority control.

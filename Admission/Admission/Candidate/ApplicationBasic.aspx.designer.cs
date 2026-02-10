@@ -60,15 +60,6 @@ namespace Admission.Admission.Candidate
         protected global::System.Web.UI.WebControls.DropDownList ddlReligion;
 
         /// <summary>
-        /// ddlBloodGroup control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlBloodGroup;
-
-        /// <summary>
         /// ddlNationalIdOrBirthRegistration control.
         /// </summary>
         /// <remarks>
@@ -96,24 +87,6 @@ namespace Admission.Admission.Candidate
         protected global::System.Web.UI.WebControls.TextBox txtNationalIdOrBirthRegistration;
 
         /// <summary>
-        /// divHall control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divHall;
-
-        /// <summary>
-        /// rblHallAccomodation control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblHallAccomodation;
-
-        /// <summary>
         /// divQuota control.
         /// </summary>
         /// <remarks>
@@ -130,6 +103,33 @@ namespace Admission.Admission.Candidate
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlQuota;
+
+        /// <summary>
+        /// ddlBloodGroup control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlBloodGroup;
+
+        /// <summary>
+        /// divHall control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divHall;
+
+        /// <summary>
+        /// rblHallAccomodation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList rblHallAccomodation;
 
         /// <summary>
         /// divQuotaDetails control.

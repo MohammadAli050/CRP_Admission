@@ -1395,18 +1395,18 @@ namespace Admission.Admission.Candidate
                                     }
                                 }
 
-                                if (notSelectedVenueCount > 0)
-                                {
-                                    examVenueSelectionStr = "Please select exam venue selection information for all faculties in Basic information section.";
-                                }
-                                else
-                                {
-                                    examVenueSelectionStr = string.Empty;
-                                }
+                                //if (notSelectedVenueCount > 0)
+                                //{
+                                //    examVenueSelectionStr = "Please select exam venue selection information for all faculties in Basic information section.";
+                                //}
+                                //else
+                                //{
+                                //    examVenueSelectionStr = string.Empty;
+                                //}
                             }
                             else
                             {
-                                examVenueSelectionStr = "Please select exam venue selection information for all faculties in Basic information section.";
+                                //examVenueSelectionStr = "Please select exam venue selection information for all faculties in Basic information section.";
                             }
                         }
                     }
@@ -1433,53 +1433,6 @@ namespace Admission.Admission.Candidate
                         DAL.ExamDetail hsc = exam.Where(c => c.ExamTypeID == 2 || c.ExamTypeID == 7 || c.ExamTypeID == 8 || c.ExamTypeID == 9 || c.ExamTypeID == 13 || c.ExamTypeID == 15).Select(c => c.ExamDetail).FirstOrDefault();
 
 
-                        #region O level And A Level Student Required Obtained Marks is 200(O level) and 80(A level) . New req given by asad (16-11-2024)
-
-                        try
-                        {
-                            if (educationCategoryId != 6) // without masters for all TotalMarks is required
-                            {
-                                var sscOLevelObj = exam.Where(x => x.ExamTypeID == 5).FirstOrDefault();
-                                var hscALevelObj = exam.Where(x => x.ExamTypeID == 7).FirstOrDefault();
-
-                                if (sscOLevelObj != null) // O level
-                                {
-                                    decimal totalObt = Convert.ToDecimal(sscOLevelObj.ExamDetail.Marks);
-                                    if (totalObt < 200)
-                                    {
-                                        lblMessage.Text = "Total Obtained Marks must be greater than or equal to 200 for O level Student";
-                                        lblMessage.CssClass = "alert alert-danger";
-                                        lblMessage.Visible = true;
-                                        return;
-                                    }
-                                }
-
-                                if (hscALevelObj != null) // A level
-                                {
-                                    if (hscALevelObj.Attribute1 == null || hscALevelObj.Attribute1 == "")
-                                    {
-                                        decimal totalObt = Convert.ToDecimal(hscALevelObj.ExamDetail.Marks);
-                                        if (totalObt < 80)
-                                        {
-                                            lblMessage.Text = "Total Obtained Marks must be greater than or equal to 80 for A level Student";
-                                            lblMessage.CssClass = "alert alert-danger";
-                                            lblMessage.Visible = true;
-                                            return;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            lblMessage.Text = "Total Obtained Marks must be greater than or equal to 200 for O level & 80 for A level Student";
-                            lblMessage.CssClass = "alert alert-danger";
-                            lblMessage.Visible = true;
-                            return;
-                        }
-
-                        #endregion
-
                         if (ssc != null)
                         {
                             if (
@@ -1489,6 +1442,8 @@ namespace Admission.Admission.Candidate
                                 ssc.GroupOrSubjectID == null ||
                                 (ssc.ResultDivisionID == null || (ssc.ResultDivisionID == 5 && string.IsNullOrEmpty(ssc.GPA.ToString()))) ||
                                 string.IsNullOrEmpty(ssc.PassingYear.ToString())
+                                || (ssc.AttributeInt2 == null || ssc.AttributeInt2 <= 0)
+                                || (ssc.GPAW4S == null || ssc.GPAW4S <= 0)
                                 )
                             {
                                 educationStr += "Some SSC/O-Level/Dakhil information missing.";
@@ -1531,6 +1486,8 @@ namespace Admission.Admission.Candidate
                                 hsc.GroupOrSubjectID == null ||
                                 (hsc.ResultDivisionID == null || (hsc.ResultDivisionID == 5 && string.IsNullOrEmpty(hsc.GPA.ToString()))) ||
                                 string.IsNullOrEmpty(hsc.PassingYear.ToString())
+                                || (hsc.AttributeInt2 == null || hsc.AttributeInt2 <= 0)
+                                || (hsc.GPAW4S == null || hsc.GPAW4S <= 0)
                                 )
                             {
                                 educationStr += "Some HSC/A-Level/Alim information missing.";
@@ -1728,181 +1685,25 @@ namespace Admission.Admission.Candidate
                         {
                             long additionalInfo = -1;
                             additionalInfo = additionalInfoObj.ID;
-                            if (AllStepInOneTime != 1 || educationCategoryId != 4)
+
+
+                            additionalInfoObj.IsFinalSubmit = true;
+                            additionalInfoObj.DateModified = DateTime.Now;
+                            additionalInfoObj.ModifiedBy = cId;
+                            using (var dbUpdate = new CandidateDataManager())
                             {
-                                additionalInfoObj.IsFinalSubmit = true;
-                                additionalInfoObj.DateModified = DateTime.Now;
-                                additionalInfoObj.ModifiedBy = cId;
-                                using (var dbUpdate = new CandidateDataManager())
-                                {
-                                    dbUpdate.Update<DAL.AdditionalInfo>(additionalInfoObj);
-                                }
+                                dbUpdate.Update<DAL.AdditionalInfo>(additionalInfoObj);
+
+                                lblMessage.Text = "Your Application has been submitted successfully";
+
+                                OnLoad(null);
                             }
-                            try
-                            {
-
-                                if (additionalInfo > 0)
-                                {
-
-                                    #region LOG /*-/*-/*-/*-/*-/*-/*-/*-/*-/*-/*-/*-
-                                    try
-                                    {
-                                        //DAL_Log.DataLog dLog = new DAL_Log.DataLog();
-                                        //dLog.DateCreated = DateTime.Now;
-                                        //dLog.EventName = "Final Submit (Admin)";
-                                        //dLog.PageName = "CandApplicationDeclaration.aspx";
-                                        //dLog.NewData = "User: " + userName + "; Final Submit to ," + "Candidate: " + candidate.FirstName.ToString() + "; PaymentID: " + paymentID.ToString() + "; CandidateID: " + cId.ToString();
-                                        //dLog.UserId = uId;
-                                        //dLog.Attribute1 = "Success";
-                                        //dLog.SessionInformation = SessionSGD.GetObjFromSession<long>(SessionName.Common_UserId).ToString() + "; " +
-                                        //    SessionSGD.GetObjFromSession<string>(SessionName.Common_RoleName) + "; C-ID:" + cId;
-                                        //LogWriter.DataLogWriter(dLog);
-                                        if (AllStepInOneTime != 1)
-                                        {
-                                            DAL_Log.DataLog dLog = new DAL_Log.DataLog();
-                                            dLog.DateTime = DateTime.Now;
-                                            dLog.DateCreated = DateTime.Now;
-                                            dLog.UserId = uId;
-                                            dLog.CandidateId = cId;
-                                            dLog.EventName = "Final Submit (Candidate)";
-                                            dLog.PageName = "ApplicationDeclaration.aspx";
-                                            //dLog.OldData = logOldObject;
-                                            dLog.NewData = "User: " + userName + "; Final Submit to ," + "Candidate: " + candidate.FirstName.ToString() + "; PaymentID: " + paymentID.ToString() + "; CandidateID: " + cId.ToString() + "; Final Submitted.";
-                                            dLog.SessionInformation = SessionSGD.GetObjFromSession<long>(SessionName.Common_UserId).ToString() + "; " +
-                                                SessionSGD.GetObjFromSession<string>(SessionName.Common_RoleName) + "; C-ID:" + cId;
-
-                                            LogWriter.DataLogWriter(dLog);
-                                        }
-                                    }
-                                    catch (Exception ex)
-                                    {
-                                    }
-                                    #endregion
-
-
-                                    //#region LOG /*-/*-/*-/*-/*-/*-/*-/*-/*-/*-/*-/*-
-                                    //try
-                                    //{
-                                    //    DAL_Log.DataLog dLog = new DAL_Log.DataLog();
-                                    //    dLog.DateCreated = DateTime.Now;
-                                    //    dLog.EventName = "Final Submit (Candidate)";
-                                    //    dLog.PageName = "ApplicationDeclaration.aspx";
-                                    //    dLog.NewData = "Candidate: " + candidate.FirstName.ToString() + "; PaymentID: " + paymentID.ToString() + "; CandidateID: " + cId.ToString() + "; Done the final submission.";
-                                    //    dLog.UserId = uId;
-                                    //    dLog.Attribute1 = "Success";
-                                    //    dLog.SessionInformation = SessionSGD.GetObjFromSession<long>(SessionName.Common_UserId).ToString() + "; " +
-                                    //        SessionSGD.GetObjFromSession<string>(SessionName.Common_RoleName) + "; C-ID:" + cId;
-                                    //    LogWriter.DataLogWriter(dLog);
-                                    //}
-                                    //catch (Exception ex)
-                                    //{
-                                    //}
-                                    //#endregion
-
-
-                                    if (AllStepInOneTime == 1 && educationCategoryId == 4)
-                                    {
-                                        long? TablepaymentID = -1;
-                                        using (var db = new CandidateDataManager())
-                                        {
-                                            TablepaymentID = db.AdmissionDB.CandidatePayments.Where(x => x.CandidateID == cId).Select(x => x.ID).FirstOrDefault();
-                                        }
-                                        string urlParam = cId + ";"
-                                          + TablepaymentID + ";"
-                                          + -1
-                                          + ";1;"
-                                          + -1 + ";"
-                                          + 4 + ";";
-                                        Response.Redirect("~/Admission/Candidate/PurchaseNotification.aspx?value=" + urlParam, false);
-                                    }
-                                    else
-                                    {
-                                        #region Send SMS
-                                        //string msgBody =  "Dear " + candidate.FirstName + "\n" +
-                                        //                  "Your application has been successfully submitted." + "\n" +
-                                        //                  "BUP";
-
-                                        string msgBody = "Dear " + candidate.FirstName +
-                                                      "Your application has been successfully submitted." +
-                                                      "BUP";
-                                        string smsRespose = SMSUtility.Send(candidate.SMSPhone, msgBody);
-
-                                        string statusT = JObject.Parse(smsRespose)["statusCode"].ToString();
-                                        //dynamic statusT = JsonConvert.DeserializeObject<dynamic>(smsRespose);
-
-                                        if (statusT != "200") //if sms sending fails
-                                        {
-                                            DAL_Log.SmsLog smsLog = new DAL_Log.SmsLog();
-                                            smsLog.AcaCalId = null;
-                                            smsLog.Attribute1 = "Sms sending failed in ApplicationDeclaration.aspx";
-                                            smsLog.Attribute2 = "Failed";
-                                            smsLog.Attribute3 = null;
-                                            smsLog.CreatedBy = candidate.ID;
-                                            smsLog.CreatedDate = DateTime.Now;
-                                            smsLog.CurrentSMSReferenceNo = smsRespose;
-                                            smsLog.Message = msgBody;
-                                            smsLog.StudentId = candidate.ID;
-                                            smsLog.PhoneNo = candidate.SMSPhone;
-                                            smsLog.SenderUserId = SessionSGD.GetObjFromSession<long>(SessionName.Common_UserId);
-                                            smsLog.SentReferenceId = null;
-                                            smsLog.SentSMSId = null;
-                                            smsLog.SmsSendDate = DateTime.Now;
-                                            smsLog.SmsType = -1;
-
-                                            //LogWriter.SmsLog(smsLog);
-
-                                            //lblMessageLv.Text = "SMS sending failed.";
-                                            //lblMessageLv.ForeColor = Color.Crimson;
-                                        }
-                                        else //if sms sending passed
-                                        {
-                                            DAL_Log.SmsLog smsLog = new DAL_Log.SmsLog();
-                                            smsLog.AcaCalId = null;
-                                            smsLog.Attribute1 = "Sms sending successful ApplicationDeclaration.aspx";
-                                            smsLog.Attribute2 = "Success";
-                                            smsLog.Attribute3 = null;
-                                            smsLog.CreatedBy = candidate.ID;
-                                            smsLog.CreatedDate = DateTime.Now;
-                                            smsLog.CurrentSMSReferenceNo = smsRespose;
-                                            smsLog.Message = msgBody;
-                                            smsLog.StudentId = candidate.ID;
-                                            smsLog.PhoneNo = candidate.SMSPhone;
-                                            smsLog.SenderUserId = SessionSGD.GetObjFromSession<long>(SessionName.Common_UserId);
-                                            smsLog.SentReferenceId = null;
-                                            smsLog.SentSMSId = null;
-                                            smsLog.SmsSendDate = DateTime.Now;
-                                            smsLog.SmsType = -1;
-
-                                            LogWriter.SmsLog(smsLog);
-
-                                            //lblMessageLv.Text = "SMS sent.";
-                                            //lblMessageLv.ForeColor = Color.Green;
-                                        }
-                                        #endregion
-                                    }
-                                }
-
-                                if (AllStepInOneTime != 1 || educationCategoryId != 4)
-                                {
-                                    //logout user with message.
-                                    SessionSGD.DeleteFromSession(SessionName.Common_UserId);
-                                    SessionSGD.DeleteFromSession(SessionName.Common_LoginID);
-                                    SessionSGD.DeleteFromSession(SessionName.Common_RedirectPage);
-                                    SessionSGD.DeleteFromSession(SessionName.Common_RoleName);
-                                    SessionSGD.DeleteFromSession(SessionName.Common_UserG);
-                                    //Response.Redirect("~/Admission/Home.aspx", false);
-                                    Response.Redirect("~/Admission/Message.aspx?message=Successful. User Logged Out.&type=success", false);
-                                }
-                            }
-                            catch (Exception ex)
-                            {
-
-                            }
+                           
                         }
                     }
                 } //end if (cid > 0 && uid > 0)
             }// end if else (chbxAgree.Checked)
-            //btnSave_Declaration.Enabled = true;
+             //btnSave_Declaration.Enabled = true;
         }
 
 

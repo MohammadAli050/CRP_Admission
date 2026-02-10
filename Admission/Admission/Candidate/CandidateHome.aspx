@@ -312,17 +312,17 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="label">Selected Quota</td>
+                                    <td class="label">Payment Status</td>
                                     <td class="value">
-                                        <asp:Label ID="lblQuota" runat="server"></asp:Label>
+                                        <asp:Label ID="lblPaymentStatus" runat="server"></asp:Label>
                                     </td>
                                 </tr>
-                                <tr runat="server" id="quotarow">
+                                <%--<tr runat="server" id="quotarow">
                                     <td class="label">Quota Status</td>
                                     <td class="value">
                                         <asp:Label ID="lblQuotaStatus" runat="server" CssClass="fw-bold"></asp:Label>
                                     </td>
-                                </tr>
+                                </tr>--%>
                             </table>
                         </div>
                     </div>

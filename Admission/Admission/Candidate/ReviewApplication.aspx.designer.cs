@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Admission.Admission.Candidate {
-    
-    
-    public partial class ReviewApplication {
-        
+namespace Admission.Admission.Candidate
+{
+
+
+    public partial class ReviewApplication
+    {
+
         /// <summary>
         /// ImagePhoto control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image ImagePhoto;
-        
+
         /// <summary>
         /// ImageSignature control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image ImageSignature;
-        
+
         /// <summary>
         /// FGSignature control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image FGSignature;
-        
+
         /// <summary>
         /// lblFirstName control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblFirstName;
-        
+
         /// <summary>
         /// lblDateOfBirth control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblDateOfBirth;
-        
+
         /// <summary>
         /// lblGender control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblGender;
-        
+
         /// <summary>
         /// tdMarital control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTableCell tdMarital;
-        
+
         /// <summary>
         /// tdMaritallbl control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTableCell tdMaritallbl;
-        
+
         /// <summary>
         /// lblMaritalStatus control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMaritalStatus;
-        
+
         /// <summary>
         /// lblNationalId control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblNationalId;
-        
+
         /// <summary>
         /// lblBirthRegNo control.
         /// </summary>
@@ -110,7 +112,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblBirthRegNo;
-        
+
         /// <summary>
         /// lblBloodGroup control.
         /// </summary>
@@ -119,7 +121,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblBloodGroup;
-        
+
         /// <summary>
         /// lblEmail control.
         /// </summary>
@@ -128,7 +130,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblEmail;
-        
+
         /// <summary>
         /// lblMobile control.
         /// </summary>
@@ -137,7 +139,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMobile;
-        
+
         /// <summary>
         /// lblReligion control.
         /// </summary>
@@ -146,16 +148,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblReligion;
-        
-        /// <summary>
-        /// lblQuota control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblQuota;
-        
+
         /// <summary>
         /// phHall control.
         /// </summary>
@@ -164,7 +157,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder phHall;
-        
+
         /// <summary>
         /// lblHall control.
         /// </summary>
@@ -173,7 +166,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblHall;
-        
+
         /// <summary>
         /// lblSec_ExamType control.
         /// </summary>
@@ -182,7 +175,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblSec_ExamType;
-        
+
         /// <summary>
         /// lblSec_EducationBrd control.
         /// </summary>
@@ -191,7 +184,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblSec_EducationBrd;
-        
+
         /// <summary>
         /// lblSec_Institute control.
         /// </summary>
@@ -200,7 +193,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblSec_Institute;
-        
+
         /// <summary>
         /// lblSec_RollNo control.
         /// </summary>
@@ -209,7 +202,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblSec_RollNo;
-        
+
         /// <summary>
         /// lblSec_RegNo control.
         /// </summary>
@@ -218,7 +211,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblSec_RegNo;
-        
+
         /// <summary>
         /// lblSec_GrpOrSub control.
         /// </summary>
@@ -227,7 +220,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblSec_GrpOrSub;
-        
+
         /// <summary>
         /// lblSec_PassingYear control.
         /// </summary>
@@ -236,7 +229,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblSec_PassingYear;
-        
+
         /// <summary>
         /// lblSec_DivClass control.
         /// </summary>
@@ -245,7 +238,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblSec_DivClass;
-        
+
         /// <summary>
         /// lblSec_GPA control.
         /// </summary>
@@ -254,7 +247,25 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblSec_GPA;
-        
+
+        /// <summary>
+        /// lblSSCBiologyGPA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSSCBiologyGPA;
+
+        /// <summary>
+        /// lblsscStudentCategory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblsscStudentCategory;
+
         /// <summary>
         /// lblHighSec_ExamType control.
         /// </summary>
@@ -263,7 +274,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblHighSec_ExamType;
-        
+
         /// <summary>
         /// lblHighSec_EducationBrd control.
         /// </summary>
@@ -272,7 +283,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblHighSec_EducationBrd;
-        
+
         /// <summary>
         /// lblHighSec_Institute control.
         /// </summary>
@@ -281,7 +292,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblHighSec_Institute;
-        
+
         /// <summary>
         /// lblHighSec_RollNo control.
         /// </summary>
@@ -290,7 +301,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblHighSec_RollNo;
-        
+
         /// <summary>
         /// lblHighSec_RegNo control.
         /// </summary>
@@ -299,7 +310,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblHighSec_RegNo;
-        
+
         /// <summary>
         /// lblHighSec_GrpOrSub control.
         /// </summary>
@@ -308,7 +319,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblHighSec_GrpOrSub;
-        
+
         /// <summary>
         /// lblHighSec_PassingYear control.
         /// </summary>
@@ -317,7 +328,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblHighSec_PassingYear;
-        
+
         /// <summary>
         /// lblHighSec_DivClass control.
         /// </summary>
@@ -326,7 +337,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblHighSec_DivClass;
-        
+
         /// <summary>
         /// lblHighSec_GPA control.
         /// </summary>
@@ -335,7 +346,25 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblHighSec_GPA;
-        
+
+        /// <summary>
+        /// lblHSCBiologyGPA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblHSCBiologyGPA;
+
+        /// <summary>
+        /// lblHSCStudentCategory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblHSCStudentCategory;
+
         /// <summary>
         /// panel_ForMasters control.
         /// </summary>
@@ -344,7 +373,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel panel_ForMasters;
-        
+
         /// <summary>
         /// lblUndergrad_Institute control.
         /// </summary>
@@ -353,7 +382,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblUndergrad_Institute;
-        
+
         /// <summary>
         /// lblUndergrad_Program control.
         /// </summary>
@@ -362,7 +391,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblUndergrad_Program;
-        
+
         /// <summary>
         /// lblUndergrad_ProgramOther control.
         /// </summary>
@@ -371,7 +400,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblUndergrad_ProgramOther;
-        
+
         /// <summary>
         /// lblUndergrad_DivClass control.
         /// </summary>
@@ -380,7 +409,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblUndergrad_DivClass;
-        
+
         /// <summary>
         /// lblUndergrad_CgpaScore control.
         /// </summary>
@@ -389,7 +418,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblUndergrad_CgpaScore;
-        
+
         /// <summary>
         /// lblUndergrad_Grade control.
         /// </summary>
@@ -398,7 +427,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblUndergrad_Grade;
-        
+
         /// <summary>
         /// lblUndergrad_PassingYear control.
         /// </summary>
@@ -407,7 +436,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblUndergrad_PassingYear;
-        
+
         /// <summary>
         /// lblGrad_Institute control.
         /// </summary>
@@ -416,7 +445,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblGrad_Institute;
-        
+
         /// <summary>
         /// lblGrad_Program control.
         /// </summary>
@@ -425,7 +454,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblGrad_Program;
-        
+
         /// <summary>
         /// lblGrad_ProgramOther control.
         /// </summary>
@@ -434,7 +463,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblGrad_ProgramOther;
-        
+
         /// <summary>
         /// lblGrad_DivClass control.
         /// </summary>
@@ -443,7 +472,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblGrad_DivClass;
-        
+
         /// <summary>
         /// lblGrad_CgpaScore control.
         /// </summary>
@@ -452,7 +481,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblGrad_CgpaScore;
-        
+
         /// <summary>
         /// lblGrad_Grade control.
         /// </summary>
@@ -461,7 +490,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblGrad_Grade;
-        
+
         /// <summary>
         /// lblGrad_PassingYear control.
         /// </summary>
@@ -470,7 +499,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblGrad_PassingYear;
-        
+
         /// <summary>
         /// lblPresentAddress control.
         /// </summary>
@@ -479,7 +508,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPresentAddress;
-        
+
         /// <summary>
         /// lblPresentDivision control.
         /// </summary>
@@ -488,7 +517,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPresentDivision;
-        
+
         /// <summary>
         /// lblPresentDistrict control.
         /// </summary>
@@ -497,7 +526,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPresentDistrict;
-        
+
         /// <summary>
         /// lblPresentUpozela control.
         /// </summary>
@@ -506,7 +535,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPresentUpozela;
-        
+
         /// <summary>
         /// lblPresentPostalCode control.
         /// </summary>
@@ -515,7 +544,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPresentPostalCode;
-        
+
         /// <summary>
         /// lblPresentCountry control.
         /// </summary>
@@ -524,7 +553,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPresentCountry;
-        
+
         /// <summary>
         /// lblPermanentAddress control.
         /// </summary>
@@ -533,7 +562,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPermanentAddress;
-        
+
         /// <summary>
         /// lblPermanentDivision control.
         /// </summary>
@@ -542,7 +571,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPermanentDivision;
-        
+
         /// <summary>
         /// lblPermanentDistrict control.
         /// </summary>
@@ -551,7 +580,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPermanentDistrict;
-        
+
         /// <summary>
         /// lblPermanentUpozela control.
         /// </summary>
@@ -560,7 +589,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPermanentUpozela;
-        
+
         /// <summary>
         /// lblPermanentPostalCode control.
         /// </summary>
@@ -569,7 +598,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPermanentPostalCode;
-        
+
         /// <summary>
         /// lblPermanentCountry control.
         /// </summary>
@@ -578,7 +607,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPermanentCountry;
-        
+
         /// <summary>
         /// panel_ProgramPriority control.
         /// </summary>
@@ -587,7 +616,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel panel_ProgramPriority;
-        
+
         /// <summary>
         /// rptProgramPriority control.
         /// </summary>
@@ -596,7 +625,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptProgramPriority;
-        
+
         /// <summary>
         /// lblNoData control.
         /// </summary>
@@ -605,7 +634,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblNoData;
-        
+
         /// <summary>
         /// lblFatherName control.
         /// </summary>
@@ -614,7 +643,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblFatherName;
-        
+
         /// <summary>
         /// lblFatherOccupation control.
         /// </summary>
@@ -623,7 +652,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblFatherOccupation;
-        
+
         /// <summary>
         /// lblFatherMobile control.
         /// </summary>
@@ -632,7 +661,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblFatherMobile;
-        
+
         /// <summary>
         /// lblMotherName control.
         /// </summary>
@@ -641,7 +670,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMotherName;
-        
+
         /// <summary>
         /// lblMotherOccupation control.
         /// </summary>
@@ -650,7 +679,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMotherOccupation;
-        
+
         /// <summary>
         /// lblMotherMobile control.
         /// </summary>
@@ -659,7 +688,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMotherMobile;
-        
+
         /// <summary>
         /// lblGuardian_Name control.
         /// </summary>
@@ -668,7 +697,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblGuardian_Name;
-        
+
         /// <summary>
         /// lblGuardianOtherRelation control.
         /// </summary>
@@ -677,7 +706,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblGuardianOtherRelation;
-        
+
         /// <summary>
         /// lblGuardianOccupation control.
         /// </summary>
@@ -686,7 +715,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblGuardianOccupation;
-        
+
         /// <summary>
         /// lblGuardianMailingAddress control.
         /// </summary>
@@ -695,7 +724,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblGuardianMailingAddress;
-        
+
         /// <summary>
         /// lblGuardianMobile control.
         /// </summary>
@@ -704,7 +733,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblGuardianMobile;
-        
+
         /// <summary>
         /// Label1 control.
         /// </summary>
@@ -713,7 +742,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
-        
+
         /// <summary>
         /// Label2 control.
         /// </summary>
@@ -722,7 +751,7 @@ namespace Admission.Admission.Candidate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label2;
-        
+
         /// <summary>
         /// Label3 control.
         /// </summary>

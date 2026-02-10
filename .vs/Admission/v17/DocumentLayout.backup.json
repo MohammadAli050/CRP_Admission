@@ -1,42 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Git Bash_Solution\\CRP_Admission\\",
+  "WorkspaceRootPath": "D:\\Git Bash_Solution\\CRP_Admission_new\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{61E8962B-337A-43F0-AABB-CE90C30CBAC1}|CommonUtility\\CommonUtility.csproj|d:\\git bash_solution\\crp_admission\\commonutility\\emailutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61E8962B-337A-43F0-AABB-CE90C30CBAC1}|CommonUtility\\CommonUtility.csproj|solutionrelative:commonutility\\emailutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|d:\\git bash_solution\\crp_admission_new\\admission\\admission\\candidate\\applicationdeclaration.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|solutionrelative:admission\\admission\\candidate\\applicationdeclaration.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|d:\\git bash_solution\\crp_admission\\admission\\admission\\candidate\\purchaseformbachelor.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|solutionrelative:admission\\admission\\candidate\\purchaseformbachelor.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|d:\\git bash_solution\\crp_admission_new\\admission\\admission\\candidate\\applicationeducation.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|solutionrelative:admission\\admission\\candidate\\applicationeducation.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|d:\\git bash_solution\\crp_admission\\admission\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|solutionrelative:admission\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|d:\\git bash_solution\\crp_admission_new\\admission\\admission\\candidate\\applicationeducation.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|solutionrelative:admission\\admission\\candidate\\applicationeducation.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|d:\\git bash_solution\\crp_admission\\admission\\admission\\office\\enrollcandidatev2.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|solutionrelative:admission\\admission\\office\\enrollcandidatev2.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|d:\\git bash_solution\\crp_admission_new\\admission\\admission\\candidate\\applicationbasic.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|solutionrelative:admission\\admission\\candidate\\applicationbasic.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|d:\\git bash_solution\\crp_admission\\admission\\admission\\candidate\\purchaseformbachelor.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|solutionrelative:admission\\admission\\candidate\\purchaseformbachelor.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|d:\\git bash_solution\\crp_admission_new\\admission\\admission\\candidate\\applicationbasic.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|solutionrelative:admission\\admission\\candidate\\applicationbasic.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B485C79-388D-42AD-B031-6F44FB7A5006}|DAL_UCAM\\DAL_UCAM.csproj|d:\\git bash_solution\\crp_admission\\dal_ucam\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{7B485C79-388D-42AD-B031-6F44FB7A5006}|DAL_UCAM\\DAL_UCAM.csproj|solutionrelative:dal_ucam\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|d:\\git bash_solution\\crp_admission_new\\admission\\admission\\candidate\\candidatehome.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|solutionrelative:admission\\admission\\candidate\\candidatehome.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|d:\\git bash_solution\\crp_admission\\admission\\admission\\office\\receiveform.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|solutionrelative:admission\\admission\\office\\receiveform.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|d:\\git bash_solution\\crp_admission_new\\admission\\admission\\candidate\\candidatehome.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|solutionrelative:admission\\admission\\candidate\\candidatehome.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|d:\\git bash_solution\\crp_admission\\admission\\siteadmin.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
-      "RelativeMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|solutionrelative:admission\\siteadmin.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+      "AbsoluteMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|d:\\git bash_solution\\crp_admission_new\\admission\\admission\\candidate\\applicationdeclaration.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|solutionrelative:admission\\admission\\candidate\\applicationdeclaration.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|d:\\git bash_solution\\crp_admission\\admission\\admission\\candidate\\selectprogramv3.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|solutionrelative:admission\\admission\\candidate\\selectprogramv3.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|d:\\git bash_solution\\crp_admission_new\\admission\\admission\\candidate\\purchasenotification.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{569777A7-9298-4E08-AD44-3D5F9DDD4DBC}|Admission\\Admission.csproj|solutionrelative:admission\\admission\\candidate\\purchasenotification.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,119 +82,119 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Web.config",
-              "DocumentMoniker": "D:\\Git Bash_Solution\\CRP_Admission\\Admission\\Web.config",
-              "RelativeDocumentMoniker": "Admission\\Web.config",
-              "ToolTip": "D:\\Git Bash_Solution\\CRP_Admission\\Admission\\Web.config",
-              "RelativeToolTip": "Admission\\Web.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2026-01-26T09:03:00.433Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EmailUtility.cs",
-              "DocumentMoniker": "D:\\Git Bash_Solution\\CRP_Admission\\CommonUtility\\EmailUtility.cs",
-              "RelativeDocumentMoniker": "CommonUtility\\EmailUtility.cs",
-              "ToolTip": "D:\\Git Bash_Solution\\CRP_Admission\\CommonUtility\\EmailUtility.cs",
-              "RelativeToolTip": "CommonUtility\\EmailUtility.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAUwDwAAAARAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "ApplicationBasic.aspx.cs",
+              "DocumentMoniker": "D:\\Git Bash_Solution\\CRP_Admission_new\\Admission\\Admission\\Candidate\\ApplicationBasic.aspx.cs",
+              "RelativeDocumentMoniker": "Admission\\Admission\\Candidate\\ApplicationBasic.aspx.cs",
+              "ToolTip": "D:\\Git Bash_Solution\\CRP_Admission_new\\Admission\\Admission\\Candidate\\ApplicationBasic.aspx.cs",
+              "RelativeToolTip": "Admission\\Admission\\Candidate\\ApplicationBasic.aspx.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAF4AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-26T08:36:45.176Z",
+              "WhenOpened": "2026-02-10T07:21:06.861Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "App.config",
-              "DocumentMoniker": "D:\\Git Bash_Solution\\CRP_Admission\\DAL_UCAM\\App.config",
-              "RelativeDocumentMoniker": "DAL_UCAM\\App.config",
-              "ToolTip": "D:\\Git Bash_Solution\\CRP_Admission\\DAL_UCAM\\App.config",
-              "RelativeToolTip": "DAL_UCAM\\App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2026-01-26T08:14:06.103Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EnrollCandidateV2.aspx.cs",
-              "DocumentMoniker": "D:\\Git Bash_Solution\\CRP_Admission\\Admission\\Admission\\Office\\EnrollCandidateV2.aspx.cs",
-              "RelativeDocumentMoniker": "Admission\\Admission\\Office\\EnrollCandidateV2.aspx.cs",
-              "ToolTip": "D:\\Git Bash_Solution\\CRP_Admission\\Admission\\Admission\\Office\\EnrollCandidateV2.aspx.cs",
-              "RelativeToolTip": "Admission\\Admission\\Office\\EnrollCandidateV2.aspx.cs",
-              "ViewState": "AgIAADsBAAAAAAAAAAAcwFQBAAApAAAAAAAAAA==",
+              "Title": "CandidateHome.aspx.cs",
+              "DocumentMoniker": "D:\\Git Bash_Solution\\CRP_Admission_new\\Admission\\Admission\\Candidate\\CandidateHome.aspx.cs",
+              "RelativeDocumentMoniker": "Admission\\Admission\\Candidate\\CandidateHome.aspx.cs",
+              "ToolTip": "D:\\Git Bash_Solution\\CRP_Admission_new\\Admission\\Admission\\Candidate\\CandidateHome.aspx.cs",
+              "RelativeToolTip": "Admission\\Admission\\Candidate\\CandidateHome.aspx.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAowEcAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-26T08:13:44.134Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SiteAdmin.Master",
-              "DocumentMoniker": "D:\\Git Bash_Solution\\CRP_Admission\\Admission\\SiteAdmin.Master",
-              "RelativeDocumentMoniker": "Admission\\SiteAdmin.Master",
-              "ToolTip": "D:\\Git Bash_Solution\\CRP_Admission\\Admission\\SiteAdmin.Master",
-              "RelativeToolTip": "Admission\\SiteAdmin.Master",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-01-26T08:08:29.818Z",
+              "WhenOpened": "2026-02-10T07:02:03.865Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "ReceiveForm.aspx",
-              "DocumentMoniker": "D:\\Git Bash_Solution\\CRP_Admission\\Admission\\Admission\\Office\\ReceiveForm.aspx",
-              "RelativeDocumentMoniker": "Admission\\Admission\\Office\\ReceiveForm.aspx",
-              "ToolTip": "D:\\Git Bash_Solution\\CRP_Admission\\Admission\\Admission\\Office\\ReceiveForm.aspx",
-              "RelativeToolTip": "Admission\\Admission\\Office\\ReceiveForm.aspx",
+              "Title": "CandidateHome.aspx",
+              "DocumentMoniker": "D:\\Git Bash_Solution\\CRP_Admission_new\\Admission\\Admission\\Candidate\\CandidateHome.aspx",
+              "RelativeDocumentMoniker": "Admission\\Admission\\Candidate\\CandidateHome.aspx",
+              "ToolTip": "D:\\Git Bash_Solution\\CRP_Admission_new\\Admission\\Admission\\Candidate\\CandidateHome.aspx",
+              "RelativeToolTip": "Admission\\Admission\\Candidate\\CandidateHome.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-01-26T08:06:42.048Z",
+              "WhenOpened": "2026-02-10T07:01:26.827Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "SelectProgramV3.aspx",
-              "DocumentMoniker": "D:\\Git Bash_Solution\\CRP_Admission\\Admission\\Admission\\Candidate\\SelectProgramV3.aspx",
-              "RelativeDocumentMoniker": "Admission\\Admission\\Candidate\\SelectProgramV3.aspx",
-              "ToolTip": "D:\\Git Bash_Solution\\CRP_Admission\\Admission\\Admission\\Candidate\\SelectProgramV3.aspx",
-              "RelativeToolTip": "Admission\\Admission\\Candidate\\SelectProgramV3.aspx",
+              "Title": "PurchaseNotification.aspx",
+              "DocumentMoniker": "D:\\Git Bash_Solution\\CRP_Admission_new\\Admission\\Admission\\Candidate\\PurchaseNotification.aspx",
+              "RelativeDocumentMoniker": "Admission\\Admission\\Candidate\\PurchaseNotification.aspx",
+              "ToolTip": "D:\\Git Bash_Solution\\CRP_Admission_new\\Admission\\Admission\\Candidate\\PurchaseNotification.aspx",
+              "RelativeToolTip": "Admission\\Admission\\Candidate\\PurchaseNotification.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-01-26T07:18:40.686Z",
+              "WhenOpened": "2026-02-10T06:44:32.931Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PurchaseFormBachelor.aspx",
-              "DocumentMoniker": "D:\\Git Bash_Solution\\CRP_Admission\\Admission\\Admission\\Candidate\\PurchaseFormBachelor.aspx",
-              "RelativeDocumentMoniker": "Admission\\Admission\\Candidate\\PurchaseFormBachelor.aspx",
-              "ToolTip": "D:\\Git Bash_Solution\\CRP_Admission\\Admission\\Admission\\Candidate\\PurchaseFormBachelor.aspx",
-              "RelativeToolTip": "Admission\\Admission\\Candidate\\PurchaseFormBachelor.aspx",
+              "DocumentIndex": 7,
+              "Title": "ApplicationDeclaration.aspx",
+              "DocumentMoniker": "D:\\Git Bash_Solution\\CRP_Admission_new\\Admission\\Admission\\Candidate\\ApplicationDeclaration.aspx",
+              "RelativeDocumentMoniker": "Admission\\Admission\\Candidate\\ApplicationDeclaration.aspx",
+              "ToolTip": "D:\\Git Bash_Solution\\CRP_Admission_new\\Admission\\Admission\\Candidate\\ApplicationDeclaration.aspx",
+              "RelativeToolTip": "Admission\\Admission\\Candidate\\ApplicationDeclaration.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-01-26T07:15:31.509Z",
+              "WhenOpened": "2026-02-10T06:40:52.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApplicationDeclaration.aspx.cs",
+              "DocumentMoniker": "D:\\Git Bash_Solution\\CRP_Admission_new\\Admission\\Admission\\Candidate\\ApplicationDeclaration.aspx.cs",
+              "RelativeDocumentMoniker": "Admission\\Admission\\Candidate\\ApplicationDeclaration.aspx.cs",
+              "ToolTip": "D:\\Git Bash_Solution\\CRP_Admission_new\\Admission\\Admission\\Candidate\\ApplicationDeclaration.aspx.cs",
+              "RelativeToolTip": "Admission\\Admission\\Candidate\\ApplicationDeclaration.aspx.cs",
+              "ViewState": "AgIAAMcFAAAAAAAAAAAAANIFAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T06:40:50.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ApplicationBasic.aspx",
+              "DocumentMoniker": "D:\\Git Bash_Solution\\CRP_Admission_new\\Admission\\Admission\\Candidate\\ApplicationBasic.aspx",
+              "RelativeDocumentMoniker": "Admission\\Admission\\Candidate\\ApplicationBasic.aspx",
+              "ToolTip": "D:\\Git Bash_Solution\\CRP_Admission_new\\Admission\\Admission\\Candidate\\ApplicationBasic.aspx",
+              "RelativeToolTip": "Admission\\Admission\\Candidate\\ApplicationBasic.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-02-10T06:34:43.322Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApplicationEducation.aspx",
+              "DocumentMoniker": "D:\\Git Bash_Solution\\CRP_Admission_new\\Admission\\Admission\\Candidate\\ApplicationEducation.aspx",
+              "RelativeDocumentMoniker": "Admission\\Admission\\Candidate\\ApplicationEducation.aspx",
+              "ToolTip": "D:\\Git Bash_Solution\\CRP_Admission_new\\Admission\\Admission\\Candidate\\ApplicationEducation.aspx",
+              "RelativeToolTip": "Admission\\Admission\\Candidate\\ApplicationEducation.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-02-10T06:31:47.648Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PurchaseFormBachelor.aspx.cs",
-              "DocumentMoniker": "D:\\Git Bash_Solution\\CRP_Admission\\Admission\\Admission\\Candidate\\PurchaseFormBachelor.aspx.cs",
-              "RelativeDocumentMoniker": "Admission\\Admission\\Candidate\\PurchaseFormBachelor.aspx.cs",
-              "ToolTip": "D:\\Git Bash_Solution\\CRP_Admission\\Admission\\Admission\\Candidate\\PurchaseFormBachelor.aspx.cs",
-              "RelativeToolTip": "Admission\\Admission\\Candidate\\PurchaseFormBachelor.aspx.cs",
-              "ViewState": "AgIAAPYHAAAAAAAAAAASwAsIAAAYAAAAAAAAAA==",
+              "Title": "ApplicationEducation.aspx.cs",
+              "DocumentMoniker": "D:\\Git Bash_Solution\\CRP_Admission_new\\Admission\\Admission\\Candidate\\ApplicationEducation.aspx.cs",
+              "RelativeDocumentMoniker": "Admission\\Admission\\Candidate\\ApplicationEducation.aspx.cs",
+              "ToolTip": "D:\\Git Bash_Solution\\CRP_Admission_new\\Admission\\Admission\\Candidate\\ApplicationEducation.aspx.cs",
+              "RelativeToolTip": "Admission\\Admission\\Candidate\\ApplicationEducation.aspx.cs",
+              "ViewState": "AgIAABgFAAAAAAAAAAApwCYFAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-26T07:06:22.88Z",
+              "WhenOpened": "2026-02-10T06:29:05.798Z",
               "EditorCaption": ""
             }
           ]

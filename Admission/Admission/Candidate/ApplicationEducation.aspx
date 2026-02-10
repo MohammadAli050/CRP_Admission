@@ -369,7 +369,7 @@
             }
 
         .spanAsterisk {
-            color: var(--danger);
+            color: red;
             font-weight: bold;
             margin-left: 3px;
         }
@@ -711,7 +711,7 @@
                                         </td>
                                     </tr>
                                     <tr id="trGPA4thSubjectSSC" runat="server">
-                                        <td>GPA Without 4th Subject</td>
+                                        <td>Biology GPA <span class="spanAsterisk">*</span></td>
                                         <td>
                                             <asp:TextBox ID="txtSec_CgpaW4S" runat="server" CssClass="form-control"></asp:TextBox>
                                             <asp:RangeValidator ID="txtSec_CgpaW4S_RV" runat="server" ControlToValidate="txtSec_CgpaW4S"
@@ -726,6 +726,18 @@
                                             <asp:DropDownList ID="ddlSec_PassingYear" runat="server" CssClass="form-control"></asp:DropDownList>
                                         </td>
                                     </tr>
+
+                                    <tr>
+                                        <td>Student Category <span class="spanAsterisk">*</span></td>
+                                        <td>
+                                            <asp:DropDownList ID="ddlSec_StudentCat" runat="server" CssClass="form-control">
+                                                <asp:ListItem Text="Select" Value="0" Selected="True" />
+                                                <asp:ListItem Text="Regular" Value="1" />
+                                                <asp:ListItem Text="Improvement" Value="2" />
+                                            </asp:DropDownList>
+                                        </td>
+                                    </tr>
+
                                 </table>
 
                                 <div class="education-section secondary mt-5" runat="server" id="divSubjectWiseGradeOLevel">
@@ -824,7 +836,7 @@
                                 </div>
 
                                 <div class="row">
-                                    <table class="form-table" runat="server" visible="false">
+                                    <table class="form-table" runat="server">
                                         <tr id="trMarksForOLevelSSC" runat="server">
                                             <td>Total Obtained Marks<asp:Label ID="lblSSCTotalMark" runat="server" Text="  *" ForeColor="Red" Font-Bold="true"></asp:Label></td>
                                             <td>
@@ -913,7 +925,7 @@
                                         </td>
                                     </tr>
                                     <tr id="trGPA4thSubjectHSC" runat="server">
-                                        <td>GPA Without 4th Subject</td>
+                                        <td>Biology GPA<span class="spanAsterisk">*</span></td>
                                         <td>
                                             <asp:TextBox ID="txtHigherSec_GpaW4S" runat="server" CssClass="form-control"></asp:TextBox>
                                             <asp:RangeValidator ID="txtHigherSec_GpaW4S_RV" runat="server" ControlToValidate="txtHigherSec_GpaW4S"
@@ -927,6 +939,18 @@
                                             <asp:DropDownList ID="ddlHigherSec_PassingYear" runat="server" CssClass="form-control"></asp:DropDownList>
                                         </td>
                                     </tr>
+
+                                    <tr>
+                                        <td>Student Category <span class="spanAsterisk">*</span></td>
+                                        <td>
+                                            <asp:DropDownList ID="ddlhsc_StudentCat" runat="server" CssClass="form-control">
+                                                <asp:ListItem Text="Select" Value="0" Selected="True" />
+                                                <asp:ListItem Text="Regular" Value="1" />
+                                                <asp:ListItem Text="Improvement" Value="2" />
+                                            </asp:DropDownList>
+                                        </td>
+                                    </tr>
+
                                 </table>
 
                                 <div class="education-section secondary mt-5" runat="server" id="divSubjectWiseGradeALevel">
@@ -1026,7 +1050,7 @@
                                 </div>
 
                                 <div>
-                                    <table class="form-table" runat="server" visible="false">
+                                    <table class="form-table" runat="server">
 
                                         <tr id="trMarksForOLevelHSC" runat="server">
                                             <td>Total Obtained Marks<asp:Label ID="lblHSCTotalMark" runat="server" Text="  *" ForeColor="Red" Font-Bold="true"></asp:Label></td>

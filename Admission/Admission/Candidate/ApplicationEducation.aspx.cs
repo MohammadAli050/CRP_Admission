@@ -243,7 +243,7 @@ namespace Admission.Admission.Candidate
 
                     if (propertySetupList != null && propertySetupList.Count > 0)
                     {
-                        if (educationCategoryId == 4 || educationCategoryId==6)
+                        if (educationCategoryId == 4 || educationCategoryId == 6)
                         {
                             #region Bachelor
 
@@ -322,7 +322,7 @@ namespace Admission.Admission.Candidate
 
 
                     #region Breadcrumbs for Bachelor and Masters
-                    if (educationCategoryId == 4 || educationCategoryId==6)
+                    if (educationCategoryId == 4 || educationCategoryId == 6)
                     {
                         bachelorsBreadcrumb.Visible = true;
                         mastersBreadcrumb.Visible = false;
@@ -582,8 +582,8 @@ namespace Admission.Admission.Candidate
                                     txtSec_CgpaScore.Enabled = true;
 
                                     txtSec_Marks.Text = secExamDetail.Marks.ToString();
-                                    trMarksForOLevelSSC.Visible = false;
-                                    trOutofMarksForOLevelSSC.Visible = false;
+                                    //trMarksForOLevelSSC.Visible = false;
+                                    //trOutofMarksForOLevelSSC.Visible = false;
 
 
                                     if (secExamDetail.AttributeDec1 != null)
@@ -592,9 +592,10 @@ namespace Admission.Admission.Candidate
                                         txtOutofSec_Marks.Text = string.Empty;
 
                                     txtSec_CgpaW4S.Text = secExamDetail.GPAW4S.ToString();
-                                    trGPA4thSubjectSSC.Visible = false;
+                                    //trGPA4thSubjectSSC.Visible = false;
 
                                     ddlSec_PassingYear.SelectedValue = secExamDetail.PassingYear.ToString();
+                                    ddlSec_StudentCat.SelectedValue = secExamDetail.AttributeInt2.ToString();
                                     ddlSec_PassingYear.Enabled = true;
                                 }
                             }
@@ -615,8 +616,8 @@ namespace Admission.Admission.Candidate
                                     ddlSec_GrpOrSub.SelectedValue = secExamDetail.GroupOrSubjectID.ToString();
                                     ddlSec_DivClass.SelectedValue = secExamDetail.ResultDivisionID.ToString();
                                     #region outofmarks ssc code remove in future
-                                    if (secondaryExam.ExamTypeID == 1)
-                                        trOutofMarksForOLevelSSC.Visible = false;
+                                    //if (secondaryExam.ExamTypeID == 1)
+                                    //    trOutofMarksForOLevelSSC.Visible = false;
                                     #endregion
                                     if (secExamDetail.ResultDivisionID == 5)
                                     {
@@ -642,6 +643,7 @@ namespace Admission.Admission.Candidate
                                     //}
                                     txtSec_CgpaW4S.Text = secExamDetail.GPAW4S.ToString();
                                     ddlSec_PassingYear.SelectedValue = secExamDetail.PassingYear.ToString();
+                                    ddlSec_StudentCat.SelectedValue = secExamDetail.AttributeInt2.ToString();
 
 
 
@@ -730,14 +732,15 @@ namespace Admission.Admission.Candidate
 
                                     txtOutofHigherSec_Marks.Text = higherSecExamDetail.AttributeDec1 == null ? "" : higherSecExamDetail.AttributeDec1.ToString();
 
-                                    trMarksForOLevelHSC.Visible = false;
-                                    trOutofMarksForOLevelHSC.Visible = false;
+                                    //trMarksForOLevelHSC.Visible = false;
+                                    //trOutofMarksForOLevelHSC.Visible = false;
 
 
                                     txtHigherSec_GpaW4S.Text = higherSecExamDetail.GPAW4S.ToString();
-                                    trGPA4thSubjectHSC.Visible = false;
+                                    //trGPA4thSubjectHSC.Visible = false;
 
                                     ddlHigherSec_PassingYear.SelectedValue = higherSecExamDetail.PassingYear.ToString();
+                                    ddlhsc_StudentCat.SelectedValue = higherSecExamDetail.AttributeInt2.ToString();
                                     ddlHigherSec_PassingYear.Enabled = true;
                                 }
                             }
@@ -759,8 +762,8 @@ namespace Admission.Admission.Candidate
                                     ddlHigherSec_GrpOrSub.SelectedValue = higherSecExamDetail.GroupOrSubjectID.ToString();
                                     ddlHigherSec_DivClass.SelectedValue = higherSecExamDetail.ResultDivisionID.ToString();
                                     #region outofmarks hsc code remove in future
-                                    if (higherSecondaryExam.ExamTypeID == 2)
-                                        trOutofMarksForOLevelHSC.Visible = false;
+                                    //if (higherSecondaryExam.ExamTypeID == 2)
+                                    //    trOutofMarksForOLevelHSC.Visible = false;
                                     #endregion
                                     if (higherSecExamDetail.ResultDivisionID == 5)
                                     {
@@ -784,6 +787,7 @@ namespace Admission.Admission.Candidate
                                     //}
                                     txtHigherSec_GpaW4S.Text = higherSecExamDetail.GPAW4S.ToString();
                                     ddlHigherSec_PassingYear.SelectedValue = higherSecExamDetail.PassingYear.ToString();
+                                    ddlhsc_StudentCat.SelectedValue = higherSecExamDetail.AttributeInt2.ToString();
 
 
                                     #region Disabled All Field
@@ -910,20 +914,20 @@ namespace Admission.Admission.Candidate
                             int sscTypeId = Convert.ToInt32(ddlSec_ExamType.SelectedValue);
                             int hscTypeId = Convert.ToInt32(ddlHigherSec_ExamType.SelectedValue);
 
-                            trGPA4thSubjectSSC.Visible = false;
+                            //trGPA4thSubjectSSC.Visible = false;
 
-                            trGPA4thSubjectHSC.Visible = false;
+                            //trGPA4thSubjectHSC.Visible = false;
 
                             if (sscTypeId == 1 || sscTypeId == 6 || sscTypeId == 12) // SSC, Dakhil, SSC (Vocational)
                             {
                                 txtSec_CgpaW4S.Text = "0";
                                 txtSec_Marks.Text = "0";
 
-                                trMarksForOLevelSSC.Visible = false;
+                                //trMarksForOLevelSSC.Visible = false;
                             }
                             else
                             {
-                                trMarksForOLevelSSC.Visible = true;
+                                //trMarksForOLevelSSC.Visible = true;
                             }
 
                             if (hscTypeId == 2 || hscTypeId == 8 || hscTypeId == 9 || hscTypeId == 13) // HSC, Alim, Diploma, HSC (Vocational)
@@ -931,11 +935,11 @@ namespace Admission.Admission.Candidate
                                 txtHigherSec_GpaW4S.Text = "0";
                                 txtHigherSec_Marks.Text = "0";
 
-                                trMarksForOLevelHSC.Visible = false;
+                                //trMarksForOLevelHSC.Visible = false;
                             }
                             else
                             {
-                                trMarksForOLevelHSC.Visible = true;
+                                //trMarksForOLevelHSC.Visible = true;
                             }
                         }
                         catch (Exception ex)
@@ -1291,6 +1295,30 @@ namespace Admission.Admission.Candidate
                     #endregion
 
 
+                    #region Check Student Category Is give or not
+
+                    if (ddlSec_StudentCat.SelectedValue == "0" || ddlhsc_StudentCat.SelectedValue == "0")
+                    {
+                        lblMessageEducation.Text = "Please select Student Category";
+                        messagePanel_Education.CssClass = "alert alert-danger";
+                        messagePanel_Education.Visible = true;
+                        return;
+                    }
+
+
+                    #endregion
+
+                    #region Biology GPA is mandatory
+
+                    if (string.IsNullOrEmpty(txtSec_CgpaW4S.Text) || string.IsNullOrEmpty(txtHigherSec_GpaW4S.Text) || Convert.ToDecimal(txtSec_CgpaW4S.Text) <= 0 || Convert.ToDecimal(txtHigherSec_GpaW4S.Text) <= 0)
+                    {
+                        lblMessageEducation.Text = "GPA of Biology is required";
+                        messagePanel_Education.CssClass = "alert alert-danger";
+                        messagePanel_Education.Visible = true;
+                        return;
+                    }
+
+                    #endregion
 
 
 
@@ -1328,6 +1356,7 @@ namespace Admission.Admission.Candidate
 
 
                             secondaryExamDetails.PassingYear = Convert.ToInt32(ddlSec_PassingYear.SelectedValue);
+                            secondaryExamDetails.AttributeInt2 = Convert.ToInt32(ddlhsc_StudentCat.SelectedValue);
 
                             secondaryExamDetails.CreatedBy = secondaryExam.ExamDetail.CreatedBy;
                             secondaryExamDetails.DateCreated = secondaryExam.ExamDetail.DateCreated;
@@ -1404,6 +1433,7 @@ namespace Admission.Admission.Candidate
                                 }
 
                                 secExmDtlObj.PassingYear = Int32.Parse(ddlSec_PassingYear.SelectedValue);
+                                secExmDtlObj.AttributeInt2 = Int32.Parse(ddlSec_StudentCat.SelectedValue);
 
                                 secExmDtlObj.DateModified = DateTime.Now;
                                 secExmDtlObj.ModifiedBy = cId;
@@ -1527,6 +1557,7 @@ namespace Admission.Admission.Candidate
                                 }
 
                                 newSecExmDtlObj.PassingYear = Int32.Parse(ddlSec_PassingYear.SelectedValue);
+                                newSecExmDtlObj.AttributeInt2 = Int32.Parse(ddlSec_StudentCat.SelectedValue);
 
                                 newSecExmDtlObj.DateCreated = DateTime.Now;
                                 newSecExmDtlObj.CreatedBy = cId;
@@ -1664,6 +1695,7 @@ namespace Admission.Admission.Candidate
                         }
 
                         newSecExmDtlObj.PassingYear = Int32.Parse(ddlSec_PassingYear.SelectedValue);
+                        newSecExmDtlObj.AttributeInt2 = Int32.Parse(ddlSec_StudentCat.SelectedValue);
 
                         newSecExmDtlObj.DateCreated = DateTime.Now;
                         newSecExmDtlObj.CreatedBy = cId;
@@ -1776,6 +1808,7 @@ namespace Admission.Admission.Candidate
                             //higherSecondaryExamDetails.Marks = Convert.ToDecimal(lblALevelResult.Text);
 
                             higherSecondaryExamDetails.PassingYear = Convert.ToInt32(ddlHigherSec_PassingYear.SelectedValue);
+                            higherSecondaryExamDetails.AttributeInt2 = Convert.ToInt32(ddlhsc_StudentCat.SelectedValue);
 
                             higherSecondaryExamDetails.CreatedBy = highSecondaryExam.ExamDetail.CreatedBy;
                             higherSecondaryExamDetails.DateCreated = highSecondaryExam.ExamDetail.DateCreated;
@@ -1889,6 +1922,7 @@ namespace Admission.Admission.Candidate
                                 }
 
                                 higherSecExmDtlObj.PassingYear = Int32.Parse(ddlHigherSec_PassingYear.SelectedValue);
+                                higherSecExmDtlObj.AttributeInt2 = Int32.Parse(ddlhsc_StudentCat.SelectedValue);
 
                                 higherSecExmDtlObj.DateModified = DateTime.Now;
                                 higherSecExmDtlObj.ModifiedBy = cId;
@@ -2011,6 +2045,7 @@ namespace Admission.Admission.Candidate
                                 }
 
                                 newHigherSecExmDtlObj.PassingYear = Int32.Parse(ddlHigherSec_PassingYear.SelectedValue);
+                                newHigherSecExmDtlObj.AttributeInt2 = Int32.Parse(ddlhsc_StudentCat.SelectedValue);
 
                                 newHigherSecExmDtlObj.DateCreated = DateTime.Now;
                                 newHigherSecExmDtlObj.CreatedBy = cId;
@@ -2148,6 +2183,7 @@ namespace Admission.Admission.Candidate
                         }
 
                         newHighSecExmDtlObj.PassingYear = Int32.Parse(ddlHigherSec_PassingYear.SelectedValue);
+                        newHighSecExmDtlObj.AttributeInt2 = Int32.Parse(ddlhsc_StudentCat.SelectedValue);
 
                         newHighSecExmDtlObj.DateCreated = DateTime.Now;
                         newHighSecExmDtlObj.CreatedBy = cId;

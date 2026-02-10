@@ -99,17 +99,17 @@ namespace Admission.Admission.Candidate
                         lblFirstName.Text = cand.FirstName;
                         lblDateOfBirth.Text = cand.DateOfBirth.ToString("dd/MM/yyyy");
                         //lblPlaceOfBirth.Text = cand.PlaceOfBirth;
-                        
+
                         //lblNationality.Text = cand.Country.Name;
                         //if (cand.NationalityID == null) { lblNationality.Text = null; }
                         //else { lblNationality.Text = cand.Country.Name; }
-                        
+
                         //lblLanguage.Text = cand.Language.LanguageName;
                         //if(cand.MotherTongueID == null) { lblLanguage.Text = null; }
                         //else { lblLanguage.Text = cand.Language.LanguageName; }
 
                         //lblGender.Text = cand.Gender.GenderName;
-                        if(cand.GenderID == null) { lblGender.Text = null; }
+                        if (cand.GenderID == null) { lblGender.Text = null; }
                         else { lblGender.Text = cand.Gender.GenderName; }
 
                         if (admSetup != null)
@@ -129,12 +129,12 @@ namespace Admission.Admission.Candidate
                         //lblMaritalStatus.Text = cand.MaritalStatu.MaritalStatus;
                         if (cand.MaritalStatusID == null) { lblMaritalStatus.Text = null; }
                         else { lblMaritalStatus.Text = cand.MaritalStatu.MaritalStatus; }
-                        
+
                         lblNationalId.Text = cand.NationalIdNumber;
                         lblBirthRegNo.Text = cand.BirthRegistrationNo;
-                        
+
                         //lblBloodGroup.Text = cand.BloodGroup.BloodGroupName;
-                        if(cand.BloodGroupID == null) { lblBloodGroup.Text = null; }
+                        if (cand.BloodGroupID == null) { lblBloodGroup.Text = null; }
                         else { lblBloodGroup.Text = cand.BloodGroup.BloodGroupName; }
 
                         lblEmail.Text = cand.Email;
@@ -143,8 +143,8 @@ namespace Admission.Admission.Candidate
                         if (cand.ReligionID == null) { lblReligion.Text = null; }
                         else { lblReligion.Text = cand.Religion.ReligionName; }
 
-                        if (cand.QuotaID == null) { lblQuota.Text = null; }
-                        else { lblQuota.Text = cand.Quota.Remarks; }
+                        //if (cand.QuotaID == null) { lblQuota.Text = null; }
+                        //else { lblQuota.Text = cand.Quota.Remarks; }
                         int EducationCatID = db.GetCandidateEducationCategoryID(cId);
                         bool showProgramPriority = EducationCatID != 6;
 
@@ -219,6 +219,8 @@ namespace Admission.Admission.Candidate
                         lblSec_GrpOrSub.Text = ssc.GroupOrSubject.GroupOrSubjectName;
                         lblSec_DivClass.Text = ssc.ResultDivision.ResultDivisionName;
                         lblSec_GPA.Text = ssc.GPA.ToString();
+                        lblSSCBiologyGPA.Text = ssc.GPAW4S != null ? ssc.GPAW4S.ToString() : "N/A";
+                        lblsscStudentCategory.Text = ssc.AttributeInt2 == null ? "N/A" : ssc.AttributeInt2 == 1 ? "Regular" : ssc.AttributeInt2 == 2 ? "Improvement" : "N/A";
                         //lblSec_CgpaScore.Text = ssc.CGPA.ToString();
                         //lblSec_Marks.Text = ssc.Marks.ToString();
                         lblSec_PassingYear.Text = ssc.PassingYear.ToString();
@@ -238,6 +240,8 @@ namespace Admission.Admission.Candidate
                         lblHighSec_GrpOrSub.Text = hsc.GroupOrSubject.GroupOrSubjectName;
                         lblHighSec_DivClass.Text = hsc.ResultDivision.ResultDivisionName;
                         lblHighSec_GPA.Text = hsc.GPA.ToString();
+                        lblHSCBiologyGPA.Text = hsc.GPAW4S != null ? hsc.GPAW4S.ToString() : "N/A";
+                        lblHSCStudentCategory.Text = hsc.AttributeInt2 == null ? "N/A" : hsc.AttributeInt2 == 1 ? "Regular" : hsc.AttributeInt2 == 2 ? "Improvement" : "N/A";
                         //lblHighSec_CgpaScore.Text = hsc.CGPA.ToString();
                         //lblHighSec_Marks.Text = hsc.Marks.ToString();
                         lblHighSec_PassingYear.Text = hsc.PassingYear.ToString();

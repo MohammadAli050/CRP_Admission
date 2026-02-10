@@ -92,6 +92,7 @@ namespace Admission.Admission.Candidate
                 DDLHelper.Bind<DAL.QuotaType>(ddlFFQuotaType, db.AdmissionDB.QuotaTypes.Where(a => a.IsActive == true && a.QuotaId == 2).OrderBy(a => a.Name).ToList(), "Name", "ID", EnumCollection.ListItemType.Select);
                 //DDLHelper.Bind<DAL.QuotaType>(ddlPWDQuotaType, db.AdmissionDB.QuotaTypes.Where(a => a.IsActive == true && a.QuotaId == 8).OrderBy(a => a.Name).ToList(), "Name", "ID", EnumCollection.ListItemType.Select);
 
+                ddlQuota.SelectedValue= "7";
 
             }
         }

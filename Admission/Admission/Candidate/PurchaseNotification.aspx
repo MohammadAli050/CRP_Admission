@@ -253,7 +253,7 @@
                                     </tr>
                                 </table>
                             </div>--%>
-                            <div class="panel panel-default" style="text-align: center">
+                            <div class="panel panel-default" style="text-align: center" runat="server" visible="false">
                                 <div class="panel-body">
 
                                     <asp:LinkButton ID="btnPayByEkPay" runat="server"
@@ -316,7 +316,7 @@
                                                     </tr>
                                                 </table>
                                             </div>
-                                            <div class="panel-footer  text-center">
+                                            <div class="panel-footer  text-center" runat="server" visible="false">
                                                 <asp:LinkButton ID="btnPayBySSL" runat="server"
                                                     OnClick="btnPayByEkPay_Click"
                                                     CssClass="btn btn-lg">Pay Now</asp:LinkButton>

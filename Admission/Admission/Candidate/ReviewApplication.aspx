@@ -133,7 +133,7 @@
                                 <asp:Label ID="lblDateOfBirth" runat="server"></asp:Label>
                             </td>
                         </tr>
-<%--                        <tr>
+                        <%--                        <tr>
                             <td class="style_td">Nationality<span class="spanAsterisk">*</span></td>
                             <td>
                                 <asp:Label ID="lblNationality" runat="server"></asp:Label>
@@ -198,16 +198,16 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="style_td">Quota</td>
+                            <%--<td class="style_td">Quota</td>
                             <td>
                                 <asp:Label ID="lblQuota" runat="server"></asp:Label>
-                            </td>
+                            </td>--%>
                             <asp:PlaceHolder ID="phHall" runat="server">
-    <td class="style_td">Hall accomodation</td>
-    <td>
-        <asp:Label ID="lblHall" runat="server"></asp:Label>
-    </td>
-</asp:PlaceHolder>
+                                <td class="style_td">Hall accomodation</td>
+                                <td>
+                                    <asp:Label ID="lblHall" runat="server"></asp:Label>
+                                </td>
+                            </asp:PlaceHolder>
                         </tr>
                     </table>
                 </div>
@@ -273,17 +273,18 @@
                                 <asp:Label ID="lblSec_GPA" runat="server"></asp:Label>
                             </td>
                         </tr>
-<%--                           <tr>
-                            <td class="style_td">CGPA/Score <span class="spanAsterisk">*</span></td>
+
+                        <tr>
+                            <td class="style_td">Biology GPA <span class="spanAsterisk">*</span></td>
                             <td>
-                                <asp:Label ID="lblSec_CgpaScore" runat="server"></asp:Label>
+                                <asp:Label ID="lblSSCBiologyGPA" runat="server"></asp:Label>
                             </td>
-                            <td class="style_td">Total Marks <span class="spanAsterisk">*</span><br />
-                                <span style="color: cornflowerblue; font-size: smaller; font-weight: normal">For older marking system</span></td>
-                            <td style="width: 35%" colspan="3">
-                                <asp:Label ID="lblSec_Marks" runat="server"></asp:Label>
+                            <td class="style_td">Student Category
                             </td>
-                        </tr>--%>
+                            <td>
+                                <asp:Label ID="lblsscStudentCategory" runat="server"></asp:Label>
+                            </td>
+                        </tr>
 
                     </table>
                 </div>
@@ -342,17 +343,17 @@
                                 <asp:Label ID="lblHighSec_GPA" runat="server"></asp:Label>
                             </td>
                         </tr>
-<%--                        <tr>
-                                                        <td class="style_td">CGPA/Score <span class="spanAsterisk">*</span></td>
+                        <tr>
+                            <td class="style_td">Biology GPA <span class="spanAsterisk">*</span></td>
                             <td>
-                                <asp:Label ID="lblHighSec_CgpaScore" runat="server"></asp:Label>
+                                <asp:Label ID="lblHSCBiologyGPA" runat="server"></asp:Label>
                             </td>
-                            <td class="style_td">Total Marks <span class="spanAsterisk">*</span><br />
-                                <span style="color: cornflowerblue; font-size: smaller; font-weight: normal">For older marking system</span></td>
-                            <td style="width: 35%" colspan="3">
-                                <asp:Label ID="lblHighSec_Marks" runat="server"></asp:Label>
+                            <td class="style_td">Student Category
                             </td>
-                        </tr>--%>
+                            <td>
+                                <asp:Label ID="lblHSCStudentCategory" runat="server"></asp:Label>
+                            </td>
+                        </tr>
                     </table>
                 </div>
             </div>
@@ -468,100 +469,100 @@
     <%-- -------------------------------------------------------------------------------------------------------------- --%>
 
     <div class="row">
-    <div class="col-md-12">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <strong>Present Address</strong>
-            </div>
-            <div class="panel-body">
-                <table style="width: 100%" class="table table-condensed table-bordered">
-                    <tr>
-                        <td style="width: 15%" class="style_td">Address</td>
-                        <td style="width: 35%">
-                            <asp:Label ID="lblPresentAddress" runat="server"></asp:Label>
-                        </td>
-                        <td style="width: 15%" class="style_td">Division</td>
-                        <td style="width: 35%">
-                            <asp:Label ID="lblPresentDivision" runat="server"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="style_td">District</td>
-                        <td>
-                            <asp:Label ID="lblPresentDistrict" runat="server"></asp:Label>
-                        </td>
-                        <td class="style_td">Upozela/Thana</td>
-                        <td>
-                            <asp:Label ID="lblPresentUpozela" runat="server"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="style_td">Postal Code</td>
-                        <td>
-                            <asp:Label ID="lblPresentPostalCode" runat="server"></asp:Label>
-                        </td>
-                        <td class="style_td">Country</td>
-                        <td>
-                            <asp:Label ID="lblPresentCountry" runat="server"></asp:Label>
-                        </td>
-                    </tr>
-                    <%--<tr>
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>Present Address</strong>
+                </div>
+                <div class="panel-body">
+                    <table style="width: 100%" class="table table-condensed table-bordered">
+                        <tr>
+                            <td style="width: 15%" class="style_td">Address</td>
+                            <td style="width: 35%">
+                                <asp:Label ID="lblPresentAddress" runat="server"></asp:Label>
+                            </td>
+                            <td style="width: 15%" class="style_td">Division</td>
+                            <td style="width: 35%">
+                                <asp:Label ID="lblPresentDivision" runat="server"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="style_td">District</td>
+                            <td>
+                                <asp:Label ID="lblPresentDistrict" runat="server"></asp:Label>
+                            </td>
+                            <td class="style_td">Upozela/Thana</td>
+                            <td>
+                                <asp:Label ID="lblPresentUpozela" runat="server"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="style_td">Postal Code</td>
+                            <td>
+                                <asp:Label ID="lblPresentPostalCode" runat="server"></asp:Label>
+                            </td>
+                            <td class="style_td">Country</td>
+                            <td>
+                                <asp:Label ID="lblPresentCountry" runat="server"></asp:Label>
+                            </td>
+                        </tr>
+                        <%--<tr>
                         <td class="style_td">Telephone</td>
                         <td colspan="3">
                             <asp:Label ID="lblPresentTelephone" runat="server"></asp:Label>
                         </td>
                     </tr>--%>
-                </table>
+                    </table>
+                </div>
             </div>
-        </div>
-        <%-- -------------------------------------------------------------- --%>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <strong>Permanent Address</strong>
-            </div>
-            <div class="panel-body">
-                <table style="width: 100%" class="table table-condensed table-bordered">
-                    <tr>
-                        <td style="width: 15%" class="style_td">Address</td>
-                        <td style="width: 35%">
-                            <asp:Label ID="lblPermanentAddress" runat="server"></asp:Label>
-                        </td>
-                        <td style="width: 15%" class="style_td">Division</td>
-                        <td style="width: 35%">
-                            <asp:Label ID="lblPermanentDivision" runat="server"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="style_td">District</td>
-                        <td>
-                            <asp:Label ID="lblPermanentDistrict" runat="server"></asp:Label>
-                        </td>
-                        <td class="style_td">Upozela/Thana</td>
-                        <td>
-                            <asp:Label ID="lblPermanentUpozela" runat="server"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="style_td">Postal Code</td>
-                        <td>
-                            <asp:Label ID="lblPermanentPostalCode" runat="server"></asp:Label>
-                        </td>
-                        <td class="style_td">Country</td>
-                        <td>
-                            <asp:Label ID="lblPermanentCountry" runat="server"></asp:Label>
-                        </td>
-                    </tr>
-                   <%-- <tr>
+            <%-- -------------------------------------------------------------- --%>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>Permanent Address</strong>
+                </div>
+                <div class="panel-body">
+                    <table style="width: 100%" class="table table-condensed table-bordered">
+                        <tr>
+                            <td style="width: 15%" class="style_td">Address</td>
+                            <td style="width: 35%">
+                                <asp:Label ID="lblPermanentAddress" runat="server"></asp:Label>
+                            </td>
+                            <td style="width: 15%" class="style_td">Division</td>
+                            <td style="width: 35%">
+                                <asp:Label ID="lblPermanentDivision" runat="server"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="style_td">District</td>
+                            <td>
+                                <asp:Label ID="lblPermanentDistrict" runat="server"></asp:Label>
+                            </td>
+                            <td class="style_td">Upozela/Thana</td>
+                            <td>
+                                <asp:Label ID="lblPermanentUpozela" runat="server"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="style_td">Postal Code</td>
+                            <td>
+                                <asp:Label ID="lblPermanentPostalCode" runat="server"></asp:Label>
+                            </td>
+                            <td class="style_td">Country</td>
+                            <td>
+                                <asp:Label ID="lblPermanentCountry" runat="server"></asp:Label>
+                            </td>
+                        </tr>
+                        <%-- <tr>
                         <td class="style_td">Telephone</td>
                         <td colspan="3">
                             <asp:Label ID="lblPermanentTelephone" runat="server"></asp:Label>
                         </td>
                     </tr>--%>
-                </table>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
-</div>
     <%-- END ADDRESS ROW --%>
     <%-- -------------------------------------------------------------------------------------------------------------- --%>
 
@@ -589,13 +590,13 @@
                                 <tr>
                                     <td class="text-center" style="width: 15%">
                                         <%# Eval("cP_Priority") %>
-                            </td>
+                                    </td>
                                     <td style="width: 35%">
                                         <%# Eval("admUnitProgZ_ProgramName") %>
-                            </td>
+                                    </td>
                                     <td style="width: 25%">
                                         <%# Eval("admUnit_Name") %>
-                            </td>
+                                    </td>
                                 </tr>
                             </ItemTemplate>
                             <FooterTemplate>
@@ -785,7 +786,7 @@
     <%-- END PARENT/GUARDIAN/SPOUCE ROW --%>
     <%-- -------------------------------------------------------------------------------------------------------------- --%>
 
-<%--    <div class="row">
+    <%--    <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">

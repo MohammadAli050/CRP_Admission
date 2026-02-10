@@ -28,7 +28,6 @@ namespace Admission.Admission.Candidate
 
             if (!IsPostBack)
             {
-                quotarow.Visible = false;
                 if (uId > 0)
                 {
                     using (var db = new CandidateDataManager())
@@ -67,6 +66,11 @@ namespace Admission.Admission.Candidate
                 {
                     paymentid = cp.PaymentId.ToString();
 
+                    if (cp.IsPaid == null || cp.IsPaid == false)
+                        lblPaymentStatus.Text = "Payment Not Completed";
+                    else
+                        lblPaymentStatus.Text = "Payment Completed";
+
                     hrefPrintAdmitCard.NavigateUrl = "~/Admission/Candidate/Prints/AdmitCardV2.aspx?val=" + cp.CandidateID.ToString();
 
                     educationCategoryId = db.GetCandidateEducationCategoryID(Convert.ToInt64(cp.CandidateID));
@@ -93,8 +97,6 @@ namespace Admission.Admission.Candidate
             lblPaymentId.Text = paymentid;
             lblCandidateName.Text = candidateObj.FirstName;
             lblDateOfBirth.Text = Convert.ToDateTime(candidateObj.DateOfBirth).ToString("dd/MM/yyyy"); //.ToShortDateString();
-            if (candidateObj.QuotaID == null) { lblQuota.Text = null; }
-            else { lblQuota.Text = candidateObj.Quota.Remarks; }
 
             bool isUndergradCandidate = true;
 
@@ -111,9 +113,6 @@ namespace Admission.Admission.Candidate
                     if (qiModel != null && qiModel.IsVerifiedDocument != null && qiModel.IsVerifiedDocument == true)
                         status = "Verified";
                 }
-                lblQuotaStatus.Text = status;
-
-                lblQuotaStatus.ForeColor = status == "Verified" ? System.Drawing.Color.Green : System.Drawing.Color.Red;
 
             }
 

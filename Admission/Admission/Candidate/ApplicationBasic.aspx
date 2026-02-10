@@ -6,7 +6,7 @@
     <script type="text/javascript">
         function handleQuotaSelection() {
             var ddlQuota = document.getElementById('<%= ddlQuota.ClientID %>');
-        var divQuotaDetails = document.getElementById('<%= divQuotaDetails.ClientID %>');
+            var divQuotaDetails = document.getElementById('<%= divQuotaDetails.ClientID %>');
 
             if (ddlQuota && divQuotaDetails && window.innerWidth <= 768) {
                 if (ddlQuota.selectedIndex === 0) {
@@ -28,7 +28,7 @@
                 handleQuotaSelection();
             });
         }
-</script>
+    </script>
 
     <script type="text/javascript">
         function InProgress() {
@@ -760,16 +760,12 @@
 
                     <div class="row">
                         <!-- Personal Information Panel -->
-                        <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="form-group">
                                 <label>Religion<span class="spanAsterisk">*</span></label>
                                 <asp:DropDownList ID="ddlReligion" runat="server" CssClass="form-control"></asp:DropDownList>
                             </div>
 
-                            <div class="form-group">
-                                <label>Blood Group<span class="spanAsterisk">*</span></label>
-                                <asp:DropDownList ID="ddlBloodGroup" runat="server" CssClass="form-control"></asp:DropDownList>
-                            </div>
 
                             <div class="form-group">
                                 <label>ID Type<span class="spanAsterisk">*</span></label>
@@ -785,6 +781,28 @@
                                 <asp:TextBox ID="txtNationalIdOrBirthRegistration" runat="server" CssClass="form-control"></asp:TextBox>
                             </div>
 
+
+                            <div runat="server" visible="false">
+
+                                <div class="form-group" runat="server" id="divQuota">
+                                    <label>Quota<span class="spanAsterisk">*</span></label>
+                                    <asp:DropDownList ID="ddlQuota" runat="server" CssClass="form-control"
+                                        OnSelectedIndexChanged="ddlQuota_SelectedIndexChanged" AutoPostBack="true">
+                                    </asp:DropDownList>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+
+                            <div class="form-group">
+                                <label>Blood Group<span class="spanAsterisk">*</span></label>
+                                <asp:DropDownList ID="ddlBloodGroup" runat="server" CssClass="form-control"></asp:DropDownList>
+                            </div>
+
+
                             <div class="form-group" runat="server" id="divHall">
                                 <label>Do you want to avail hall accommodation?<span class="spanAsterisk">*</span></label>
                                 <asp:RadioButtonList ID="rblHallAccomodation" runat="server"
@@ -794,46 +812,41 @@
                                 </asp:RadioButtonList>
                             </div>
 
-                            <div class="form-group" runat="server" id="divQuota">
-                                <label>Quota<span class="spanAsterisk">*</span></label>
-                                <asp:DropDownList ID="ddlQuota" runat="server" CssClass="form-control"
-                                    OnSelectedIndexChanged="ddlQuota_SelectedIndexChanged" AutoPostBack="true">
-                                </asp:DropDownList>
-                            </div>
-
                         </div>
 
                         <!-- Quota Information Cards -->
-                        <div class="col-lg-8 col-md-6 col-sm-12" runat="server" id="divQuotaDetails">
-                            <div class="quota-info-grid">
-                                <div class="quota-card">
-                                    <h5>Freedom Fighter Quota</h5>
-                                    <ul>
-                                        <li>Children of Freedom Fighter</li>
-                                    </ul>
-                                </div>
+                        <div runat="server" visible="false">
+                            <div class="col-lg-8 col-md-6 col-sm-12" runat="server" id="divQuotaDetails">
+                                <div class="quota-info-grid">
+                                    <div class="quota-card">
+                                        <b>Freedom Fighter Quota</b>
+                                        <ul>
+                                            <li>Children of Freedom Fighter</li>
+                                        </ul>
+                                    </div>
 
-                                <div class="quota-card">
-                                    <h5>Special Quota</h5>
-                                    <ul>
-                                        <li>Children of Armed Forces Personnel (Serving and Retired)</li>
-                                        <li>Children of BUP Permanent Teacher, Officers, and Staffs (Serving and Retired)</li>
-                                        <li>Children of Sitting members of BUP Governing Bodies (Senate, Syndicate, Academic Council and Finance Committee)</li>
-                                    </ul>
-                                </div>
+                                    <div class="quota-card">
+                                        <b>Special Quota</b>
+                                        <ul>
+                                            <li>Children of Armed Forces Personnel (Serving and Retired)</li>
+                                            <li>Children of BUP Permanent Teacher, Officers, and Staffs (Serving and Retired)</li>
+                                            <li>Children of Sitting members of BUP Governing Bodies (Senate, Syndicate, Academic Council and Finance Committee)</li>
+                                        </ul>
+                                    </div>
 
-                                <div class="quota-card">
-                                    <h5>Ethnic Minority</h5>
-                                    <ul>
-                                        <li>Certificate issued by local Upazilla Nirbahi Officer (UNO)</li>
-                                    </ul>
-                                </div>
+                                    <div class="quota-card">
+                                        <b>Ethnic Minority</b>
+                                        <ul>
+                                            <li>Certificate issued by local Upazilla Nirbahi Officer (UNO)</li>
+                                        </ul>
+                                    </div>
 
-                                <div class="quota-card">
-                                    <h5>Disable</h5>
-                                    <ul>
-                                        <li>Disable</li>
-                                    </ul>
+                                    <div class="quota-card">
+                                        <b>Disable</b>
+                                        <ul>
+                                            <li>Disable</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
